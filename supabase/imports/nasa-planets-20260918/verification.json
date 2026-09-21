@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-09-18T14:57:59.591Z",
+  "imported_planets": 653,
+  "linked_host_stars": 435,
+  "system_mappings": 653,
+  "catalogue_stars": 10100,
+  "no_matched_confirmed_planets": 9665,
+  "science_status_for_unmatched": "unknown",
+  "duplicates": 0,
+  "public_app_access": true,
+  "source_data_verified": true,
+  "six_planet_example": "HD 219134",
+  "simulated_planets_added_to_scientific_catalogue": 0
+}

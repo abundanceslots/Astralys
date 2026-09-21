@@ -1,0 +1,14 @@
+{
+  "retrieved_at": "2026-09-18T14:51:26.782Z",
+  "batch": "astralys_nasa_confirmed_planets_20260918",
+  "planets": 653,
+  "host_stars": 435,
+  "catalogue_stars": 10100,
+  "stars_without_matched_confirmed_planet": 9665,
+  "source": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name%2Chostname%2Cgaia_dr3_id%2Cra%2Cdec%2Csy_dist%2Csy_gaiamag%2Cpl_rade%2Cpl_radelim%2Cpl_bmasse%2Cpl_bmasselim%2Cpl_bmassprov%2Cpl_orbper%2Cpl_orbperlim%2Cpl_orbsmax%2Cpl_eqt%2Cpl_eqtlim%2Cdisc_year%2Cdiscoverymethod%2Cdisc_refname+from+pscomppars&format=json",
+  "query": "select pl_name,hostname,gaia_dr3_id,ra,dec,sy_dist,sy_gaiamag,pl_rade,pl_radelim,pl_bmasse,pl_bmasselim,pl_bmassprov,pl_orbper,pl_orbperlim,pl_orbsmax,pl_eqt,pl_eqtlim,disc_year,discoverymethod,disc_refname from pscomppars",
+  "match_method": "exact_gaia_dr3_identifier",
+  "sql_sha256": "bf062c94e6f60f679b21e109fb790d75aada8cbee0bf721099a998777b6e44de",
+  "duplicates": 0,
+  "unknown_orbit_order": 5
+}

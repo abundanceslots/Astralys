@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-09-18T14:43:10.355Z",
+  "batch": "astralys_gaia_9000_20260918",
+  "imported": 9000,
+  "total_stars": 10100,
+  "duplicates": 0,
+  "overlap_with_previous_stars": 0,
+  "previous_stars_preserved": 1100,
+  "matches_gaia_payload": true,
+  "accessible_to_app_public_key": true,
+  "individual_discovery_dates_fabricated": false
+}

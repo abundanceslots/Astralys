@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-09-18T14:41:22.022Z",
+  "rows": 9000,
+  "initial_stars": 1100,
+  "expected_stars": 10100,
+  "duplicates": 0,
+  "overlaps": 0,
+  "batch": "astralys_gaia_9000_20260918",
+  "source": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+  "query": "SELECT TOP 20000\n  source_id, ra, dec, parallax, phot_g_mean_mag, bp_rp,\n  parallax_error, parallax_over_error, ruwe\nFROM gaiadr3.gaia_source\nWHERE parallax >= 10\n  AND phot_g_mean_mag BETWEEN 1 AND 12\n  AND ra IS NOT NULL AND dec IS NOT NULL AND bp_rp IS NOT NULL\n  AND parallax_over_error >= 10 AND ruwe < 1.4\n  AND duplicated_source = 'false'\nORDER BY phot_g_mean_mag ASC, source_id ASC",
+  "sql_sha256": "af482954fcf5c5b1afa04895f91940582f591e355f56c0523ccdece98faef61d",
+  "magnitude_range": [
+    5.1951,
+    8.694964
+  ],
+  "distance_ly_range": [
+    5.962895,
+    326.130758
+  ],
+  "visual_categories": {
+    "blue-white": 797,
+    "golden": 1061,
+    "white-yellow": 6924,
+    "blue": 124,
+    "orange-red": 94
+  }
+}

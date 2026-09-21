@@ -1,0 +1,22 @@
+:root {
+  --font-display:
+    Sora_400Regular, Sora, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+html, body, #root { height: 100%; background: #070911; }
+body { margin: 0; overflow: hidden; }
+[role="tab"] { cursor: pointer; transition: background-color 160ms ease, transform 160ms ease; }
+input, textarea { font-size: 16px; }
+@media (prefers-reduced-motion: reduce) { [role="tab"] { transition: none; } }
+
+/* Keyboard focus remains visible on custom mobile-style controls. */
+[role="button"]:focus-visible, [role="tab"]:focus-visible, [role="radio"]:focus-visible,
+a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #BCE5FF;
+  outline-offset: 3px;
+}
