@@ -20,9 +20,10 @@ type CelestialVisualProps = {
   object: CelestialVisualObject;
   size?: number;
   animated?: boolean;
+  fillFrame?: boolean;
 };
 
-export function CelestialVisual({ object, size = 96, animated = false }: CelestialVisualProps) {
+export function CelestialVisual({ object, size = 96, animated = false, fillFrame = false }: CelestialVisualProps) {
   const { reducedMotion, foreground } = useMotionPreferences();
   const [focused, setFocused] = useState(false);
   useFocusEffect(useCallback(() => {
@@ -46,7 +47,7 @@ export function CelestialVisual({ object, size = 96, animated = false }: Celesti
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${progress.value * 360}deg` }],
   }));
-  const radius = size * profile.bodyRatio;
+  const radius = size * (fillFrame ? 0.48 : profile.bodyRatio);
   const diameter = radius * 2;
   const sphereStyle = {
     width: diameter,

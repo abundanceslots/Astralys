@@ -1,0 +1,149 @@
+{
+  "generatedAt": "2026-09-21T12:49:01.805Z",
+  "projectRef": "unfvmwmhrdlywxwrjaxm",
+  "schema": "public",
+  "access": "anonymous application access with Row Level Security applied",
+  "discovery": "known project tables",
+  "tables": [
+    {
+      "table": "base_level_rules",
+      "rowCount": 10,
+      "status": "exported"
+    },
+    {
+      "table": "celestial_objects",
+      "rowCount": 10753,
+      "status": "exported"
+    },
+    {
+      "table": "guardian_observatory_progress",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.guardian_observatory_progress TO anon;\",\"message\":\"permission denied for table guardian_observatory_progress\"}"
+    },
+    {
+      "table": "guardian_planets",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.guardian_planets TO anon;\",\"message\":\"permission denied for table guardian_planets\"}"
+    },
+    {
+      "table": "guardian_resource_ledger",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.guardian_resource_ledger TO anon;\",\"message\":\"permission denied for table guardian_resource_ledger\"}"
+    },
+    {
+      "table": "guardian_satellites",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.guardian_satellites TO anon;\",\"message\":\"permission denied for table guardian_satellites\"}"
+    },
+    {
+      "table": "guardian_systems",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.guardian_systems TO anon;\",\"message\":\"permission denied for table guardian_systems\"}"
+    },
+    {
+      "table": "interstellar_connection_rules",
+      "rowCount": 3,
+      "status": "exported"
+    },
+    {
+      "table": "interstellar_connections",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.interstellar_connections TO anon;\",\"message\":\"permission denied for table interstellar_connections\"}"
+    },
+    {
+      "table": "observatory_instrument_rules",
+      "rowCount": 5,
+      "status": "exported"
+    },
+    {
+      "table": "observatory_satellites",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.observatory_satellites TO anon;\",\"message\":\"permission denied for table observatory_satellites\"}"
+    },
+    {
+      "table": "planet_colonies",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.planet_colonies TO anon;\",\"message\":\"permission denied for table planet_colonies\"}"
+    },
+    {
+      "table": "planet_unlock_rules",
+      "rowCount": 8,
+      "status": "exported"
+    },
+    {
+      "table": "planetary_system_planets",
+      "rowCount": 653,
+      "status": "exported"
+    },
+    {
+      "table": "planetary_systems",
+      "rowCount": 10100,
+      "status": "exported"
+    },
+    {
+      "table": "profiles",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.profiles TO anon;\",\"message\":\"permission denied for table profiles\"}"
+    },
+    {
+      "table": "satellite_level_rules",
+      "rowCount": 20,
+      "status": "exported"
+    },
+    {
+      "table": "stellar_alliance_contributions",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_alliance_contributions TO anon;\",\"message\":\"permission denied for table stellar_alliance_contributions\"}"
+    },
+    {
+      "table": "stellar_alliance_invitations",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_alliance_invitations TO anon;\",\"message\":\"permission denied for table stellar_alliance_invitations\"}"
+    },
+    {
+      "table": "stellar_alliance_members",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_alliance_members TO anon;\",\"message\":\"permission denied for table stellar_alliance_members\"}"
+    },
+    {
+      "table": "stellar_alliance_missions",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_alliance_missions TO anon;\",\"message\":\"permission denied for table stellar_alliance_missions\"}"
+    },
+    {
+      "table": "stellar_alliances",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_alliances TO anon;\",\"message\":\"permission denied for table stellar_alliances\"}"
+    },
+    {
+      "table": "stellar_neighbors",
+      "rowCount": 8800,
+      "status": "exported"
+    },
+    {
+      "table": "stellar_network_links",
+      "rowCount": null,
+      "status": "not_exported",
+      "reason": "401 Unauthorized: {\"code\":\"42501\",\"details\":null,\"hint\":\"Grant the required privileges to the current role with: GRANT SELECT ON public.stellar_network_links TO anon;\",\"message\":\"permission denied for table stellar_network_links\"}"
+    },
+    {
+      "table": "system_visual_profiles",
+      "rowCount": 10020,
+      "status": "exported"
+    }
+  ]
+}

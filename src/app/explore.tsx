@@ -1,15 +1,16 @@
-import { ObservatoryPressable as Pressable, ObservatoryButton } from '@/components/observatory-button';
-import { House, ArrowLeft, ArrowRight, Search, SlidersHorizontal, X, Sparkles, Scale, Crosshair, Orbit, ChevronRight } from 'lucide-react-native';
+import { ObservatoryPressable as Pressable } from '@/components/observatory-button';
+import { ArrowLeft, Search, SlidersHorizontal, X } from 'lucide-react-native';
 import { useContentKeyboard } from '@/hooks/use-content-keyboard';
-import { supabase } from '@/lib/supabase';
 import { CelestialVisual } from '@/components/celestial-visual';
 import { CelestialComparisonModal } from '@/components/celestial-comparison-modal';
+import { ExploreCollections } from '@/components/explore-collections';
 import { StarDetailModal, type StarDetail } from '@/components/star-detail-modal';
-import { findLocalStarSourceIds, getCelestialDisplayName } from '@/utils/celestial-display-name';
-import { useRouter, useFocusEffect } from 'expo-router';
+import { getCelestialDisplayName } from '@/utils/celestial-display-name';
+import { useRouter, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
+  BackHandler,
   FlatList,
   Modal,
   Keyboard,
@@ -18,14 +19,25 @@ import {
   View,
 } from 'react-native';
 import { MotionSection } from '@/components/motion-section';
+import Animated, { FadeIn, SlideInRight } from 'react-native-reanimated';
 import { Text, TextInput } from '@/components/astralys-text';
 import { navigationClearance } from '@/constants/observatory-theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { defaultStarSort, getSkyRegionOption, regionOptions, sortOptions, type SkyRegion, type StarSort } from '@/features/catalogue-filters';
+import { defaultStarSort, regionOptions, sortOptions, type SkyRegion, type StarSort } from '@/features/catalogue-filters';
+import {
+  categoryOptions,
+  fetchStars,
+  formatDistance,
+  getCategoryOption,
+  systemLabel,
+  type StarCategory,
+  type StarColor,
+} from '@/features/star-catalogue';
 
 const PAGE_SIZE = 20;
 
-type StarColor = 'all' | 'blue' | 'blue-white' | 'white-yellow' | 'golden' | 'orange-red';
+/** 'collections' = accueil d'Explore (étoile du jour + rangées), 'list' = catalogue complet. */
+type ExploreView = 'collections' | 'list';
 
 const colorOptions: { value: StarColor; label: string }[] = [
   { value: 'all', label: 'All colors' },
@@ -44,26 +56,20 @@ const starColors: Record<string, string> = {
   'orange-red': '#E9906E',
 };
 
-function formatDistance(distance: number | null) {
-  if (distance === null) return 'Unknown distance';
-  return `${Math.round(distance).toLocaleString('en-US')} light-years`;
-}
-
-function formatMagnitude(magnitude: number | null) {
-  if (magnitude === null) return 'Unknown magnitude';
-  return `Magnitude ${magnitude.toFixed(2)}`;
-}
-
 export default function ExploreScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { intent } = useLocalSearchParams<{ intent?: string }>();
+  const firstStarMode = intent === 'first-star';
   const filterSheetRef = useRef<View>(null);
   const closeFilters = useCallback(() => setFiltersVisible(false), []);
   const requestVersion = useRef(0);
   const morePending = useRef(false);
+  const [view, setView] = useState<ExploreView>(firstStarMode ? 'list' : 'collections');
   const [stars, setStars] = useState<StarDetail[]>([]);
   const [selectedStar, setSelectedStar] = useState<StarDetail | null>(null);
   const [comparisonBase, setComparisonBase] = useState<StarDetail | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [searchInput, setSearchInput] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
   const [totalCount, setTotalCount] = useState(0);
@@ -74,6 +80,14 @@ export default function ExploreScreen() {
   const [region, setRegion] = useState<SkyRegion>('all');
   const [starColor, setStarColor] = useState<StarColor>('all');
   const [sort, setSort] = useState<StarSort>(defaultStarSort);
+  const [category, setCategory] = useState<StarCategory>(firstStarMode ? 'nearby-confirmed' : 'all');
+
+  // Arrivée depuis « Choisir ma première étoile » alors que l'écran était déjà monté.
+  useEffect(() => {
+    if (!firstStarMode) return;
+    setView('list');
+    setCategory('nearby-confirmed');
+  }, [firstStarMode]);
 
   useContentKeyboard(filtersVisible, closeFilters, filterSheetRef, true);
 
@@ -85,6 +99,7 @@ export default function ExploreScreen() {
       selectedRegion: SkyRegion,
       selectedColor: StarColor,
       selectedSort: StarSort,
+      selectedCategory: StarCategory,
     ) => {
       if (!replace && morePending.current) return;
       const version = replace ? ++requestVersion.current : requestVersion.current;
@@ -92,43 +107,24 @@ export default function ExploreScreen() {
       replace ? setLoading(true) : setLoadingMore(true);
       setError(null);
 
-      const sortOption = sortOptions.find((option) => option.value === selectedSort) ?? sortOptions[0];
-
-      let request = supabase
-        .from('celestial_objects')
-        .select(
-          'id, object_type, source_catalog, source_id, scientific_name, common_name, ra_deg, dec_deg, distance_ly, apparent_magnitude, visual_category, temperature_k, radius_solar, mass_solar, radius_earth, mass_earth, equilibrium_temperature_k',
-          { count: 'exact' },
-        )
-        .eq('object_type', 'star')
-        .order(sortOption.column, { ascending: sortOption.ascending, nullsFirst: false })
-        .order('id', { ascending: true });
-
-      if (search) {
-        const localMatches = findLocalStarSourceIds(search);
-        request = localMatches.length > 0
-          ? request.in('source_id', localMatches)
-          : (/^\d+$/.test(search) ? request.eq('source_id', search) : request.ilike('scientific_name', `%${search}%`));
-      }
-
-      const regionOption = getSkyRegionOption(selectedRegion);
-      if (regionOption.minimumDeclination !== undefined) request = request.gte('dec_deg', regionOption.minimumDeclination);
-      if (regionOption.maximumDeclination !== undefined) request = request.lt('dec_deg', regionOption.maximumDeclination);
-
-      if (selectedColor !== 'all') {
-        request = request.eq('visual_category', selectedColor);
-      }
-
-      const { data, error: requestError, count } = await request.range(from, from + PAGE_SIZE - 1);
+      const result = await fetchStars({
+        from,
+        limit: PAGE_SIZE,
+        search,
+        region: selectedRegion,
+        color: selectedColor,
+        sort: selectedSort,
+        category: selectedCategory,
+        withCount: true,
+      });
 
       if (version !== requestVersion.current) return;
       morePending.current = false;
-      if (requestError) {
+      if (result.error) {
         setError('The catalogue could not be loaded right now.');
       } else {
-        const nextStars = (data ?? []) as StarDetail[];
-        setStars((current) => (replace ? nextStars : [...current, ...nextStars]));
-        setTotalCount(count ?? nextStars.length);
+        setStars(current => (replace ? result.stars : [...current, ...result.stars]));
+        setTotalCount(result.total ?? result.stars.length);
       }
 
       setLoading(false);
@@ -137,19 +133,19 @@ export default function ExploreScreen() {
     [],
   );
 
+  // La liste ne se charge que lorsqu'elle est affichée.
   useEffect(() => {
-    void loadStars(0, true, activeSearch, region, starColor, sort);
-  }, [activeSearch, loadStars, region, sort, starColor]);
+    if (view !== 'list') return;
+    void loadStars(0, true, activeSearch, region, starColor, sort, category);
+  }, [view, activeSearch, loadStars, region, sort, starColor, category]);
 
   const submitSearch = () => {
     Keyboard.dismiss();
     const nextSearch = searchInput.trim();
-
     if (nextSearch === activeSearch) {
-      void loadStars(0, true, nextSearch, region, starColor, sort);
+      void loadStars(0, true, nextSearch, region, starColor, sort, category);
       return;
     }
-
     setActiveSearch(nextSearch);
   };
 
@@ -158,9 +154,16 @@ export default function ExploreScreen() {
     setActiveSearch('');
   };
 
+  const closeSearch = () => {
+    Keyboard.dismiss();
+    clearSearch();
+    setSearchOpen(false);
+  };
+
   const canLoadMore = stars.length < totalCount;
   const activeFilterCount = Number(region !== 'all') + Number(starColor !== 'all') + Number(sort !== defaultStarSort);
   const activeSortLabel = sortOptions.find((option) => option.value === sort)?.label ?? 'Nearest first';
+  const activeCategory = getCategoryOption(category);
 
   const resetFilters = () => {
     setRegion('all');
@@ -168,11 +171,29 @@ export default function ExploreScreen() {
     setSort(defaultStarSort);
   };
 
-  useFocusEffect(useCallback(() => () => {
-    setSelectedStar(null);
-    setComparisonBase(null);
-    setFiltersVisible(false);
-  }, []));
+  /* ---- navigation entre l'accueil (collections) et la liste ---- */
+  const openList = (nextCategory: StarCategory, nextSort: StarSort = defaultStarSort) => {
+    setCategory(nextCategory);
+    setSort(nextSort);
+    setView('list');
+  };
+
+  const openSearch = () => {
+    setCategory('all');
+    setSearchOpen(true);
+    setView('list');
+  };
+
+  const backToCollections = useCallback(() => {
+    Keyboard.dismiss();
+    setSearchOpen(false);
+    setSearchInput('');
+    setActiveSearch('');
+    setRegion('all');
+    setStarColor('all');
+    setSort(defaultStarSort);
+    setView('collections');
+  }, []);
 
   const returnHome = () => {
     setSelectedStar(null);
@@ -180,6 +201,24 @@ export default function ExploreScreen() {
     setFiltersVisible(false);
     router.replace('/');
   };
+
+  // Android : le bouton retour ramène d'abord de la liste aux collections.
+  useFocusEffect(useCallback(() => {
+    if (view !== 'list' || firstStarMode) return undefined;
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      backToCollections();
+      return true;
+    });
+    return () => sub.remove();
+  }, [view, firstStarMode, backToCollections]));
+
+  useFocusEffect(useCallback(() => () => {
+    setSelectedStar(null);
+    setComparisonBase(null);
+    setFiltersVisible(false);
+  }, []));
+
+  const listTitle = firstStarMode ? 'Choose your first star' : 'Explore';
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top + 10 }]}>
@@ -190,33 +229,56 @@ export default function ExploreScreen() {
         <View style={styles.glow} />
       </View>
 
-      {!selectedStar && !comparisonBase ? <View style={styles.shell}>
-        <View style={styles.header}>
+      {!selectedStar && !comparisonBase && view === 'collections' ? (
+        <Animated.View key="collections" entering={FadeIn.duration(220)} style={styles.shell}>
+          <ExploreCollections
+            bottomInset={navigationClearance(insets.bottom) + 16}
+            onHome={returnHome}
+            onSearch={openSearch}
+            onOpenStar={setSelectedStar}
+            onSeeAll={openList}
+          />
+        </Animated.View>
+      ) : null}
+
+      {!selectedStar && !comparisonBase && view === 'list' ? <Animated.View key="list" entering={SlideInRight.duration(240)} style={styles.shell}>
+        <View style={styles.listHeader}>
           <Pressable
-            accessibilityLabel="Return to home"
+            accessibilityLabel={firstStarMode ? 'Return to home' : 'Back to collections'}
             accessibilityRole="button"
-            onPress={returnHome}
-            style={({ pressed }) => [styles.homeButton, pressed && styles.navigationPressed]}>
+            onPress={firstStarMode ? returnHome : backToCollections}
+            style={styles.iconButton}>
             <ArrowLeft size={20} color="#C8BAF5" />
-            <Text style={styles.homeButtonText}>Home</Text>
           </Pressable>
-          <Text selectable style={styles.brand}>ASTRALYS</Text>
+          <Text accessibilityRole="header" numberOfLines={1} style={styles.listTitle}>{listTitle}</Text>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={searchOpen ? 'Close search' : 'Search for a star'}
+            accessibilityState={{ expanded: searchOpen }}
+            onPress={searchOpen ? closeSearch : () => setSearchOpen(true)}
+            style={[styles.iconButton, searchOpen && styles.iconButtonActive]}>
+            {searchOpen ? <X size={20} color="#C8BAF5" /> : <Search size={20} color="#C8BAF5" />}
+          </Pressable>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={activeFilterCount > 0 ? `Filters, ${activeFilterCount} active` : 'Filters'}
+            onPress={() => setFiltersVisible(true)}
+            style={styles.iconButton}>
+            <SlidersHorizontal size={20} color="#C8BAF5" />
+            {activeFilterCount > 0 ? (
+              <View style={styles.iconBadge}><Text style={styles.filterBadgeText}>{activeFilterCount}</Text></View>
+            ) : null}
+          </Pressable>
         </View>
 
-        <MotionSection style={styles.intro}>
-          <View>
-            <Text accessibilityRole="header" style={styles.title}>Explore stars</Text>
-          </View>
-          <Text accessibilityLiveRegion="polite" style={styles.count}>{`${totalCount.toLocaleString('en-US')} ${totalCount === 1 ? 'star' : 'stars'}`}</Text>
-        </MotionSection>
-
-        <MotionSection delay={60} style={styles.searchRow}>
+        {searchOpen ? (
           <View style={styles.searchField}>
-            <Search size={22} color="#A7B0C5" />
+            <Search size={18} color="#A7B0C5" />
             <TextInput
               accessibilityLabel="Search for a star"
               autoCapitalize="none"
               autoCorrect={false}
+              autoFocus
               onChangeText={setSearchInput}
               onSubmitEditing={submitSearch}
               placeholder="Name or catalogue ID"
@@ -228,27 +290,41 @@ export default function ExploreScreen() {
             />
             {searchInput.length > 0 ? (
               <Pressable accessibilityRole="button" accessibilityLabel="Clear search" onPress={clearSearch} style={styles.clearButton}>
-                <X size={20} color="#A7B0C5" />
+                <X size={18} color="#A7B0C5" />
               </Pressable>
             ) : null}
           </View>
-          <Pressable accessibilityRole="button" onPress={submitSearch} style={styles.searchButton}>
-            <Text style={styles.searchButtonText}>Search</Text>
-          </Pressable>
-        </MotionSection>
+        ) : null}
 
-        <MotionSection delay={100} style={styles.filterBar}>
-          <Pressable accessibilityRole="button" onPress={() => setFiltersVisible(true)} style={styles.filterButton}>
-            <SlidersHorizontal size={20} color="#C8BAF5" />
-            <Text style={styles.filterButtonText}>Filters</Text>
-            {activeFilterCount > 0 ? (
-              <View style={styles.filterBadge}>
-                <Text style={styles.filterBadgeText}>{activeFilterCount}</Text>
-              </View>
-            ) : null}
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.tabScroller}
+          contentContainerStyle={styles.tabs}
+          accessibilityRole="tablist">
+          {categoryOptions.map(option => {
+            const selected = category === option.value;
+            return (
+              <Pressable
+                key={option.value}
+                accessibilityRole="tab"
+                accessibilityState={{ selected }}
+                onPress={() => setCategory(option.value)}
+                style={[styles.tab, selected && styles.tabSelected]}>
+                <Text style={[styles.tabText, selected && styles.tabTextSelected]}>{option.tab}</Text>
+              </Pressable>
+            );
+          })}
+        </ScrollView>
+
+        <View style={styles.summaryRow}>
+          <Text accessibilityLiveRegion="polite" numberOfLines={1} style={styles.summaryText}>
+            {loading ? activeCategory.description : `${totalCount.toLocaleString('en-US')} ${totalCount === 1 ? 'star' : 'stars'} · ${activeCategory.description}`}
+          </Text>
+          <Pressable accessibilityRole="button" accessibilityLabel={`Sorted by ${activeSortLabel}. Change sorting`} onPress={() => setFiltersVisible(true)} style={styles.sortButton}>
+            <Text style={styles.sortButtonText}>{activeSortLabel.replace(' first', '')} ▾</Text>
           </Pressable>
-          <Text numberOfLines={1} style={styles.sortSummary}>{activeSortLabel}</Text>
-        </MotionSection>
+        </View>
 
         {activeFilterCount > 0 ? (
           <View style={styles.chipWrap}>
@@ -261,7 +337,7 @@ export default function ExploreScreen() {
         {error ? (
           <View accessibilityRole="alert" accessibilityLiveRegion="polite" style={styles.errorCard}>
             <Text style={styles.errorText}>{error}</Text>
-            <Pressable accessibilityRole="button" onPress={() => void loadStars(0, true, activeSearch, region, starColor, sort)}>
+            <Pressable accessibilityRole="button" onPress={() => void loadStars(0, true, activeSearch, region, starColor, sort, category)}>
               <Text style={styles.retryText}>Try again</Text>
             </Pressable>
           </View>
@@ -270,7 +346,6 @@ export default function ExploreScreen() {
         {loading ? (
           <View style={styles.centerState}>
             <ActivityIndicator color="#B9A8E8" size="small" />
-            <Text style={styles.stateText}>Opening the catalogue…</Text>
           </View>
         ) : (
           <FlatList
@@ -284,8 +359,7 @@ export default function ExploreScreen() {
               <View style={styles.emptyCard}>
                 <Text style={styles.emptySymbol}>✦</Text>
                 <Text style={styles.emptyTitle}>No stars found</Text>
-                <Text style={styles.emptyText}>Try another search.</Text>
-                <Pressable accessibilityRole="button" onPress={() => { clearSearch(); resetFilters(); }} style={styles.resetButton}><Text style={styles.resetButtonText}>Reset search</Text></Pressable>
+                <Pressable accessibilityRole="button" onPress={() => { clearSearch(); resetFilters(); setCategory('all'); }} style={styles.resetButton}><Text style={styles.resetButtonText}>Reset search</Text></Pressable>
               </View>
             }
             ListFooterComponent={
@@ -294,7 +368,7 @@ export default function ExploreScreen() {
                   accessibilityRole="button"
                   accessibilityState={{ disabled: loadingMore, busy: loadingMore }}
                   disabled={loadingMore}
-                  onPress={() => void loadStars(stars.length, false, activeSearch, region, starColor, sort)}
+                  onPress={() => void loadStars(stars.length, false, activeSearch, region, starColor, sort, category)}
                   style={({ pressed }) => [
                     styles.moreButton,
                     pressed && styles.moreButtonPressed,
@@ -306,12 +380,11 @@ export default function ExploreScreen() {
                     <Text style={styles.moreButtonText}>Show more</Text>
                   )}
                 </Pressable>
-              ) : stars.length > 0 ? (
-                <Text style={styles.endText}>End of results</Text>
               ) : null
             }
             renderItem={({ item, index }) => {
               const Row = index < 6 ? MotionSection : View;
+              const imagined = item.system_experience === 'imagined';
               return (
                 <Row {...(index < 6 ? { delay: index * 25 } : {})}>
                   <Pressable
@@ -323,18 +396,12 @@ export default function ExploreScreen() {
                     <View style={styles.starVisual}>
                       <CelestialVisual object={item} size={48} />
                     </View>
-
                     <View style={styles.starInfo}>
-                      <Text numberOfLines={1} style={styles.starName}>
-                        {getCelestialDisplayName(item)}
-                      </Text>
-                      <Text numberOfLines={1} style={styles.starDistance}>
-                        {formatDistance(item.distance_ly)}
-                      </Text>
+                      <Text numberOfLines={1} style={styles.starName}>{getCelestialDisplayName(item)}</Text>
+                      <Text numberOfLines={1} style={styles.starDistance}>{formatDistance(item.distance_ly)}</Text>
                     </View>
-
-                    <View style={styles.magnitudePill}>
-                      <Text style={styles.magnitudeText}>{formatMagnitude(item.apparent_magnitude)}</Text>
+                    <View style={[styles.systemPill, imagined && styles.systemPillImagined]}>
+                      <Text style={[styles.systemPillText, imagined && styles.systemPillTextImagined]}>{systemLabel(item)}</Text>
                     </View>
                   </Pressable>
                 </Row>
@@ -343,7 +410,7 @@ export default function ExploreScreen() {
             showsVerticalScrollIndicator={false}
           />
         )}
-      </View> : null}
+      </Animated.View> : null}
 
       <Modal
         animationType="fade"
@@ -468,6 +535,30 @@ export default function ExploreScreen() {
 }
 
 const styles = StyleSheet.create({
+  listHeader: { minHeight: 48, flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 14 },
+  listTitle: { flex: 1, color: '#F6F4FB', fontSize: 24, lineHeight: 30, fontWeight: '600', letterSpacing: -0.6 },
+  iconButton: {
+    width: 44, height: 44, alignItems: 'center', justifyContent: 'center', borderRadius: 14,
+    backgroundColor: '#141824', borderWidth: 1, borderColor: 'rgba(196,181,253,0.11)',
+  },
+  iconButtonActive: { backgroundColor: '#211D31' },
+  iconBadge: {
+    position: 'absolute', top: -5, right: -5, minWidth: 18, height: 18, paddingHorizontal: 4,
+    alignItems: 'center', justifyContent: 'center', borderRadius: 9, backgroundColor: '#D8CEF2',
+  },
+  tabScroller: { flexGrow: 0, marginHorizontal: -20, marginBottom: 12 },
+  tabs: { gap: 8, paddingHorizontal: 20 },
+  tab: {
+    minHeight: 40, justifyContent: 'center', paddingHorizontal: 14, borderRadius: 999,
+    borderWidth: 1, borderColor: '#262A3D',
+  },
+  tabSelected: { backgroundColor: '#C8BAF5', borderColor: '#C8BAF5' },
+  tabText: { color: '#A7B0C5', fontSize: 13, fontWeight: '600' },
+  tabTextSelected: { color: '#12101C' },
+  summaryRow: { minHeight: 32, flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 10 },
+  summaryText: { flex: 1, color: '#A1A9BB', fontSize: 12 },
+  sortButton: { minHeight: 44, justifyContent: 'center', paddingLeft: 10 },
+  sortButtonText: { color: '#C8BAF5', fontSize: 12, fontWeight: '700' },
   screen: {
     flex: 1,
     backgroundColor: '#070911',
@@ -503,99 +594,8 @@ const styles = StyleSheet.create({
     maxWidth: 520,
     alignSelf: 'center',
   },
-  header: {
-    height: 48,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  homeButton: {
-    minWidth: 76,
-    height: 44,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 4,
-    paddingHorizontal: 9,
-    borderRadius: 12,
-    backgroundColor: '#141824',
-    borderWidth: 1,
-    borderColor: 'rgba(196,181,253,0.11)',
-  },
-  homeArrow: {
-    color: '#CFC4EC',
-    fontSize: 23,
-    lineHeight: 24,
-    marginTop: -2,
-  },
-  homeButtonText: {
-    color: '#D8D2E2',
-    fontSize: 12,
-    fontWeight: '800',
-  },
-  navigationPressed: {
-    opacity: 0.65,
-  },
-  brand: {
-    color: '#F5F3FF',
-    fontSize: 14,
-    fontWeight: '800',
-    letterSpacing: 2.4,
-  },
-  cataloguePill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 7,
-    paddingHorizontal: 10,
-    paddingVertical: 7,
-    borderRadius: 99,
-    backgroundColor: '#101420',
-  },
-  liveDot: {
-    width: 5,
-    height: 5,
-    borderRadius: 3,
-    backgroundColor: '#A996DF',
-  },
-  cataloguePillText: {
-    color: '#8B829F',
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  intro: {
-    minHeight: 74,
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    paddingBottom: 13,
-  },
-  eyebrow: {
-    color: '#A996DF',
-    fontSize: 12,
-    fontWeight: '800',
-    letterSpacing: 1.8,
-    marginBottom: 5,
-  },
-  title: {
-    color: '#F6F4FB',
-    fontSize: 27,
-    lineHeight: 31,
-    fontWeight: '600',
-    letterSpacing: -0.7,
-  },
-  count: {
-    color: '#747B8E',
-    fontSize: 12,
-    marginBottom: 3,
-  },
-  searchRow: {
-    flexDirection: 'row',
-    gap: 8,
-    marginBottom: 13,
-  },
   searchField: {
-    flex: 1,
-    minWidth: 0,
+    marginBottom: 12,
     gap: 8,
     height: 48,
     flexDirection: 'row',
@@ -605,12 +605,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#10141F',
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.065)',
-  },
-  searchIcon: {
-    color: '#968AAE',
-    fontSize: 22,
-    marginRight: 8,
-    marginTop: -2,
   },
   searchInput: {
     flex: 1,
@@ -625,69 +619,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  clearButtonText: {
-    color: '#8D849D',
-    fontSize: 22,
-    lineHeight: 24,
-  },
-  searchButton: {
-    height: 48,
-    justifyContent: 'center',
-    paddingHorizontal: 14,
-    borderRadius: 15,
-    backgroundColor: '#C8BAF5',
-  },
-  searchButtonText: {
-    color: '#171321',
-    fontSize: 12,
-    fontWeight: '800',
-  },
-  filterBar: {
-    minHeight: 39,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 10,
-    marginBottom: 11,
-  },
-  filterButton: {
-    minHeight: 44,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 7,
-    paddingHorizontal: 11,
-    borderRadius: 12,
-    backgroundColor: '#151927',
-    borderWidth: 1,
-    borderColor: 'rgba(196,181,253,0.12)',
-  },
-  filterIcon: {
-    color: '#B9A8E8',
-    fontSize: 14,
-  },
-  filterButtonText: {
-    color: '#C8C1D7',
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  filterBadge: {
-    minWidth: 18,
-    height: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 9,
-    backgroundColor: '#D8CEF2',
-  },
   filterBadgeText: {
     color: '#171321',
     fontSize: 12,
     fontWeight: '900',
-  },
-  sortSummary: {
-    flex: 1,
-    color: '#A1A9BB',
-    fontSize: 12,
-    textAlign: 'right',
   },
   errorCard: {
     minHeight: 46,
@@ -718,10 +653,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 12,
     paddingBottom: 54,
-  },
-  stateText: {
-    color: '#808799',
-    fontSize: 12,
   },
   listContent: {
     paddingBottom: 112,
@@ -767,19 +698,23 @@ const styles = StyleSheet.create({
     color: '#A1A9BB',
     fontSize: 12,
   },
-  magnitudePill: {
-    maxWidth: 92,
+  systemPill: {
+    maxWidth: 104,
     paddingHorizontal: 9,
     paddingVertical: 7,
     borderRadius: 10,
     backgroundColor: '#171A29',
   },
-  magnitudeText: {
+  systemPillImagined: { backgroundColor: '#221B2B' },
+  systemPillText: {
     color: '#ACA2C4',
-    fontSize: 12,
-    fontWeight: '700',
+    fontSize: 9,
+    lineHeight: 12,
+    fontWeight: '800',
+    letterSpacing: 0.35,
     textAlign: 'center',
   },
+  systemPillTextImagined: { color: '#C9A8D9' },
   moreButton: {
     height: 48,
     alignItems: 'center',
@@ -801,12 +736,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '800',
   },
-  endText: {
-    color: '#A1A9BB',
-    fontSize: 12,
-    textAlign: 'center',
-    paddingVertical: 18,
-  },
   emptyCard: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -826,10 +755,6 @@ const styles = StyleSheet.create({
     color: '#E9E5F0',
     fontSize: 14,
     fontWeight: '700',
-  },
-  emptyText: {
-    color: '#747B8E',
-    fontSize: 12,
   },
   modalRoot: {
     flex: 1,
@@ -919,12 +844,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 14,
     backgroundColor: '#121620',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.055)',
   },
   optionSelected: {
     backgroundColor: '#211D31',
-    borderColor: 'rgba(196,181,253,0.34)',
   },
   optionLabel: {
     color: '#C5C1CC',
@@ -953,8 +875,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 11,
     borderRadius: 12,
     backgroundColor: '#121620',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.055)',
   },
   colorDot: {
     width: 7,
@@ -977,8 +897,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 13,
     borderRadius: 13,
     backgroundColor: '#121620',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.055)',
   },
   radio: {
     width: 17,
@@ -1004,10 +922,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 10,
     borderRadius: 16,
-    backgroundColor: '#C8BAF5',
+    backgroundColor: '#22283B',
   },
   applyButtonText: {
-    color: '#171321',
+    color: '#F4F1FF',
     fontSize: 13,
     fontWeight: '900',
   },

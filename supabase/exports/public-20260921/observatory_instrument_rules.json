@@ -1,0 +1,67 @@
+[
+  {
+    "instrument_type": "observation",
+    "display_name": "Satellite d’observation",
+    "description": "Suit la position et les variations mesurables de l’astre.",
+    "required_knowledge": 0,
+    "required_exploration": 0,
+    "required_connection": 0,
+    "mission_seconds": 300,
+    "reward_knowledge": 15,
+    "reward_exploration": 5,
+    "reward_connection": 0,
+    "sort_order": 1
+  },
+  {
+    "instrument_type": "probe",
+    "display_name": "Sonde planétaire",
+    "description": "Explore progressivement une planète confirmée.",
+    "required_knowledge": 40,
+    "required_exploration": 20,
+    "required_connection": 0,
+    "mission_seconds": 21600,
+    "reward_knowledge": 20,
+    "reward_exploration": 35,
+    "reward_connection": 0,
+    "sort_order": 2
+  },
+  {
+    "instrument_type": "relay",
+    "display_name": "Relais de communication",
+    "description": "Relie le système aux gardiens stellaires voisins.",
+    "required_knowledge": 60,
+    "required_exploration": 0,
+    "required_connection": 20,
+    "mission_seconds": 43200,
+    "reward_knowledge": 10,
+    "reward_exploration": 5,
+    "reward_connection": 25,
+    "sort_order": 3
+  },
+  {
+    "instrument_type": "station",
+    "display_name": "Station scientifique",
+    "description": "Installe une présence orbitale autour d’une planète explorée.",
+    "required_knowledge": 120,
+    "required_exploration": 100,
+    "required_connection": 40,
+    "mission_seconds": 86400,
+    "reward_knowledge": 30,
+    "reward_exploration": 60,
+    "reward_connection": 10,
+    "sort_order": 4
+  },
+  {
+    "instrument_type": "telescope",
+    "display_name": "Télescope spatial",
+    "description": "Approfondit les données et les alertes scientifiques du système.",
+    "required_knowledge": 200,
+    "required_exploration": 80,
+    "required_connection": 60,
+    "mission_seconds": 86400,
+    "reward_knowledge": 60,
+    "reward_exploration": 20,
+    "reward_connection": 20,
+    "sort_order": 5
+  }
+]

@@ -1,56 +1,59 @@
-# Welcome to your Expo app 👋
+# Astralys
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Application mobile (iOS / Android) d'exploration spatiale : le joueur choisit une vraie étoile du catalogue Gaia DR3, développe son système (énergie, relais, sondes, planètes réelles et imaginées) et joue à **Orbital Run**, un jeu d'adresse gravitationnel.
 
-## Get started
+- **App :** Expo SDK 57 · React Native 0.86 · expo-router · Reanimated 4 · Skia · expo-gl
+- **Backend :** Supabase (Postgres + RLS, Auth Google/Apple/email, fonctions Edge)
+- **Catalogue :** 10 100 étoiles Gaia DR3 + 653 planètes confirmées (NASA Exoplanet Archive)
 
-1. Install dependencies
+## Démarrer
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```powershell
+npm install
+copy .env.example .env.local   # puis remplir les deux valeurs Supabase
+npx expo start --go --lan --clear
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+`npm run start:go` fait la même chose. Les widgets d'écran d'accueil ne fonctionnent pas dans Expo Go : il faut une version de développement (`eas build --profile development`).
 
-### Other setup steps
+## Variables d'environnement
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+| Variable | Où la trouver | Où la déclarer |
+|---|---|---|
+| `EXPO_PUBLIC_SUPABASE_URL` | Supabase → Project Settings → API | `.env.local` (local) **et** EAS → Environment variables (builds) |
+| `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | idem (clé publique « publishable ») | idem |
 
-## Learn more
+`.env.local` n'est jamais envoyé sur GitHub (voir `.gitignore`). Sans ces variables dans EAS, un build cloud s'arrête au démarrage. Aucune clé secrète (service role, Typesafe, Google client secret) ne doit être dans l'app : elles vont uniquement dans les secrets Supabase.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+src/app/            écrans (expo-router) : accueil, explore, collection, store, profile
+src/components/     composants (système 3D, Orbital Run, fiches, boutique…)
+src/features/       logique pure : économie du jeu, rendu 3D, niveaux, catalogue, boutique
+src/context/        état global : compte, étoiles acquises, progression par système
+src/lib/            Supabase, sauvegarde cloud, widgets, liens légaux
+src/widgets/        widgets iOS (expo-widgets) et Android
+supabase/           migrations SQL, vérifications, fonctions Edge, imports du catalogue
+docs/               documentation, pages légales (docs/legal), check-list de publication
+scripts/            vérifications automatiques (npm run check:systems…)
+```
 
-## Join the community
+## Base de données
 
-Join our community of developers creating universal apps.
+Tout est décrit dans [`supabase/README.md`](supabase/README.md) : ordre des migrations, tables, fonctions, gestion des testeurs autorisés à acheter.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Vérifications
+
+```powershell
+npm run check:systems     # les 10 100 systèmes sont valides et variés, économie simulée
+npx tsc --noEmit          # types
+```
+
+## Publication
+
+Voir [`docs/PUBLICATION.md`](docs/PUBLICATION.md).
+
+## Licence et données
+
+Code : voir `LICENSE`. Données astronomiques : ESA Gaia DR3 et NASA Exoplanet Archive (données publiques, citées dans l'app).

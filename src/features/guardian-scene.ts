@@ -7,6 +7,28 @@ export type RelayInspection = { yaw: number; pitch: number };
 export const initialRelayInspection = (): RelayInspection => ({ yaw: 0.67, pitch: 0.42 });
 export const minimumCameraDistance = 1.25;
 export type SceneMesh = { vertices: Float32Array; count: number };
+/** Ce dont la caméra a besoin d'une planète (système de démo ou système construit depuis la base). */
+export type SceneBodyLike = { id: DemoPlanet; orbit: number; size: number; position: Vec3; angle?: number };
+
+/* ---- Révolution des planètes autour de l'étoile ----
+ * Horloge murale (secondes) : les planètes continuent d'avancer entre deux ouvertures de l'app.
+ * Vitesse type Kepler (plus lent loin de l'étoile) : ~2 min par tour à 2 unités, ~19 min à 9 unités. */
+export const ORBIT_REFERENCE = 2;
+export const ORBIT_REFERENCE_PERIOD_S = 120;
+export const orbitalSpeed = (orbit: number) => (Math.PI * 2 / ORBIT_REFERENCE_PERIOD_S) * Math.pow(ORBIT_REFERENCE / Math.max(0.5, orbit), 1.5);
+export function orbitalAngle(body: { orbit: number; angle?: number; position: Vec3 }, clockSeconds: number) {
+  const start = body.angle ?? Math.atan2(body.position[2], body.position[0]);
+  return start + orbitalSpeed(body.orbit) * (clockSeconds % 1_000_000);
+}
+export function orbitalPosition(body: { orbit: number; angle?: number; position: Vec3 }, clockSeconds: number): Vec3 {
+  const a = orbitalAngle(body, clockSeconds);
+  return [Math.cos(a) * body.orbit, body.position[1], Math.sin(a) * body.orbit];
+}
+/** Copie des planètes à l'instant donné (null : positions de départ, sans mouvement). */
+export function bodiesAt<T extends SceneBodyLike>(bodies: readonly T[], clockSeconds: number | null | undefined): T[] {
+  if (clockSeconds == null) return [...bodies];
+  return bodies.map(body => ({ ...body, position: orbitalPosition(body, clockSeconds) }));
+}
 export const demoSystemVisualProfile: SystemVisualProfile = {
   systemId: 'astralys-demo-system',
   visualSeed: 7429,
@@ -91,21 +113,21 @@ export function project(position: Vec3, matrix: Float32Array, width: number, hei
   if (clip[3] <= 0) return null;
   return { x: (clip[0] / clip[3] + 1) * width / 2, y: (1 - clip[1] / clip[3]) * height / 2, depth: clip[2] / clip[3] };
 }
-export function pickPlanet(x: number, y: number, camera: SceneCamera, width: number, height: number, available: readonly DemoPlanet[]): DemoPlanet | undefined {
+export function pickPlanet(x: number, y: number, camera: SceneCamera, width: number, height: number, available: readonly DemoPlanet[], bodies: readonly SceneBodyLike[] = scenePlanets): DemoPlanet | undefined {
   const matrix = cameraMatrix(camera, width / Math.max(1, height));
-  return scenePlanets.filter(p => available.includes(p.id)).map(p => {
+  return bodies.filter(p => available.includes(p.id)).map(p => {
     const point = project(p.position, matrix, width, height);
     const radius = Math.max(28, projectedBodyRadius(p.position, p.size, camera, width, height) + 8);
     return { id: p.id, distance: point && point.depth >= -1 && point.depth <= 1 ? Math.hypot(point.x - x, point.y - y) / radius : Infinity };
   }).filter(p => p.distance <= 1).sort((a, b) => a.distance - b.distance)[0]?.id;
 }
-export function overviewCamera(width: number, height: number, available: readonly DemoPlanet[]): SceneCamera {
-  const extent = Math.max(3.1, ...scenePlanets.filter(p => available.includes(p.id)).map(p => p.orbit + 0.5));
+export function overviewCamera(width: number, height: number, available: readonly DemoPlanet[], bodies: readonly SceneBodyLike[] = scenePlanets): SceneCamera {
+  const extent = Math.max(3.1, ...bodies.filter(p => available.includes(p.id)).map(p => p.orbit + 0.5));
   const distance = clamp(extent / (Math.tan(Math.PI / 8) * Math.min(1, width / Math.max(height, 1))) * 1.17, 8, 40);
   return { x: 0, z: 0, distance };
 }
-export function focusedCamera(planet: DemoPlanet, width = 390, height = 550): SceneCamera {
-  const body = scenePlanets.find(p => p.id === planet)!;
+export function focusedCamera(planet: DemoPlanet, width = 390, height = 550, bodies: readonly SceneBodyLike[] = scenePlanets): SceneCamera {
+  const body = bodies.find(p => p.id === planet) ?? scenePlanets.find(p => p.id === planet)!;
   // Fit the selected sphere to ~42% of the shorter scene dimension, without HUD occlusion.
   const diameter = Math.max(1, Math.min(width, height) * 0.42);
   const distance = clamp(body.size * Math.max(1, height) / (Math.tan(Math.PI / 8) * diameter), minimumCameraDistance, 8);
@@ -196,3 +218,28 @@ export function dishMesh(): SceneMesh {
 }
 
 export { sceneVertexShader, sceneFragmentShader } from './guardian-materials';
+
+/* ------------------------------------------------------------------ */
+/* Comète : orbite très allongée qui plonge vers l'étoile puis repart   */
+/* ------------------------------------------------------------------ */
+export type SceneComet = { seq: number; startedAt: number };
+/** Durée d'un passage complet (s) : assez lent pour avoir le temps de la toucher. */
+export const COMET_PERIOD = 70;
+
+/** Position de la comète à l'horloge `clockSeconds` (null = animations réduites : position fixe). */
+export function cometPosition(comet: SceneComet, clockSeconds: number | null | undefined, outerOrbit: number): Vec3 {
+  const a = clamp(outerOrbit * 0.62, 3, 6), e = 0.62, b = a * Math.sqrt(1 - e * e);
+  const t = clockSeconds == null ? 0.18 : (((clockSeconds - comet.startedAt / 1000) / COMET_PERIOD) % 1 + 1) % 1;
+  const E = t * Math.PI * 2;
+  const px = a * (Math.cos(E) - e), pz = b * Math.sin(E);
+  const rot = comet.seq * 2.1;
+  // Même plan que les planètes (y = 0), comme une vraie comète du système.
+  return [px * Math.cos(rot) - pz * Math.sin(rot), 0, px * Math.sin(rot) + pz * Math.cos(rot)];
+}
+
+/** Le toucher tombe-t-il sur la comète ? (zone généreuse : elle bouge) */
+export function pickComet(x: number, y: number, camera: SceneCamera, width: number, height: number, position: Vec3): boolean {
+  const point = project(position, cameraMatrix(camera, width / Math.max(1, height)), width, height);
+  if (!point || point.depth < -1 || point.depth > 1) return false;
+  return Math.hypot(point.x - x, point.y - y) <= Math.max(40, projectedBodyRadius(position, 0.35, camera, width, height));
+}

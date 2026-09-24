@@ -1,0 +1,66 @@
+[
+  {
+    "orbit_order": 1,
+    "required_base_level": 1,
+    "energy_cost": 100,
+    "data_cost": 30,
+    "materials_cost": 0,
+    "exploration_seconds": 300
+  },
+  {
+    "orbit_order": 2,
+    "required_base_level": 2,
+    "energy_cost": 350,
+    "data_cost": 100,
+    "materials_cost": 20,
+    "exploration_seconds": 1800
+  },
+  {
+    "orbit_order": 3,
+    "required_base_level": 3,
+    "energy_cost": 900,
+    "data_cost": 300,
+    "materials_cost": 80,
+    "exploration_seconds": 7200
+  },
+  {
+    "orbit_order": 4,
+    "required_base_level": 4,
+    "energy_cost": 2200,
+    "data_cost": 700,
+    "materials_cost": 200,
+    "exploration_seconds": 21600
+  },
+  {
+    "orbit_order": 5,
+    "required_base_level": 5,
+    "energy_cost": 5000,
+    "data_cost": 1500,
+    "materials_cost": 500,
+    "exploration_seconds": 43200
+  },
+  {
+    "orbit_order": 6,
+    "required_base_level": 6,
+    "energy_cost": 10000,
+    "data_cost": 3200,
+    "materials_cost": 1200,
+    "exploration_seconds": 86400
+  },
+  {
+    "orbit_order": 7,
+    "required_base_level": 7,
+    "energy_cost": 20000,
+    "data_cost": 6500,
+    "materials_cost": 2500,
+    "exploration_seconds": 172800
+  },
+  {
+    "orbit_order": 8,
+    "required_base_level": 8,
+    "energy_cost": 40000,
+    "data_cost": 12000,
+    "materials_cost": 5000,
+    "exploration_seconds": 259200
+  }
+]

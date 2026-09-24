@@ -352,7 +352,7 @@ export function SkyLocatorModal({ star, visible, onClose }: SkyLocatorModalProps
               {error ? <Text style={styles.errorText}>{error}</Text> : null}
               <Pressable disabled={phase === 'requesting'} onPress={startLocator} style={styles.startButton}>
                 {phase === 'requesting' ? (
-                  <ActivityIndicator color="#171321" />
+                  <ActivityIndicator color="#F4F1FF" />
                 ) : (
                   <>
                     <Text style={styles.startButtonText}>{phase === 'error' ? 'Try again' : 'Start sky guidance'}</Text>
@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: '#05070C' },
   cameraShade: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgba(2,4,9,0.24)' },
   topBar: { position: 'absolute', top: 0, left: 0, right: 0, minHeight: 76, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 17, paddingBottom: 10, backgroundColor: 'rgba(5,7,12,0.72)' },
-  closeButton: { width: 39, height: 39, alignItems: 'center', justifyContent: 'center', borderRadius: 20, backgroundColor: 'rgba(20,24,36,0.88)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
+  closeButton: { width: 39, height: 39, alignItems: 'center', justifyContent: 'center', borderRadius: 14, backgroundColor: 'rgba(20,24,36,0.88)' },
   closeIcon: { color: '#F0ECF6', fontSize: 25, lineHeight: 27 },
   topIdentity: { flex: 1, alignItems: 'center', paddingHorizontal: 10 },
   starName: { maxWidth: 230, color: '#F6F3FA', fontSize: 13, fontWeight: '800' },
@@ -395,9 +395,9 @@ const styles = StyleSheet.create({
   privacyIcon: { color: '#A996DF', fontSize: 17 },
   privacyText: { flex: 1, color: '#777E8F', fontSize: 9, lineHeight: 14 },
   errorText: { color: '#E2A7B2', fontSize: 10, lineHeight: 15, textAlign: 'center', marginTop: 15 },
-  startButton: { width: '100%', height: 54, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 22, marginTop: 16, borderRadius: 17, backgroundColor: '#E7DFFF' },
-  startButtonText: { color: '#171321', fontSize: 13, fontWeight: '900' },
-  startArrow: { color: '#171321', fontSize: 20 },
+  startButton: { width: '100%', height: 54, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 22, marginTop: 16, borderRadius: 12, backgroundColor: '#22283B' },
+  startButtonText: { color: '#F4F1FF', fontSize: 13, fontWeight: '800' },
+  startArrow: { color: '#C8BAF5', fontSize: 20 },
   accuracyNotice: { color: '#5E6575', fontSize: 8, lineHeight: 13, textAlign: 'center', marginTop: 11 },
   trackingLayer: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, paddingTop: 80 },
   horizonLine: { position: 'absolute', left: '8%', right: '8%', top: '50%', height: 1, backgroundColor: 'rgba(255,255,255,0.14)' },
@@ -429,7 +429,7 @@ const styles = StyleSheet.create({
   metricValue: { color: '#DDD8E6', fontSize: 10, fontWeight: '800' },
   metricDivider: { width: 1, backgroundColor: 'rgba(255,255,255,0.08)' },
   actionRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 8 },
-  calibrateButton: { minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, borderRadius: 12, backgroundColor: 'rgba(20,24,36,0.90)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.10)' },
+  calibrateButton: { minHeight: 36, justifyContent: 'center', paddingHorizontal: 12, borderRadius: 10, backgroundColor: 'rgba(20,24,36,0.90)' },
   calibrateText: { color: '#D7D1E1', fontSize: 9, fontWeight: '800' },
   calibrationHint: { flex: 1, color: '#D4D1DA', fontSize: 8, lineHeight: 12, textShadowColor: 'rgba(0,0,0,0.85)', textShadowRadius: 4 },
   compassHint: { color: '#E1D9F4', fontSize: 8, lineHeight: 12, textAlign: 'center', marginTop: 7, textShadowColor: 'rgba(0,0,0,0.85)', textShadowRadius: 4 },

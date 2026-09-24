@@ -1,27 +1,32 @@
-import { ObservatoryPressable as Pressable, ObservatoryButton } from '@/components/observatory-button';
-import { House, ArrowLeft, ArrowRight, Search, SlidersHorizontal, X, Sparkles, Scale, Crosshair, Orbit, ChevronRight } from 'lucide-react-native';
+import { ObservatoryPressable as Pressable } from '@/components/observatory-button';
+import { House, ArrowLeft, Sparkles, Scale, Crosshair, ChevronRight, ChevronDown, ChevronUp, Eye, BookOpen, ShoppingBag, Orbit } from 'lucide-react-native';
 import { useFollowing } from '@/context/following-context';
-import { Link } from 'expo-router';
+import { useAcquisitions } from '@/context/acquisitions-context';
 import { useContentKeyboard } from '@/hooks/use-content-keyboard';
 import { supabase } from '@/lib/supabase';
 import { CelestialVisual } from '@/components/celestial-visual';
 import { getCelestialVisualProfile } from '@/components/celestial-visual.shared';
 import { StarActivityPanel } from '@/components/star-activity-panel';
 import { ConfirmedPlanetsPanel } from '@/components/confirmed-planets-panel';
+import { ImaginedPlanetsPanel } from '@/components/imagined-planets-panel';
 import { SkyLocatorModal } from '@/components/sky-locator-modal';
 import { getCelestialDisplayName, getCelestialScientificName, hasAstralysCatalogueName } from '@/utils/celestial-display-name';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   BackHandler,
+  PanResponder,
   ScrollView,
   StyleSheet,
+  useWindowDimensions,
   View,
 } from 'react-native';
-import Animated, { FadeIn, FadeInDown, ReduceMotion } from 'react-native-reanimated';
+import Animated, { Extrapolation, FadeIn, FadeInDown, LinearTransition, interpolate, ReduceMotion, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { MotionSection } from '@/components/motion-section';
 import { Text } from '@/components/astralys-text';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { StarPurchaseSheet } from '@/components/star-purchase-sheet';
+import { useRouter } from 'expo-router';
 
 export type StarDetail = {
   id: string;
@@ -49,6 +54,9 @@ export type StarDetail = {
   mass_earth?: number | null;
   orbital_period_days?: number | null;
   equilibrium_temperature_k?: number | null;
+  confirmed_planet_count?: number;
+  system_experience?: 'catalogue' | 'imagined';
+  is_purchasable?: boolean;
 };
 
 type StarDetailModalProps = {
@@ -58,14 +66,6 @@ type StarDetailModalProps = {
   onCompare: (star: StarDetail) => void;
 };
 
-const starColors: Record<string, string> = {
-  blue: '#78AFFF',
-  'blue-white': '#B7D2FF',
-  'white-yellow': '#F4F0D6',
-  golden: '#F2CE77',
-  'orange-red': '#E9906E',
-};
-
 const colorLabels: Record<string, string> = {
   blue: 'Blue',
   'blue-white': 'Blue-white',
@@ -73,6 +73,12 @@ const colorLabels: Record<string, string> = {
   golden: 'Golden',
   'orange-red': 'Orange-red',
 };
+
+const accordionTransition = LinearTransition.springify()
+  .damping(20)
+  .stiffness(180)
+  .mass(0.8)
+  .reduceMotion(ReduceMotion.System);
 
 function formatDistance(distance: number | null) {
   if (distance === null) return 'Unknown';
@@ -97,6 +103,17 @@ function getBrightnessDescription(magnitude: number | null) {
   if (magnitude <= 4) return 'it appears bright in Earth’s night sky';
   if (magnitude <= 6) return 'it may be visible to the naked eye under dark skies';
   return 'it generally requires binoculars or a telescope to observe';
+}
+
+function getVisibilitySummary(star: StarDetail) {
+  if (star.object_type === 'planet') {
+    return 'This exoplanet is not directly visible. Locate its host system to find its position in the sky.';
+  }
+  if (star.apparent_magnitude === null) return 'Visibility is not documented for this star.';
+  if (star.apparent_magnitude <= 2) return 'Very bright · readily visible to the naked eye.';
+  if (star.apparent_magnitude <= 4) return 'Visible to the naked eye from a reasonably dark location.';
+  if (star.apparent_magnitude <= 6) return 'Best seen under a dark sky, away from city lights.';
+  return 'Binoculars or a telescope are recommended.';
 }
 
 function formatDiscovery(star: StarDetail) {
@@ -155,21 +172,95 @@ function buildDescription(star: StarDetail) {
 
 export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetailModalProps) {
   const { stars: followed, toggle } = useFollowing();
+  const { stars: acquiredStars } = useAcquisitions();
+  const router = useRouter();
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const [followError, setFollowError] = useState<string | null>(null);
-  const [scienceExpanded, setScienceExpanded] = useState(false);
+  const [openCategory, setOpenCategory] = useState<'science' | 'catalogue' | null>(null);
+  const [planetExpanded, setPlanetExpanded] = useState(false);
   const screenRef = useRef<View>(null);
   const insets = useSafeAreaInsets();
   const [details, setDetails] = useState<StarDetail | null>(star);
   const [loadingDetails, setLoadingDetails] = useState(false);
   const [locatorVisible, setLocatorVisible] = useState(false);
   const [relatedPlanet, setRelatedPlanet] = useState<StarDetail | null>(null);
+  const [purchaseVisible, setPurchaseVisible] = useState(false);
+  const planetExpansion = useSharedValue(0);
+  const planetDragStart = useRef(0);
+  const contentWidth = Math.min(screenWidth - 40, 520);
+  const planetStageWidth = contentWidth + 40;
+  const planetVisualSize = Math.min(planetStageWidth * 1.08, 560);
+  const compactPlanetHeight = 260;
+  const expandedPlanetHeight = Math.max(520, Math.min(screenHeight - insets.top - 82, 760));
+  const planetTravel = Math.max(1, expandedPlanetHeight - compactPlanetHeight);
+
+  const settlePlanet = (expanded: boolean) => {
+    setPlanetExpanded(expanded);
+    planetExpansion.value = withSpring(expanded ? 1 : 0, {
+      damping: 20,
+      stiffness: 170,
+      mass: 0.82,
+    });
+  };
+
+  const planetPanResponder = useMemo(() => PanResponder.create({
+    onStartShouldSetPanResponder: () => false,
+    onMoveShouldSetPanResponder: (_, gesture) => Math.abs(gesture.dy) > 6 && Math.abs(gesture.dy) > Math.abs(gesture.dx),
+    onMoveShouldSetPanResponderCapture: (_, gesture) => Math.abs(gesture.dy) > 6 && Math.abs(gesture.dy) > Math.abs(gesture.dx),
+    onPanResponderGrant: () => {
+      planetDragStart.current = planetExpansion.value;
+    },
+    onPanResponderMove: (_, gesture) => {
+      planetExpansion.value = Math.max(0, Math.min(1, planetDragStart.current + gesture.dy / planetTravel));
+    },
+    onPanResponderRelease: (_, gesture) => {
+      const shouldExpand = gesture.vy > 0.35 || (gesture.vy > -0.2 && planetExpansion.value >= 0.45);
+      settlePlanet(shouldExpand);
+    },
+    onPanResponderTerminate: () => settlePlanet(planetExpansion.value >= 0.5),
+  }), [planetExpansion, planetTravel]);
+
+  const planetStageStyle = useAnimatedStyle(() => ({
+    height: interpolate(
+      planetExpansion.value,
+      [0, 1],
+      [compactPlanetHeight, expandedPlanetHeight],
+      Extrapolation.CLAMP,
+    ),
+  }));
+  const planetVisualStyle = useAnimatedStyle(() => ({
+    transform: [
+      {
+        translateX: interpolate(
+          planetExpansion.value,
+          [0, 1],
+          [planetStageWidth - planetVisualSize * 0.64, (planetStageWidth - planetVisualSize) / 2],
+          Extrapolation.CLAMP,
+        ),
+      },
+      {
+        translateY: interpolate(
+          planetExpansion.value,
+          [0, 1],
+          [-planetVisualSize * 0.05, (expandedPlanetHeight - planetVisualSize) / 2],
+          Extrapolation.CLAMP,
+        ),
+      },
+      {
+        scale: interpolate(planetExpansion.value, [0, 1], [1, 0.76], Extrapolation.CLAMP),
+      },
+    ],
+  }));
 
   useEffect(() => {
     setDetails(star);
     setRelatedPlanet(null);
     setLocatorVisible(false);
-    setScienceExpanded(false);
+    setOpenCategory(null);
+    setPlanetExpanded(false);
+    planetExpansion.value = 0;
     setFollowError(null);
+    setPurchaseVisible(false);
 
     if (!star) return;
 
@@ -182,14 +273,18 @@ export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetail
       .eq('id', star.id)
       .single()
       .then(({ data }) => {
-        if (active && data) setDetails(data as StarDetail);
+        if (active && data) setDetails(current => ({
+          ...(data as StarDetail),
+          confirmed_planet_count: current?.confirmed_planet_count,
+          system_experience: current?.system_experience,
+        }));
         if (active) setLoadingDetails(false);
       });
 
     return () => {
       active = false;
     };
-  }, [star]);
+  }, [star, planetExpansion]);
 
   useEffect(() => {
     if (!star || locatorVisible || relatedPlanet) return;
@@ -200,22 +295,16 @@ export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetail
   useContentKeyboard(Boolean(star) && !locatorVisible && !relatedPlanet, onClose, screenRef);
   if (!star || !details) return null;
 
-  const color = starColors[details.visual_category ?? ''] ?? '#D8CEF2';
   const visualProfile = getCelestialVisualProfile(details);
   const displayName = getCelestialDisplayName(details);
   const scientificDisplayName = getCelestialScientificName(details);
-  const usesAstralysName = hasAstralysCatalogueName(details);
+  const scienceExpanded = openCategory === 'science';
+  const referenceExpanded = openCategory === 'catalogue';
+  const acquired = acquiredStars.some(item => item.id === details.id);
 
   return (
     <MotionSection key={star.id} ref={screenRef} style={styles.overlay}>
       <View accessibilityElementsHidden={Boolean(relatedPlanet)} importantForAccessibility={relatedPlanet ? 'no-hide-descendants' : 'auto'} style={[styles.screen, { paddingTop: insets.top + 8 }]}>
-        <View pointerEvents="none" style={styles.sky}>
-          <View style={[styles.skyStar, styles.skyStarOne]} />
-          <View style={[styles.skyStar, styles.skyStarTwo]} />
-          <View style={[styles.skyStar, styles.skyStarThree]} />
-          <View style={[styles.ambientGlow, { backgroundColor: `${color}0D` }]} />
-        </View>
-
         <View style={styles.header}>
           <Pressable
             accessibilityLabel="Back to previous screen"
@@ -241,70 +330,90 @@ export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetail
         <ScrollView
           contentContainerStyle={[styles.content, { paddingBottom: Math.max(insets.bottom, 18) + 100 }]}
           showsVerticalScrollIndicator={false}>
-          <MotionSection delay={40} style={styles.visualStage}>
-            <View style={[styles.orbit, styles.orbitOuter, { borderColor: `${color}24` }]} />
-            <View style={[styles.orbit, styles.orbitInner, { borderColor: `${color}1A` }]} />
-            <CelestialVisual animated object={details} size={96} />
-            <Text style={styles.visualCaption}>{visualProfile.description} · artistic rendering</Text>
-          </MotionSection>
+          <Animated.View {...planetPanResponder.panHandlers} style={[styles.planetStage, planetStageStyle]}>
+            <Animated.View pointerEvents="none" style={[styles.planetVisualPosition, { width: planetVisualSize, height: planetVisualSize }, planetVisualStyle]}>
+              <CelestialVisual animated fillFrame object={details} size={planetVisualSize} />
+            </Animated.View>
+            <Pressable
+              variant="quiet"
+              accessibilityHint="Drag down to enlarge the celestial object or drag up to return"
+              accessibilityRole="button"
+              accessibilityState={{ expanded: planetExpanded }}
+              onPress={() => settlePlanet(!planetExpanded)}
+              style={styles.planetHandle}>
+              <View style={styles.planetHandleSurface}>
+                <View style={styles.planetGrabber} />
+                <Text style={styles.planetHandleText}>{planetExpanded ? 'Return' : 'Explore'}</Text>
+                {planetExpanded ? <ChevronUp size={12} color="rgba(220,214,233,0.62)" /> : <ChevronDown size={12} color="rgba(220,214,233,0.62)" />}
+              </View>
+            </Pressable>
+            {planetExpanded ? <Animated.View entering={FadeIn.duration(220).reduceMotion(ReduceMotion.System)} pointerEvents="none" style={styles.planetExpandedCaption}>
+              <Text style={styles.planetExpandedCaptionText}>{visualProfile.description} · artistic rendering</Text>
+            </Animated.View> : null}
+          </Animated.View>
 
           <MotionSection delay={80} style={styles.identity}>
-            <View style={styles.cataloguePill}>
-              <View style={[styles.catalogueDot, { backgroundColor: color }]} />
-              <Text style={styles.catalogueText}>{details.source_catalog.replace(/_/g, ' ').replace(/^GAIA/i, 'Gaia')}</Text>
-            </View>
             <Text accessibilityRole="header" selectable style={styles.title}>{displayName}</Text>
-            {usesAstralysName ? (
-              <Text style={styles.scientificName}>ASTRALYS CATALOGUE NAME</Text>
-            ) : displayName !== scientificDisplayName ? (
-              <Text style={styles.scientificName}>{scientificDisplayName}</Text>
-            ) : null}
-            <Text selectable style={styles.sourceId}>Catalogue ID {details.source_id}</Text>
             {loadingDetails ? <ActivityIndicator color="#8F82AA" size="small" style={styles.detailsLoader} /> : null}
           </MotionSection>
 
-          <Pressable accessibilityRole="button" accessibilityState={{ selected: followed.some(s => s.id === details.id) }} onPress={() => setFollowError(toggle(details))} style={styles.compareButton}>
-            <Text style={styles.compareButtonText}>{followed.some(s => s.id === details.id) ? 'Following · remove from watchlist' : details.object_type === 'planet' ? 'Follow this planet' : 'Follow this star'}</Text>
-            <Sparkles size={22} color="#171321" />
-          </Pressable>
-          <Pressable
-            accessibilityHint={details.object_type === 'planet' ? 'Points towards the host system, not a directly visible exoplanet' : 'Opens the camera and points towards this star'}
-            accessibilityLabel={details.object_type === 'planet' ? `Locate the host system of ${displayName}` : `Locate ${displayName} in the sky`}
-            accessibilityRole="button"
-            disabled={details.ra_deg === null || details.dec_deg === null}
-            onPress={() => setLocatorVisible(true)}
-            style={({ pressed }) => [
-              styles.locatorButton,
-              pressed && styles.navigationPressed,
-              (details.ra_deg === null || details.dec_deg === null) && styles.locatorButtonDisabled,
-            ]}>
-            <Crosshair size={24} color="#C8BAF5" />
-            <View style={styles.locatorButtonCopy}>
-              
-              <Text style={styles.locatorButtonText}>{details.object_type === 'planet' ? 'Locate host system' : 'Locate in the sky'}</Text>
+          <View style={styles.visibilityCard}>
+            <Eye size={20} color="#9ED7E5" />
+            <View style={styles.visibilityCopy}>
+              <Text style={styles.visibilityLabel}>VISIBILITY</Text>
+              <Text style={styles.visibilityText}>{getVisibilitySummary(details)}</Text>
             </View>
-            <ArrowRight size={22} color="#C8BAF5" />
-          </Pressable>
+          </View>
 
-          <Pressable variant="secondary" accessibilityRole="button" onPress={() => onCompare(details)} style={styles.compareButton}>
-            <View>
-              
-              <Text style={[styles.compareButtonText, { color: '#C8BAF5' }]}>Compare with another object</Text>
+          <View style={styles.actions}>
+            {details.object_type === 'star' ? <Pressable variant="primary" accessibilityRole="button" disabled={!acquired && details.is_purchasable === false} onPress={() => acquired
+              ? router.push({ pathname: '/observatory', params: { view: 'system', starId: details.id } })
+              : setPurchaseVisible(true)} style={styles.primaryAction}>
+              {acquired ? <Orbit size={20} color="#C8BAF5" /> : <ShoppingBag size={19} color="#C8BAF5" />}
+              <Text style={styles.primaryActionText}>{acquired ? 'Open my system' : details.is_purchasable === false ? 'Unavailable' : 'Claim this star'}</Text>
+            </Pressable> : <Pressable variant="primary" accessibilityRole="button" accessibilityState={{ selected: followed.some(s => s.id === details.id) }} onPress={() => setFollowError(toggle(details))} style={styles.primaryAction}>
+              <Sparkles size={20} color="#C8BAF5" />
+              <Text style={styles.primaryActionText}>{followed.some(s => s.id === details.id) ? 'In my collection' : 'Add to my collection'}</Text>
+            </Pressable>}
+            <View style={styles.secondaryActions}>
+              {details.object_type === 'star' ? <Pressable variant="quiet" accessibilityRole="button" accessibilityState={{ selected: followed.some(s => s.id === details.id) }} onPress={() => setFollowError(toggle(details))} style={styles.secondaryAction}>
+                <Sparkles size={18} color="#C8BAF5" />
+                <Text numberOfLines={1} style={styles.secondaryActionText}>{followed.some(s => s.id === details.id) ? 'Following' : 'Follow'}</Text>
+              </Pressable> : null}
+              <Pressable
+                variant="quiet"
+                accessibilityHint={details.object_type === 'planet' ? 'Points towards the host system, not a directly visible exoplanet' : 'Opens the camera and points towards this star'}
+                accessibilityLabel={details.object_type === 'planet' ? `Locate the host system of ${displayName}` : `Locate ${displayName} in the sky`}
+                accessibilityRole="button"
+                disabled={details.ra_deg === null || details.dec_deg === null}
+                onPress={() => setLocatorVisible(true)}
+                style={[styles.secondaryAction, (details.ra_deg === null || details.dec_deg === null) && styles.locatorButtonDisabled]}>
+                <Crosshair size={18} color="#C8BAF5" />
+                <Text style={styles.secondaryActionText}>{details.object_type === 'planet' ? 'Locate host' : 'Locate'}</Text>
+              </Pressable>
+              <Pressable variant="quiet" accessibilityRole="button" onPress={() => onCompare(details)} style={styles.secondaryAction}>
+                <Scale size={18} color="#C8BAF5" />
+                <Text style={styles.secondaryActionText}>Compare</Text>
+              </Pressable>
             </View>
-            <Scale size={22} color="#C8BAF5" />
-          </Pressable>
-
-          <Text style={styles.description}>Save this real object in Collection to revisit its visibility and journal. The watchlist stays on this device; it is not paid guardianship.</Text>
+          </View>
           {followError ? <Text accessibilityRole="alert" accessibilityLiveRegion="assertive" style={styles.description}>{followError}</Text> : null}
-          <Link href="/collection" asChild><ObservatoryButton label="Open my collection" icon={Orbit} variant="secondary" /></Link>
-          <Text style={styles.description}>Symbolic guardianship and paid acquisition are not available from this screen yet. No astronomical ownership is transferred.</Text>
 
-          {details.object_type === 'star' ? <ConfirmedPlanetsPanel key={details.id} starId={details.id} onSelect={setRelatedPlanet} /> : null}
+          {details.object_type === 'star' ? details.system_experience === 'imagined'
+            ? <ImaginedPlanetsPanel key={details.id} starId={details.id} />
+            : <ConfirmedPlanetsPanel key={details.id} starId={details.id} onSelect={setRelatedPlanet} />
+          : null}
 
-          <Pressable accessibilityRole="button" accessibilityState={{ expanded: scienceExpanded }} onPress={() => setScienceExpanded(v => !v)} style={styles.changeScienceButton}>
-            <Text style={styles.locatorButtonText}>Scientific details {scienceExpanded ? '−' : '+'}</Text>
+          <Animated.View layout={accordionTransition}>
+          <Pressable variant="quiet" accessibilityRole="button" accessibilityState={{ expanded: scienceExpanded }} onPress={() => setOpenCategory(current => current === 'science' ? null : 'science')} style={[styles.categoryButton, scienceExpanded && styles.categoryButtonExpanded]}>
+            <View style={styles.categoryIcon}><Eye size={18} color="#C8BAF5" /></View>
+            <View style={styles.categoryCopy}>
+              <Text style={styles.categoryTitle}>Scientific details</Text>
+              <Text style={styles.categoryHint}>Physical data, discovery and position</Text>
+            </View>
+            <ChevronRight size={19} color="#8F88A0" style={scienceExpanded ? styles.categoryChevronExpanded : undefined} />
           </Pressable>
-          {scienceExpanded ? <Animated.View entering={FadeIn.duration(240).reduceMotion(ReduceMotion.System)} style={styles.metricsGrid}>
+          {scienceExpanded ? <Animated.View entering={FadeInDown.duration(260).reduceMotion(ReduceMotion.System)} layout={accordionTransition} style={styles.metricsGrid}>
             <View style={styles.metricCard}>
               <Text style={styles.metricLabel}>DISTANCE</Text>
               <Text style={styles.metricValue}>{formatDistance(details.distance_ly)}</Text>
@@ -361,14 +470,40 @@ export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetail
           </Animated.View>
 
           </> : null}
-          {details.object_type === 'planet' ? <Text style={styles.description}>Sky guidance and visibility refer to the host system. This exoplanet cannot be identified directly with your phone camera.</Text> : null}
-          <StarActivityPanel star={details} />
+          {scienceExpanded && details.object_type === 'planet' ? <Text style={styles.description}>Sky guidance and visibility refer to the host system. This exoplanet cannot be identified directly with your phone camera.</Text> : null}
+          </Animated.View>
 
-          <Animated.View entering={FadeIn.duration(240).reduceMotion(ReduceMotion.System)} style={styles.notice}>
-            <Text style={styles.noticeSymbol}>◇</Text>
-            <Text style={styles.noticeText}>
-              This visual is an artistic interpretation generated from the available catalogue data. It is not a photograph of the celestial object.
-            </Text>
+          <Animated.View layout={accordionTransition}>
+          <Pressable variant="quiet" accessibilityRole="button" accessibilityState={{ expanded: referenceExpanded }} onPress={() => setOpenCategory(current => current === 'catalogue' ? null : 'catalogue')} style={[styles.categoryButton, referenceExpanded && styles.categoryButtonExpanded]}>
+            <View style={styles.categoryIcon}><BookOpen size={18} color="#C8BAF5" /></View>
+            <View style={styles.categoryCopy}>
+              <Text style={styles.categoryTitle}>Catalogue & activity</Text>
+              <Text style={styles.categoryHint}>Sources, updates and interpretation notes</Text>
+            </View>
+            <ChevronRight size={19} color="#8F88A0" style={referenceExpanded ? styles.categoryChevronExpanded : undefined} />
+          </Pressable>
+          {referenceExpanded ? <Animated.View entering={FadeInDown.duration(260).reduceMotion(ReduceMotion.System)} layout={accordionTransition}>
+            <View style={styles.referenceCard}>
+              <Text style={styles.referenceEyebrow}>CATALOGUE REFERENCE</Text>
+              {displayName !== scientificDisplayName ? <View style={styles.referenceRow}>
+                <Text style={styles.referenceLabel}>Scientific designation</Text>
+                <Text selectable style={styles.referenceValue}>{scientificDisplayName}</Text>
+              </View> : null}
+              <View style={styles.referenceRow}>
+                <Text style={styles.referenceLabel}>Source</Text>
+                <Text selectable style={styles.referenceValue}>
+                  {details.source_catalog.replace(/_/g, ' ').replace(/^GAIA/i, 'Gaia')} · {details.source_id}
+                </Text>
+              </View>
+            </View>
+            <StarActivityPanel star={details} />
+            <View style={styles.notice}>
+              <Text style={styles.noticeSymbol}>◇</Text>
+              <Text style={styles.noticeText}>
+                This visual is an artistic interpretation generated from the available catalogue data. It is not a photograph of the celestial object.
+              </Text>
+            </View>
+          </Animated.View> : null}
           </Animated.View>
         </ScrollView>
 
@@ -377,6 +512,13 @@ export function StarDetailModal({ star, onClose, onHome, onCompare }: StarDetail
           star={details}
           visible={locatorVisible}
         />
+        {details.object_type === 'star' ? <StarPurchaseSheet
+          acquired={acquired}
+          onAcquired={() => setPurchaseVisible(false)}
+          onClose={() => setPurchaseVisible(false)}
+          star={details}
+          visible={purchaseVisible}
+        /> : null}
       </View>
       {relatedPlanet ? <StarDetailModal star={relatedPlanet} onClose={() => setRelatedPlanet(null)} onHome={onHome} onCompare={onCompare} /> : null}
     </MotionSection>
@@ -487,6 +629,78 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  planetStage: {
+    position: 'relative',
+    marginHorizontal: -20,
+    overflow: 'hidden',
+    backgroundColor: '#090D15',
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255,255,255,0.06)',
+  },
+  planetVisualPosition: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+  },
+  planetHandle: {
+    position: 'absolute',
+    bottom: 4,
+    left: 0,
+    right: 0,
+    zIndex: 5,
+    minHeight: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingHorizontal: 16,
+    backgroundColor: 'transparent',
+  },
+  planetHandleSurface: {
+    height: 28,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingHorizontal: 11,
+    borderRadius: 14,
+    backgroundColor: 'rgba(16,19,29,0.62)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.07)',
+  },
+  planetGrabber: {
+    width: 26,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: 'rgba(187,179,207,0.42)',
+  },
+  planetHandleText: {
+    color: 'rgba(197,190,215,0.68)',
+    fontSize: 9,
+    lineHeight: 13,
+    fontWeight: '600',
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+  },
+  planetExpandedCaption: {
+    position: 'absolute',
+    left: 18,
+    right: 18,
+    bottom: 48,
+    alignItems: 'flex-end',
+  },
+  planetExpandedCaptionText: {
+    maxWidth: 250,
+    color: '#8E91A0',
+    fontSize: 10,
+    lineHeight: 15,
+    fontWeight: '700',
+    letterSpacing: 0.35,
+    textAlign: 'right',
+    textTransform: 'uppercase',
+  },
   orbit: {
     position: 'absolute',
     borderRadius: 999,
@@ -515,8 +729,8 @@ const styles = StyleSheet.create({
   identity: {
     alignItems: 'center',
     paddingHorizontal: 8,
-    marginTop: -5,
-    marginBottom: 10,
+    marginTop: 18,
+    marginBottom: 16,
   },
   cataloguePill: {
     flexDirection: 'row',
@@ -552,18 +766,108 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 6,
   },
-  sourceId: {
-    color: '#A1A9BB',
-    fontSize: 12,
-    marginTop: 7,
+  sourceReference: {
+    color: '#686779',
+    fontSize: 10,
+    lineHeight: 15,
+    marginTop: 6,
+    letterSpacing: 0.25,
   },
+  referenceCard: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderRadius: 16,
+    backgroundColor: '#0D111B',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.06)',
+    gap: 10,
+  },
+  referenceEyebrow: {
+    color: '#777287',
+    fontSize: 9,
+    fontWeight: '800',
+    letterSpacing: 1.1,
+  },
+  referenceRow: { gap: 3 },
+  referenceLabel: { color: '#898495', fontSize: 10, fontWeight: '600' },
+  referenceValue: { color: '#B1AABA', fontSize: 11, lineHeight: 16 },
   detailsLoader: {
     marginTop: 9,
   },
+  visibilityCard: {
+    minHeight: 70,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 13,
+    borderRadius: 18,
+    backgroundColor: '#0E1721',
+    borderWidth: 1,
+    borderColor: 'rgba(153,216,232,0.14)',
+  },
+  visibilityCopy: { flex: 1, minWidth: 0, gap: 4 },
+  visibilityLabel: { color: '#86BECC', fontSize: 10, fontWeight: '800', letterSpacing: 1.25 },
+  visibilityText: { color: '#E5ECF2', fontSize: 13, lineHeight: 19, fontWeight: '600' },
+  actions: { marginTop: 10, gap: 8 },
+  primaryAction: {
+    minHeight: 50,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 9,
+    paddingHorizontal: 18,
+    backgroundColor: '#22283B',
+  },
+  primaryActionText: { color: '#F4F1FF', fontSize: 14, fontWeight: '700' },
+  secondaryActions: { flexDirection: 'row', gap: 8 },
+  secondaryAction: {
+    flex: 1,
+    minWidth: 0,
+    minHeight: 48,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    paddingHorizontal: 12,
+  },
+  secondaryActionText: { color: '#C8BAF5', fontSize: 13, fontWeight: '800' },
+  categoryButton: {
+    minHeight: 62,
+    marginTop: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 11,
+    borderRadius: 16,
+    backgroundColor: '#111622',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.055)',
+  },
+  categoryButtonExpanded: {
+    backgroundColor: '#151A28',
+    borderColor: 'rgba(200,186,245,0.18)',
+  },
+  categoryIcon: {
+    width: 34,
+    height: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 11,
+    backgroundColor: '#1B2030',
+  },
+  categoryCopy: { flex: 1, minWidth: 0, gap: 2 },
+  categoryTitle: { color: '#F0EDF7', fontSize: 14, fontWeight: '700' },
+  categoryHint: { color: '#858394', fontSize: 11, lineHeight: 16 },
+  categoryChevronExpanded: { transform: [{ rotate: '90deg' }] },
   metricsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 8,
+    marginTop: 8,
   },
   metricCard: {
     width: '48.8%',
@@ -642,22 +946,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 17,
     marginTop: 10,
     borderRadius: 18,
-    backgroundColor: '#C8BAF5',
+    backgroundColor: '#22283B',
   },
   compareEyebrow: {
-    color: '#655A7D',
+    color: '#B9ABE8',
     fontSize: 12,
     fontWeight: '900',
     letterSpacing: 1.1,
     marginBottom: 4,
   },
   compareButtonText: {
-    color: '#171321',
+    color: '#F4F1FF',
     fontSize: 13,
     fontWeight: '900',
   },
   compareArrow: {
-    color: '#312840',
+    color: '#C8BAF5',
     fontSize: 24,
     fontWeight: '600',
   },

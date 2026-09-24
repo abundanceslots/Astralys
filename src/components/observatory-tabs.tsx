@@ -3,7 +3,7 @@ import { Keyboard, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'expo-router';
 import { Text } from '@/components/astralys-text';
-import { BookOpen, House, Search, UserRound, type LucideIcon } from 'lucide-react-native';
+import { BookOpen, House, Search, ShoppingBag, UserRound, type LucideIcon } from 'lucide-react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Observatory as theme } from '@/constants/observatory-theme';
 import Animated, { ReduceMotion, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -23,7 +23,7 @@ export default function ObservatoryTabs() {
   const screenStyle = useAnimatedStyle(() => ({ opacity: 0.9 + 0.1 * reveal.value }));
   useEffect(() => {
     if (Platform.OS === 'web') {
-      const names: Record<string, string> = { '/': 'Home', '/explore': 'Explore', '/collection': 'Collection', '/profile': 'Profile' };
+      const names: Record<string, string> = { '/': 'Home', '/explore': 'Explore', '/collection': 'Collection', '/store': 'Store', '/profile': 'Profile', '/observatory': 'Observatory' };
       document.title = `${names[pathname] ?? 'Explore'} · Astralys`;
     }
   }, [pathname]);
@@ -31,7 +31,10 @@ export default function ObservatoryTabs() {
     <TabTrigger name="home" href="/" asChild><TabButton icon={House}>Home</TabButton></TabTrigger>
     <TabTrigger name="explore" href="/explore" asChild><TabButton icon={Search}>Explore</TabButton></TabTrigger>
     <TabTrigger name="collection" href="/collection" asChild><TabButton icon={BookOpen}>Collection</TabButton></TabTrigger>
+    <TabTrigger name="store" href="/store" asChild><TabButton icon={ShoppingBag}>Store</TabButton></TabTrigger>
     <TabTrigger name="profile" href="/profile" asChild><TabButton icon={UserRound}>Profile</TabButton></TabTrigger>
+    <TabTrigger name="observatory" href="/observatory" style={styles.hiddenTab} />
+    <TabTrigger name="system-lab" href="/system-lab" style={styles.hiddenTab} />
   </FixedList></TabList>{launching ? <LaunchIntro /> : null}</Tabs>;
 }
 function TabButton({ children, icon: Icon, isFocused, ...props }: TabTriggerSlotProps & { icon: LucideIcon }) {
@@ -55,14 +58,27 @@ function FixedList(props: TabListProps) {
     const hide = Keyboard.addListener('keyboardDidHide', () => setKeyboardVisible(false));
     return () => { show.remove(); hide.remove(); };
   }, []);
-  return <View {...props} accessibilityElementsHidden={launching} importantForAccessibility={launching ? 'no-hide-descendants' : 'auto'} style={[styles.footer, { bottom: Math.max(insets.bottom, 16) }, keyboardVisible && { display: 'none' }]}><View style={styles.menu}>{props.children}</View></View>;
+  return <View {...props} accessibilityElementsHidden={launching} importantForAccessibility={launching ? 'no-hide-descendants' : 'auto'} style={[styles.footer, { paddingBottom: insets.bottom }, keyboardVisible && { display: 'none' }]}><View style={styles.menu}>{props.children}</View></View>;
 }
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: theme.background },
-  slot: { flex: 1 }, footer: { position: 'absolute', left: 0, right: 0, zIndex: 100, alignItems: 'center', paddingHorizontal: 14 },
-  menu: { width: '100%', maxWidth: 520, minHeight: 76, flexDirection: 'row', alignItems: 'center', paddingVertical: 6, paddingHorizontal: 3, borderRadius: 24, backgroundColor: '#0F131D' },
+  slot: { flex: 1 },
+  footer: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 100,
+    alignItems: 'center',
+    paddingTop: 4,
+    backgroundColor: '#0F131D',
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.08)',
+  },
+  menu: { width: '100%', maxWidth: 520, minHeight: 68, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 3 },
   tab: { flex: 1, minWidth: 0, minHeight: 62, alignItems: 'center', justifyContent: 'center', gap: 4, borderRadius: theme.radius },
   tabHovered: { backgroundColor: '#1A2030' },
+  hiddenTab: { display: 'none' },
   iconBox: { width: 34, height: 34, borderRadius: theme.radius, alignItems: 'center', justifyContent: 'center' },
   label: { color: theme.muted, fontSize: 11, lineHeight: 16, fontWeight: '500' }, labelSelected: { color: theme.text },
 });

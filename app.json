@@ -8,9 +8,11 @@
     "scheme": "astrelys",
     "userInterfaceStyle": "dark",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.abundanceslots.astralys"
     },
     "android": {
+      "package": "com.abundanceslots.astralys",
       "adaptiveIcon": {
         "backgroundColor": "#070911",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -63,7 +65,49 @@
         {
           "experimentalLauncherActivity": false
         }
-      ]
+      ],
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "AstralysStar",
+              "displayName": "My star",
+              "description": "Your star, the energy it produces, when to see it tonight and when its light left.",
+              "supportedFamilies": [
+                "systemSmall",
+                "systemMedium"
+              ],
+              "contentMarginsDisabled": false,
+              "ios": {
+                "supportedFamilies": [
+                  "systemSmall",
+                  "systemMedium"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "AstralysStar",
+              "label": "My star",
+              "description": "Your star, its energy, tonight’s visibility and when its light left.",
+              "minWidth": "250dp",
+              "minHeight": "110dp",
+              "targetCellWidth": 4,
+              "targetCellHeight": 2,
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000
+            }
+          ]
+        }
+      ],
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,

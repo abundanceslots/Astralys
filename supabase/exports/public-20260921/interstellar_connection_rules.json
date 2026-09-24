@@ -1,0 +1,29 @@
+[
+  {
+    "level": 1,
+    "required_base_level": 5,
+    "required_network_power": 100,
+    "energy_cost": 12000,
+    "data_cost": 3000,
+    "materials_cost": 1500,
+    "build_seconds": 86400
+  },
+  {
+    "level": 2,
+    "required_base_level": 7,
+    "required_network_power": 250,
+    "energy_cost": 40000,
+    "data_cost": 10000,
+    "materials_cost": 6000,
+    "build_seconds": 259200
+  },
+  {
+    "level": 3,
+    "required_base_level": 9,
+    "required_network_power": 500,
+    "energy_cost": 120000,
+    "data_cost": 30000,
+    "materials_cost": 18000,
+    "build_seconds": 604800
+  }
+]

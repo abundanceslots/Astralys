@@ -1,0 +1,5226 @@
+[
+  {
+    "id": "5eb0dffb-0c09-4ef4-abcc-dad15580bf4e",
+    "system_id": "308bfd07-456a-42bc-b51d-3057d34a0d06",
+    "planet_id": "ca57cc2b-2079-4031-af64-bf265d07f5f5",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f167eb83-88fc-4a3a-8b28-bbd47ecaf8d1",
+    "system_id": "3b05697e-cc35-4176-a543-967c15c3d81c",
+    "planet_id": "1019630d-724e-4a97-ae84-e850e0bbcee4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4a4019ff-ccfe-4305-af26-05308380e655",
+    "system_id": "ab5db3ee-ab4d-4101-895a-9f7eba911de6",
+    "planet_id": "c3b113b5-b6c9-4d1c-8274-c0457465f72c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "75a490e4-5c8f-44fa-8428-3b1ac021399a",
+    "system_id": "d4f5a039-a38e-4077-bd61-03775a317bff",
+    "planet_id": "a6739c8e-ae42-4642-bf08-0ffa6de0b368",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7b2be0d8-051c-4ad9-aaad-00e954027b55",
+    "system_id": "0e8ee024-35d4-4ba4-a517-b15e4cc01296",
+    "planet_id": "b76fd23a-0165-48d3-908a-7c67367468ba",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "55ec704c-c05a-4104-9912-75fab8677480",
+    "system_id": "f08848fe-fd55-494e-b98b-867390c5f31c",
+    "planet_id": "c7b5a71e-0760-4b94-aba9-1396d673ab0f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "01c9ed16-3014-4540-b3cb-41577096cd88",
+    "system_id": "15433a10-a9d2-44e9-bd3c-26519d96c788",
+    "planet_id": "e82ff046-4e53-4919-bd3f-41b239ea98cf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1c588dea-c118-4d2a-8e2a-fff5f7bf764c",
+    "system_id": "4eb4ab19-67f5-4b1d-a71e-6cb96a793a7b",
+    "planet_id": "b339cd58-2b54-4bf0-aed1-9145ab750c4b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "64629471-4271-4300-995c-73bb65dd8984",
+    "system_id": "640fe67c-11de-4eff-9bfd-705dd7059c49",
+    "planet_id": "9e512624-a549-4369-acc5-a120244f1ee8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b81292e3-f0e0-4157-9737-e0c0d816eddc",
+    "system_id": "60156444-52f4-49a6-aa31-fcc99bc02d33",
+    "planet_id": "e94872e7-5dc8-4744-a39f-5b387499eb21",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4fcc234d-b170-494d-acd2-8f74ed70bae2",
+    "system_id": "984e7780-2480-418b-8c01-ee9dc97362e8",
+    "planet_id": "7c3c69bc-c3c8-4b49-bc2a-5262e86d8ffb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "aac537b5-8e66-47dc-b383-ad8101592850",
+    "system_id": "7a43edff-cb45-4ea2-97ea-89310cd3d8d2",
+    "planet_id": "50b9fe52-150e-440e-a4bf-baa3537456b7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "64fceafb-5fe3-469b-9f7e-11d27b96556b",
+    "system_id": "7a43edff-cb45-4ea2-97ea-89310cd3d8d2",
+    "planet_id": "6cc5af73-2cce-4ac9-b12b-3645cd4eac0a",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "efc24072-1a04-4e46-818f-8ed9f8b7dac0",
+    "system_id": "ddd8a366-5eda-4d00-af29-dca541e75a14",
+    "planet_id": "94c4b3a4-ca68-4ee5-9800-bf8daab44e29",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1cd9bb1b-4062-4526-95fb-6c1dfcdac0b0",
+    "system_id": "73e610bd-ddf6-40a9-9a3c-b730432501be",
+    "planet_id": "bdf051c4-2e55-48f6-a1a5-a1e89bd8c32c",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2013abd0-bdb7-424a-b565-8b8a64ebc69a",
+    "system_id": "ba4ec91a-470a-4b54-a2c9-538928eaa28b",
+    "planet_id": "ff4393d2-ee2d-4b76-8faf-09217e9c427a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "503d1985-fbcb-46b4-8730-04df7f7839bf",
+    "system_id": "dfbe6ab7-3720-4bf9-92c4-7d2f5295b40f",
+    "planet_id": "7ec9dbe8-1d51-4ed7-ad7a-348ac9134b32",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "30a99413-5f07-4235-be73-105104dd1a44",
+    "system_id": "7a5bf4c5-e2e6-4e58-af9a-10c7a5c69eee",
+    "planet_id": "654fd442-05bc-4390-854c-2691880ec6be",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9da68fa7-e852-489b-9c6b-23e46d3353ba",
+    "system_id": "84d22c3c-d713-4c80-8a76-ae2267cdc03d",
+    "planet_id": "97920ad7-ceab-443b-9490-d38cf363973a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ff0b4987-867c-4447-beb7-d314bf3579e2",
+    "system_id": "98e689b5-75aa-4776-9bfd-88850cbba477",
+    "planet_id": "ad983cdf-3066-4f13-83cd-5a09bd650e05",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5b16cd55-06c2-461e-810f-cb31ba5cac41",
+    "system_id": "9958e118-1f6e-4b57-954f-985216134f86",
+    "planet_id": "994dc633-7f5b-471a-8d14-058a68d3a53f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "28f00dd1-2cd7-4837-b519-f35381480dc7",
+    "system_id": "8dc87541-6ae8-4fd8-90a7-ba67042572ac",
+    "planet_id": "f282e03c-507b-4426-a4ff-77ab2a76f09c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4bdbfd1f-9167-499d-b173-7a9c8a38726c",
+    "system_id": "5327340d-1335-47d5-b0d3-cf734064558b",
+    "planet_id": "b34ab2c9-ee8f-4ad3-bb11-82cdc0f2d168",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f8ee027b-da7f-4a2e-af68-6ed14a2df48f",
+    "system_id": "bab45be9-0aec-406a-ba5f-463df9e0e7b6",
+    "planet_id": "64d522e4-e1e1-450a-9972-956bfe58e4df",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "05681bcc-e0f9-41d4-9738-30853ae1f1b8",
+    "system_id": "bab45be9-0aec-406a-ba5f-463df9e0e7b6",
+    "planet_id": "1ea83e1e-794b-4dfc-b643-414611cccdef",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d45ded58-b1f1-4797-a62f-b565636ea2ac",
+    "system_id": "fdb0b184-56b2-404d-ab1d-97b7c2838226",
+    "planet_id": "95cceb67-d472-4fea-af37-d97064d070c1",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e0e59850-8d69-4703-b44c-e8ec4669b623",
+    "system_id": "93c0ffee-881b-47ed-974c-d552ae91f28d",
+    "planet_id": "18c2c4c2-0e81-4ac2-96a4-50ed64e305dd",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c32c242f-9162-4f9c-b1f5-dbff89cdd67b",
+    "system_id": "176bb25b-e210-4f9b-a9ac-cc4fcb15af8d",
+    "planet_id": "b34ad517-73e1-4c72-b781-4c05b160cc8e",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b795437c-3a54-4590-918b-c6660b549dd9",
+    "system_id": "b8c6887d-bd75-4470-91ff-993d997d9810",
+    "planet_id": "ec6c5740-228b-4f1c-9917-0128b4c0df30",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "40d6b52c-3409-42a8-b40f-3bd267e8d5d2",
+    "system_id": "02960e3a-cb35-499d-b6bd-8c5a00b2ec27",
+    "planet_id": "4392c355-30a7-4ccb-9496-26f3e753fc73",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2a6ee9cb-0037-4535-b263-d70712096b3d",
+    "system_id": "d45c719a-8078-4bb3-8b91-8483e6e95f29",
+    "planet_id": "ac4a53a0-303a-4108-962d-01c32762a82c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6cf037d0-44c0-4754-b792-22ea7e4daf76",
+    "system_id": "93c0ffee-881b-47ed-974c-d552ae91f28d",
+    "planet_id": "fb0c854c-cff0-4383-938c-24fcc1864768",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4c9562c0-de9a-4ea7-837c-a1fc82d9da5e",
+    "system_id": "52957e63-4f35-4b03-825c-73f557d01058",
+    "planet_id": "257f7357-7b20-4865-92a3-55dbfe0ab13c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5e0018d9-16cd-410c-8438-e1df349fcd8f",
+    "system_id": "04fb45a6-272c-4ed8-b259-652aad7aca48",
+    "planet_id": "69159b2f-7747-42c5-bc8c-0ae1145545ac",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9524d279-ce74-4de8-bb36-a5305767ec2a",
+    "system_id": "17043fea-18cd-40b5-a881-d3d071b0273b",
+    "planet_id": "78be3cec-ea48-4c31-8a10-f07e3f3b827b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0468363f-347a-499e-a9be-1a2a6f0292be",
+    "system_id": "17043fea-18cd-40b5-a881-d3d071b0273b",
+    "planet_id": "ea7f2b4d-705f-41cd-a08d-e8aac020dc5e",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3e92a388-92aa-43ed-82a9-915a26c48998",
+    "system_id": "17043fea-18cd-40b5-a881-d3d071b0273b",
+    "planet_id": "25f7d62f-4486-46ae-b007-aacbb6eb849a",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cf04fd1b-f8b8-406e-a4bd-7fb412b7ecf6",
+    "system_id": "17043fea-18cd-40b5-a881-d3d071b0273b",
+    "planet_id": "316f95ec-cb6f-4e89-ae5a-8b368d4d29c1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "82e78d9a-d66c-4c2d-9716-26125699e559",
+    "system_id": "17043fea-18cd-40b5-a881-d3d071b0273b",
+    "planet_id": "2da5ebb1-d634-4bcb-ba00-6155145c3c90",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2b596377-370b-47c5-b59d-b5c5cfc1cb7a",
+    "system_id": "49b078e2-bfab-4b88-92aa-4b7d7cc21784",
+    "planet_id": "2d57d17d-5483-402d-b019-9aec79885cb1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c349fd32-698e-48f4-be61-f8032a3016a0",
+    "system_id": "6c84596a-4254-45e5-9fb6-fc9f25ae1688",
+    "planet_id": "67be9886-5b96-4e27-9dbf-903b530e7cbf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "20c5d825-8645-4cf8-857a-1e1430001660",
+    "system_id": "a60a49a2-c7a6-46e3-9268-08ec6b92aae1",
+    "planet_id": "94247659-e52f-4650-a8a8-4423c442cc07",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3fc5130f-86a6-4b89-8d18-4efdf289e44a",
+    "system_id": "05f46f5b-fbcf-400b-a018-63af9039c569",
+    "planet_id": "ca96e893-e5a5-4451-858a-3fa5fdd308c8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c757c411-c80a-4873-8c93-ac28b5fde9c6",
+    "system_id": "a6d8f9f9-da90-4e78-a4f6-1dad17dfda9f",
+    "planet_id": "8f2db4bb-9147-4e47-904c-7f8196b853a9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b8467a2b-608f-416c-844f-03e42c2abb3f",
+    "system_id": "a60a49a2-c7a6-46e3-9268-08ec6b92aae1",
+    "planet_id": "9c23ea68-f782-428e-8603-c725256988a8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "beb1410f-35c6-42bb-9020-f659c544e20c",
+    "system_id": "a6d8f9f9-da90-4e78-a4f6-1dad17dfda9f",
+    "planet_id": "90f54ed4-0915-4aca-bf24-6532a23618c2",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d5597326-7648-4b73-84e4-28902dc40faf",
+    "system_id": "d364ccd5-6832-4bc9-82d0-920afba90fcb",
+    "planet_id": "7016149a-dce3-43aa-a19b-269e75aa1478",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a27e4701-9865-4040-91b8-96e380167f01",
+    "system_id": "d364ccd5-6832-4bc9-82d0-920afba90fcb",
+    "planet_id": "5b8423bc-69ed-463c-8705-80232ec54cfc",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a77c5048-e9d3-4c4f-9b35-dbf8ea6127ad",
+    "system_id": "3ecb47dd-8b64-4285-83ef-1de5726b28d2",
+    "planet_id": "1240814f-14cb-493d-bf31-74fa6f2581bb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "615fc4fe-7bef-413b-93ef-e8b88e2313a4",
+    "system_id": "8b66c57d-2f29-4de5-b7a7-5ea0f55775a2",
+    "planet_id": "b8c641de-b75c-4325-9ac3-eb5bfbc9330e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cdffec9a-73ee-48dd-b171-9a5745f196af",
+    "system_id": "8b66c57d-2f29-4de5-b7a7-5ea0f55775a2",
+    "planet_id": "97d215a8-d96b-4a9c-abcc-65b6c76d5147",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9c17beff-1e6c-4286-98d7-a2741654aa4e",
+    "system_id": "68591557-8760-4e5c-a4ab-7a86f005d21e",
+    "planet_id": "3f42f0f9-c95f-4385-a667-7faa183fc624",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8d1b79af-12f5-4b4b-84d6-420226e74f03",
+    "system_id": "84a37d86-f543-439b-bc9f-c5ac8f1d2ff3",
+    "planet_id": "601eed4f-bcc4-476f-b502-088f669c688c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "44966a39-78e1-439b-9022-1b0c31ab654f",
+    "system_id": "a6d8f9f9-da90-4e78-a4f6-1dad17dfda9f",
+    "planet_id": "be032c67-e200-4cb6-8582-ac4fd09ba0d8",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f262b6f8-3c1e-479b-b2bb-54c6f9c67d17",
+    "system_id": "a6d8f9f9-da90-4e78-a4f6-1dad17dfda9f",
+    "planet_id": "20e6ea5e-e865-46f3-add4-277c52a86926",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "461d5b50-e221-48e8-a0c8-138cd582e598",
+    "system_id": "54b7ea71-9908-4e5e-b1ca-8ae52b75739b",
+    "planet_id": "1070f3db-2876-4250-a009-2f0fafbdd146",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2a2f03b6-f213-4fda-ade3-8b9033734c74",
+    "system_id": "5d0032f6-cfda-4dcc-adfe-a4c850e91695",
+    "planet_id": "dade16b3-04b8-4c9a-9598-71cf9fe6cdf6",
+    "orbit_order": null,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8314841d-bba5-4fc4-8352-6e68b487fbec",
+    "system_id": "3fdfcacd-b996-4f68-90fc-7af94e9dbe2b",
+    "planet_id": "8be2c404-30a1-4c16-ae80-2444eeed313f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bc0ed58a-a76c-49a5-af4a-58ffd0f16dfd",
+    "system_id": "93c0ffee-881b-47ed-974c-d552ae91f28d",
+    "planet_id": "40072448-213f-471f-a4a8-1011976daf80",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e3539bd2-a8b0-4aa2-bf37-26cd5113feb7",
+    "system_id": "ab9bd60f-1b8a-4ec1-8ca4-bf9f914e5b0e",
+    "planet_id": "e44be702-40b5-4485-96bd-d859aefce2e0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cb9869e8-ae48-4029-bcef-6b7fd83a5138",
+    "system_id": "412e20c2-4ff8-493a-a206-267d09cc4fbd",
+    "planet_id": "5306e51b-483b-40fc-a023-a060ee3b2067",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d8016b14-0abd-4c96-9999-5d31e7ef5b50",
+    "system_id": "e0261bf6-de22-40a9-b650-ab72386f60fc",
+    "planet_id": "060f62cb-1a14-4a56-83a5-5d994461b56a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9f3d021d-e077-41f9-96d9-dd2895a1435f",
+    "system_id": "599d9d4f-e2e1-4529-bcdc-096439fc8093",
+    "planet_id": "f8404679-1c2e-4dbc-b453-0aabcf4ee909",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "10eb8c4a-598e-41a1-9e51-b13b8899cb66",
+    "system_id": "5ae19ebe-8757-419a-ad58-8e26edd04a86",
+    "planet_id": "037da37a-3067-4ee1-9517-cc72fb7230f4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f70e981e-c35f-40c7-96ee-6919ad727bc9",
+    "system_id": "42faf9dd-6abe-46c0-8330-46c905830008",
+    "planet_id": "fe3d6b06-890c-4348-a801-245b8ab8eb9b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "125ded19-fcce-45a5-8de3-018d9f168f5f",
+    "system_id": "0dce3cc0-b40f-42d6-8d6d-9c5a28e8b1f4",
+    "planet_id": "b4c89f6a-ab92-4bd8-b739-09e1572889a3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c65a1d3b-ff79-4cd3-99b3-b0bb26e11966",
+    "system_id": "6e38e910-cb7c-4615-a5ce-539b93ce726e",
+    "planet_id": "0e7dbcdc-c7ca-48ed-a571-9e7de6619222",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "55283094-c96f-4a51-8179-34b7ed645c73",
+    "system_id": "7701ddb7-d372-4674-a342-86321a7f7a70",
+    "planet_id": "82df3251-eb6c-40b3-b07c-c26d2efda2ad",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ffa7f4aa-0a99-4389-a43c-f0eb036807b9",
+    "system_id": "86db7f57-e005-4cad-a62b-466ed51dd44b",
+    "planet_id": "43abb477-a46a-4b77-b72b-245b0bbe5fbb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0014b0b6-901d-4792-a36b-7f42817dae20",
+    "system_id": "762705bc-4671-4dbc-9f3d-76cb6a11112f",
+    "planet_id": "9d0deda4-6c4b-44ea-bf9a-d25963b8e1d2",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "909e25a0-ebe0-422d-bf42-8a6cefc74e38",
+    "system_id": "42faf9dd-6abe-46c0-8330-46c905830008",
+    "planet_id": "dcb5143d-7da5-45bf-a978-274db774dcf9",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "30443b88-9273-4029-9cc7-318e14ec6928",
+    "system_id": "86db7f57-e005-4cad-a62b-466ed51dd44b",
+    "planet_id": "45055fbf-fcac-48b6-af37-6f3c6c351649",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fd68dcfe-81ff-4d87-9f71-efb2d728a75a",
+    "system_id": "a06259a9-ab55-4806-a27d-03783c1eeaad",
+    "planet_id": "b78e0f9c-3c85-49a9-9d26-3636dd0fdd00",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cd85225b-76cb-4a90-95ef-f09443782d41",
+    "system_id": "d0ba5e54-67ff-4015-94d0-af2d5afbee1b",
+    "planet_id": "f2d323be-eea0-4fd9-901c-54e5109f1a02",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4e96639b-1859-4758-b7bd-e7a09da45e8c",
+    "system_id": "2fda19cd-0911-4f05-8557-2405e4e65954",
+    "planet_id": "30c8148b-2244-4bfd-96ad-3f04f70e6284",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f1d7bc6a-b63b-4939-9502-14203356bc24",
+    "system_id": "ec6fbb2e-71b5-44e7-ae57-ff07610046be",
+    "planet_id": "6e7cb398-e38a-4054-ac27-5b13ab013dbb",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8d78b5eb-631f-4f8d-b40f-05fbfc70f703",
+    "system_id": "2f7ae626-075c-4edc-8e3b-7f616d9063f6",
+    "planet_id": "8be508ae-569c-45db-8c7c-6908d3ef9634",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "067d00ab-0011-49bc-992f-3d9f3c802c71",
+    "system_id": "329255a0-340c-46eb-86fb-c4310295b47f",
+    "planet_id": "3cde9245-4c46-4daa-b033-971607d50ac4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e40b5646-a17b-499e-83ef-fb43be74d2d1",
+    "system_id": "61918c35-21f1-4124-a4de-e21c14e2c145",
+    "planet_id": "149e9d4b-3536-4f76-867a-5d5f059e227a",
+    "orbit_order": null,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c9c7f281-4445-42be-8e86-177b96893382",
+    "system_id": "cebc159f-c70f-429c-8c5b-011f04e07772",
+    "planet_id": "79cb0a2d-f218-4c06-8f50-c6942e4d2292",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "49e068fe-a621-42c7-9739-c48586600f6b",
+    "system_id": "eca7696f-e89a-4249-880e-2a12f4950650",
+    "planet_id": "e47e4162-b658-4c62-8a45-b266a64d0798",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "96132f1d-2f35-4832-a9ca-c1c09cec3747",
+    "system_id": "09367386-f57f-434a-ac3f-bd11351763b4",
+    "planet_id": "92d62041-40bb-44ff-b6da-148bae350411",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bfa17499-a5b6-4995-9244-f15660d699e9",
+    "system_id": "47acd231-e2dd-4291-8a9e-b70c6c06dacc",
+    "planet_id": "638204da-5fab-4904-9407-f1c4f978a745",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b9dd7ae8-31d0-4ff6-82f3-3cfcb74562a3",
+    "system_id": "bd066c90-ddee-4610-9221-2f65ef47a863",
+    "planet_id": "73c418ef-367d-45ef-a47d-5084f346d2b3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "54b086a4-d465-4560-82d1-c6887b4c0ccd",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "629a7cf1-b869-474f-b6e0-8c890ad17351",
+    "orbit_order": 6,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "79d60ee8-2cd8-4150-a8da-188d11c9646a",
+    "system_id": "e0261bf6-de22-40a9-b650-ab72386f60fc",
+    "planet_id": "59f5207d-a6bf-445f-9aa0-c3d2b41e145e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c2bb2251-17f2-45f0-9e80-fa640bca8f9e",
+    "system_id": "9bae26b7-d092-4fd9-ac5d-55f721050cfa",
+    "planet_id": "05e79e15-5e4c-4cc4-a652-c311406618e1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6a3ab601-99bd-42f1-89be-c8983b064f73",
+    "system_id": "cfe5a172-56fe-4853-ae40-1e61f2daa7b9",
+    "planet_id": "76af0073-0fe2-4bed-a2e0-7ca661f10bad",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "49418f5a-dbc7-4dfa-be56-cad36ca9bb8e",
+    "system_id": "9cdf74bc-1a7b-46a3-9920-eb9668d276c6",
+    "planet_id": "0e176a4b-f127-4b21-9ec4-4d420b6617a3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "94f0c5b0-4253-458f-a8fc-0282463d775c",
+    "system_id": "a22d38a6-422d-45b0-a3c5-eba03a6ad0a4",
+    "planet_id": "39f65b2e-734d-42cd-a14f-b23c67bd0462",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f6f3cabd-9fae-4aea-899d-785560f0a61c",
+    "system_id": "19df8ab0-0604-44e3-8e00-42c1849e08ad",
+    "planet_id": "47d30608-028d-4447-8d01-eaa0e34c0429",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "749c0d92-5069-4b83-8de4-b087204809fa",
+    "system_id": "24cdd1cc-e94c-45f9-891c-fcabf16935b7",
+    "planet_id": "d0cddd0b-8a0b-477c-9658-f0fc9df44a84",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e7aceb3d-0291-426b-8178-5fe9f1dc3045",
+    "system_id": "6c3a0c79-7413-44b5-93d4-909f156711ad",
+    "planet_id": "4a522328-08a8-4442-8cef-213eae3d3b31",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0eb7b761-7c73-4493-9269-2123d3cddcbf",
+    "system_id": "8869c96f-583e-4f2b-8f7f-cc151e054954",
+    "planet_id": "c1e124eb-ba99-46a3-bc96-9a56ee265f44",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "20252837-5b0b-46df-81b0-988e343ce73c",
+    "system_id": "e4d2329a-8a67-412e-8f68-226334658f4a",
+    "planet_id": "544b48e7-351a-4a71-bc1b-238ecb92df64",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "589a6bfe-8a2d-4a1e-b3aa-4525fa65409e",
+    "system_id": "4f3c858b-67f1-42a1-aebe-53a32cc728ae",
+    "planet_id": "31e116de-12e6-4050-a891-1fb273bbd302",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c85a55fb-4938-470d-b30b-a67eb82bd777",
+    "system_id": "da030b81-ddb3-4f3b-938d-bab178a9f51e",
+    "planet_id": "3b965947-6458-41b7-ad17-e1d466bc4f35",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "26b7dda7-56a7-49c4-9206-ccb0be28d92d",
+    "system_id": "44b8d28a-d314-43e3-9279-0c84def34620",
+    "planet_id": "a7b17d9a-bfcb-4e2b-a316-5aa57c557646",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "27b440ce-e2ad-473f-974c-95d1cb2ad5ba",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "b7191423-4305-4c61-a361-631a02f211ff",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4f86e257-806c-4ec0-9bbb-bbc3fb52fad3",
+    "system_id": "2fac2806-2d48-469f-8d4c-f73f3bd43924",
+    "planet_id": "7e757f90-66ed-4a19-a390-fb2ec27bb007",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ea401d83-8bc4-4aed-8c32-a1eac534ec26",
+    "system_id": "c5b8df65-08f7-44b1-ad22-8b6061b8bcad",
+    "planet_id": "4ba8e1e2-c0a2-4d0b-8107-bcddefb97fdb",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6f5120ee-9c09-4cfe-b84b-0626c3a02210",
+    "system_id": "1a6814f0-0bcd-49d8-b9b5-1ccfcc69dfdd",
+    "planet_id": "9c8dd782-1026-483b-b514-1ff3ac41f64a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6139a181-4777-4368-bc43-85f72b21caa4",
+    "system_id": "81bb9dfb-02b6-491c-862a-436e147ea734",
+    "planet_id": "14a03247-3006-4210-a169-f376d50a30b3",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7c450f82-7c10-4db5-bdef-cda8c03febc2",
+    "system_id": "110144f8-3e11-4e30-847b-71fc584d14e0",
+    "planet_id": "eb06ecc6-0fdf-473e-ad66-e4afd1e91dca",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "576e3e89-779b-4dbb-925f-6e469bcc3b69",
+    "system_id": "b222fc6f-f431-425d-9719-8a9125ddbadd",
+    "planet_id": "e8f5d766-218e-4346-8f05-3e29fc3823df",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "03e03619-8414-40f5-9e5b-aca5c41a06e4",
+    "system_id": "cde294c0-03bd-4a04-b42c-ae2c1f6f15c6",
+    "planet_id": "9c825ddd-756f-41a1-b6f7-549878cd8cbf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "57b70df0-f4ff-46cd-b875-a2f146d8f6c2",
+    "system_id": "7611f87a-ac05-4b89-94c8-e8272747eca5",
+    "planet_id": "6218b969-32dc-45c0-9083-9a24ee9be733",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2b84e036-2ac5-45ab-81b6-391ffab88bcc",
+    "system_id": "3bbfb525-86c0-4b63-8ffd-722a8b153449",
+    "planet_id": "b65ca580-8894-4515-aad0-5951278b8eb4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4bd12c02-9696-4d9b-bfdf-73c1c5118bf3",
+    "system_id": "da9f3452-93e5-4c2d-83ba-e186337252c2",
+    "planet_id": "c6d81909-3f4c-40c0-8561-1609d0f2bd24",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d76966d8-bb04-425e-b141-bc16bdb336f6",
+    "system_id": "f56b080d-9066-44af-b93b-63e1ef2b81db",
+    "planet_id": "576fc07e-930b-4c44-bfed-5b3b9ca2e675",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ae756e72-fb84-47a6-b67e-f0c70aa5cc46",
+    "system_id": "335fb825-7608-42ee-9f40-9e00db4d916c",
+    "planet_id": "f6e3d3ac-3f7a-4d61-8dd4-8b90d9412686",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6b122f40-03d5-4c56-8dcc-d15d67c2783d",
+    "system_id": "c2337b2a-f91e-46ee-a150-f7e7d8c2cc75",
+    "planet_id": "d52940bd-88f8-4206-a201-f0adb0919f29",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1d50a0d6-1fb4-42eb-96f8-e399c08a51e3",
+    "system_id": "b5d73e82-975f-4301-a3e8-210039643be6",
+    "planet_id": "a7bd84d7-0970-46fb-b672-5207d531884a",
+    "orbit_order": null,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2261b51b-d5e7-4460-b3a9-500485f6128c",
+    "system_id": "ed165b39-0075-4071-ac39-91a94cc18979",
+    "planet_id": "3e286a3f-9a7d-463c-9ff6-3e017a4452f6",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4784dabf-070e-4c3f-aedf-1ac73957bdbf",
+    "system_id": "a06259a9-ab55-4806-a27d-03783c1eeaad",
+    "planet_id": "aca4e578-1e81-4053-8f63-7d5238f50b83",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a4eba201-93f6-4dbb-a92b-0e8514e48169",
+    "system_id": "f9ef253b-3811-42c1-ae1e-a4079f86ecea",
+    "planet_id": "382d7348-441c-4df9-9dd3-e66a99db6d02",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f360aada-0d5f-4899-99fc-5ede7b3c3e76",
+    "system_id": "d2c46bd3-aea5-4322-b9c9-17e48f1596a4",
+    "planet_id": "95f90938-3820-438d-8446-569c91536dba",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a96762ad-254a-49a5-bc93-b58af9a5bab0",
+    "system_id": "dc8cee45-81c1-4551-b084-9985e4583af4",
+    "planet_id": "35f8599a-2c5c-4bdb-812a-1bf864eb9c95",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "85d17a27-ddfc-48f8-baa1-3f7a2cdca1fc",
+    "system_id": "84712254-8a5d-47bc-ba91-e93cf29b9b31",
+    "planet_id": "c907d27e-ea46-48e8-ab31-d56894c5d0f4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1827b32-6e0b-4ab8-9cf9-6cbdf4c042ae",
+    "system_id": "d2c46bd3-aea5-4322-b9c9-17e48f1596a4",
+    "planet_id": "4276ef88-05ea-4d66-a00f-1e606fd1844c",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ecac62a8-80df-42ea-bd32-7cb295cb003a",
+    "system_id": "a20cce3c-a900-4bae-88dd-f5bd4f1f07e6",
+    "planet_id": "bc12e741-2352-4186-a9b5-dbba05754f55",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "314c3970-2775-475c-a1cb-4669c92cb3ac",
+    "system_id": "f15eeefa-a623-4410-81a1-1975f56ec167",
+    "planet_id": "06ebb6d9-c0f1-4db7-af1a-a99a669d6d0c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9e7ee1a6-2b8a-4df7-9ea0-95c8c55d886a",
+    "system_id": "a95c4c75-3579-47ca-ad4d-8b51a10844d6",
+    "planet_id": "a2edf982-f38f-4562-b7dc-8bd2c058c6b3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8af1710f-9d42-49f4-96ef-47681fea849d",
+    "system_id": "516c2883-af93-4c8d-b081-9887104b46cd",
+    "planet_id": "7a985b84-7b4e-40c3-808d-3fbf8e066261",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0828f9cb-ac72-48f3-91a6-75a6f76cdbf8",
+    "system_id": "6f15047e-ac61-4136-b546-9e80bd426a1a",
+    "planet_id": "5d9fa380-87aa-4c90-b33b-ff130873c552",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9b22bff3-f18d-48fd-a24c-7d987f388051",
+    "system_id": "eda37ecf-44b6-40d1-9b10-62ac2c642340",
+    "planet_id": "b8543206-0483-443d-ba68-3d931582ee75",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "287c5936-f804-4b13-b94c-3cef63bc1e76",
+    "system_id": "e9091c6b-df5b-4889-a608-a4693b78a24d",
+    "planet_id": "0914db84-b99f-4b89-b83e-d4d9c6aff0ca",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5191eb8d-1b33-4533-b4f8-2a4d6174e6a8",
+    "system_id": "4b60c32c-dd94-4c38-96b8-6d763f0ed6b6",
+    "planet_id": "0a979a82-2202-4120-ad25-f23a4a006ded",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ac270894-7b68-47ef-ab3e-29400ef2a3f0",
+    "system_id": "0869b8ac-3d18-454c-92a0-d1baad9419c0",
+    "planet_id": "9b6fabcf-3ae7-4276-82af-2a46ad9ef40c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3c380fc2-22c6-4f80-8266-b675c9c2cb8f",
+    "system_id": "d2c46bd3-aea5-4322-b9c9-17e48f1596a4",
+    "planet_id": "fba4b8c0-2ebc-4a24-82bf-9d41e722ea70",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a161df44-ff32-4b49-8b1a-0a274c3e64ac",
+    "system_id": "02618c02-682a-4a88-b89d-0940fd0b492b",
+    "planet_id": "c3a19fcc-ae84-4a0a-b611-90db86e3f5cd",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f954e0f6-331d-43ec-b696-f53e7200dff9",
+    "system_id": "98f40716-7fe0-4f0c-bc61-befe8c91cd39",
+    "planet_id": "b018f0f7-ff77-49c8-9c39-db664285e197",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c3221c67-d226-4d42-9291-11c3a6405c48",
+    "system_id": "7783d83f-1223-4fd6-9d0e-4f2270d08d3f",
+    "planet_id": "0d04ce03-83a5-4db1-95c2-3424e2844b14",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f61aec1b-ec6e-44d1-8e66-7bad1c6d1c42",
+    "system_id": "89071b3d-941f-44a3-958f-e700a93882d3",
+    "planet_id": "515fd95d-bfe6-4c03-bffc-8cae41195c48",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b48cc8fe-d903-4211-8aea-8bf367c20eb5",
+    "system_id": "1583df63-a751-4885-b426-048a18dd34b9",
+    "planet_id": "ff54c74c-863b-4136-b687-96e5318d739e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0dfa3542-278f-493f-9a7e-738962acd5f5",
+    "system_id": "e4d2329a-8a67-412e-8f68-226334658f4a",
+    "planet_id": "8d483946-566d-4e5e-b783-3c6f170ac6d6",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e3c013c4-3201-4db9-97b6-5d5373b2c91e",
+    "system_id": "5fbf0da1-849e-4f3a-93a1-f2f53d7359ba",
+    "planet_id": "ae76bc8e-f1b1-4648-96e9-db48e832c2da",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c67f90f7-872e-4164-be84-8b58688ca411",
+    "system_id": "37a65eec-30e0-4493-ace0-71fb1c5b164a",
+    "planet_id": "5106f189-90e9-4b6b-bf19-b8f47b8a7bbe",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c24bcb42-379c-45e7-bff7-ffc671ca1466",
+    "system_id": "c2fef01f-da8e-49e3-bc5f-d21ff6071c0c",
+    "planet_id": "64500a88-7e07-4fb5-8a0a-07b0b8d8da86",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "163db92a-160a-4a9a-b85b-332ae962937f",
+    "system_id": "cdeea466-1817-4aa6-9b07-7165398fa257",
+    "planet_id": "f586e276-d90a-4184-b7a7-ba883dba73cb",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "09c5c71f-a9e9-4b75-b34c-3d68a939bb69",
+    "system_id": "335fb825-7608-42ee-9f40-9e00db4d916c",
+    "planet_id": "68f57d52-03c3-4695-a5bc-acac7c91856f",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "802f80bc-3a47-4704-a322-558cfb02de50",
+    "system_id": "abc1c1ee-be63-4d67-b041-cfd9a40c423f",
+    "planet_id": "ac29480a-923c-41c2-b126-22d41e4c4374",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9a84a833-776f-4530-9e21-a5d865e8cd8b",
+    "system_id": "921ce469-94e2-4528-b89d-049d2a0b0890",
+    "planet_id": "6c79a264-6c8f-445b-821c-602520add35d",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "45e6e5d7-5ee1-4751-9065-0bd8ad9621c1",
+    "system_id": "42668570-b197-41a0-b278-ad853ee9b382",
+    "planet_id": "1a08d248-faad-4077-8b84-d6afc8eb1eda",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "95718337-bc61-43e9-963e-783ef3707057",
+    "system_id": "50bb7a6f-55b9-4159-9d37-35a074719fc6",
+    "planet_id": "c3d7522e-089a-4bc8-a5c1-eecf406f4c86",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "69ae10a5-856f-44d5-98e9-c349de153e21",
+    "system_id": "34c40cff-08fc-47d7-8cfb-40d329984f88",
+    "planet_id": "1733a160-ecee-44a7-842f-143b1142cb60",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d4e4ce8b-f551-4f79-b7cf-a79409715f82",
+    "system_id": "1f1874f6-1051-4138-9ca2-6442c1bd5571",
+    "planet_id": "69f096c0-2525-41b8-8400-7a111f640c72",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "df8bfc90-98ec-419d-ba0f-5eeb86348de7",
+    "system_id": "91927d03-45bd-404e-ae61-9765e7240452",
+    "planet_id": "3cf8ad12-db78-493a-957c-3d0a4bc195cc",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2ed025d5-4ac8-475d-a2ff-b692cd88885e",
+    "system_id": "2b237fac-8dc3-4eeb-8247-a269179c444d",
+    "planet_id": "af31bebd-cffd-4c31-9214-63abc9b052fd",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "713fe8e5-9b78-45e6-803d-88db47c403ab",
+    "system_id": "48fcdc58-cab2-4a42-a1ca-973331f690c2",
+    "planet_id": "5babb93d-db72-419a-b359-8e1f837e3ec1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7fb523f1-3e75-4036-aa56-8d00d42e976d",
+    "system_id": "49adf263-3b78-4e41-93f8-9dee0190ab8b",
+    "planet_id": "4af1838e-096c-48e2-a87e-d9f8d7288da0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "98334e4f-a0f1-46a9-851d-ac7bb80fcf2f",
+    "system_id": "c565fdd6-9260-4cc6-a4c3-6956c2e9ee87",
+    "planet_id": "ddbf3236-94bd-4f3c-a89a-2d87e0d651d6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b0689dd2-d4a1-4b73-b825-7a33f46c6d3c",
+    "system_id": "11c2ed1f-f3e5-49a0-a369-f2a5b77452d9",
+    "planet_id": "d92ba18d-2685-4b64-bea0-475863c1ebe5",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1213e246-7935-4cbc-add5-7ae2e39e3e0d",
+    "system_id": "1815659c-e332-4585-829b-8f98023e627c",
+    "planet_id": "f28eeef8-e915-4fa5-aee2-ce874865124f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c2fde0f4-a973-4627-9a27-8bcbef31fbd1",
+    "system_id": "bfbd8e1b-6067-4755-9e21-96af196ad541",
+    "planet_id": "7e2d098b-0230-43f2-8f85-44af5b351362",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e147b3bb-bc6e-4178-b804-2db3f8ae247b",
+    "system_id": "d9b4d1e2-af19-4e07-b143-b070a7242d39",
+    "planet_id": "4d0667c3-a6c6-430a-80b3-860caab81f5e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5930824e-c068-4ada-9476-b7a9ffbaaee3",
+    "system_id": "0e4cb3dd-643f-467c-91e0-14146c6590bb",
+    "planet_id": "e80263c7-e313-4496-bc6a-5f7aa3d89087",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8092d9a0-1703-40ba-8a91-f18dd115f7d9",
+    "system_id": "bb8b8e6a-d2a3-4324-80c5-d37c31348b89",
+    "planet_id": "f5d5d05d-88b0-498c-8fe6-6ab5805d6683",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4062e229-263b-47d2-a680-8f08bc55415c",
+    "system_id": "d69a23fe-84fe-4190-86c4-5dd114468513",
+    "planet_id": "25c813d3-a046-4160-ba4a-310e83d51c5b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "791e68e6-2799-4a37-9bf7-6e5aa499e3d3",
+    "system_id": "6567d336-5db6-4d57-a754-80a9033ebe6c",
+    "planet_id": "7d24c1d0-c364-4821-a220-0803131e25ea",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1d134976-f4aa-4844-84a2-37fc6df1c517",
+    "system_id": "7db3a733-b1e2-40a2-ac9d-8c7f5679d560",
+    "planet_id": "a9484b39-e720-4c35-a922-ec67833b2b73",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "76ac7f05-4a1c-4ddd-8182-58b4e753f29c",
+    "system_id": "73e610bd-ddf6-40a9-9a3c-b730432501be",
+    "planet_id": "b1600f0d-7ee2-45c9-a5c5-2b1421dde570",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c52e466e-0e32-4c33-b042-1edc371823fe",
+    "system_id": "4bb55b8a-fbd4-49f4-8deb-262cdce53621",
+    "planet_id": "e4ecc215-765f-4e1c-b7f7-3980f5197dc0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0ddb6dec-b24e-41e6-8b03-f7e7b95124be",
+    "system_id": "86db7f57-e005-4cad-a62b-466ed51dd44b",
+    "planet_id": "eb3c5d29-764e-4911-a8dc-3dc0671feaa4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fde3cd78-421f-43b2-b642-19d67ad3bbec",
+    "system_id": "fcb81d28-3b01-4609-b04b-753865182ed8",
+    "planet_id": "f60867aa-675b-4091-824b-afb0de56f563",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f6c05d56-270c-4241-8304-ae899223b513",
+    "system_id": "b5439350-30d6-4ab1-8dcc-e5eceaff30d3",
+    "planet_id": "d42eba65-0036-4e0a-964e-0d3214b57446",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e23ceacd-2ace-470f-bfff-1de3329fc8b8",
+    "system_id": "2aeff312-459a-4a0d-9ee9-6a7bdd97af76",
+    "planet_id": "31f0756e-58da-457a-853c-68f23ebf8e44",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7c6c21d7-d00a-4bdf-ae85-15ef2e48c75b",
+    "system_id": "dd02f661-c57e-41c7-8556-59890d1de5c8",
+    "planet_id": "91cdd61b-3d5c-4955-91de-74f0db79897a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "36d3750f-5203-4170-9484-cbea3a6e404f",
+    "system_id": "bab45be9-0aec-406a-ba5f-463df9e0e7b6",
+    "planet_id": "fae53c11-bef3-4827-84c5-e1aa4a51559e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1533ab0c-0927-416b-ab2f-7d1da154825c",
+    "system_id": "c48c12ad-47dd-448e-8629-fbcd0db305ef",
+    "planet_id": "a736055f-9ff8-4478-8728-dd4ee3571cd9",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "afd037bd-c363-4a05-9ba7-af6ffce37e55",
+    "system_id": "cdeea466-1817-4aa6-9b07-7165398fa257",
+    "planet_id": "e0fa35c1-8e67-4e1c-bb0e-ae3d85022fd7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1a8ce562-efbc-45c0-9674-880b4d92c76d",
+    "system_id": "7a43edff-cb45-4ea2-97ea-89310cd3d8d2",
+    "planet_id": "ed56800c-985d-4cf5-a939-334d22ff923c",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "da17f614-c594-4b7f-866b-fc87c6807655",
+    "system_id": "88aacc27-4a7d-49cc-892f-3c726a505507",
+    "planet_id": "38d8eed5-7ad7-44ad-b145-3327385de4fd",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c3b3797c-b574-4d8e-9564-471ddcf33754",
+    "system_id": "75ab866c-5535-4b2a-adc1-6d34978ea016",
+    "planet_id": "bbf46201-37cf-47b8-bb95-89943564fa9a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ea6365f2-240e-40b3-997c-ecf1a798f2ae",
+    "system_id": "0abc38f9-5907-45b1-88c7-a40e5e55f728",
+    "planet_id": "b98a6858-7aee-49b3-8854-01e7d164e0f8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "da26c90b-228c-4262-abac-8c920f3e8c06",
+    "system_id": "8aae3294-357a-4ade-ac8a-66dfe46ad3cf",
+    "planet_id": "4197f2fc-740e-4cad-ba4a-5a59ff7c6605",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a4f542d1-a984-43f6-858d-e660a71b9c9f",
+    "system_id": "0c1b1d10-bbcd-419c-ab3f-aff2a56c1d6d",
+    "planet_id": "75e40abd-f19f-42dd-bf4e-1bb4da58b516",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3a92aaee-4253-4f10-a863-974eda096ce2",
+    "system_id": "aeb60d86-20e8-4918-aa29-0af19c798d63",
+    "planet_id": "41260b7f-81c6-470b-8e17-d5f81f7b8252",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b1c6dff4-b79e-4d7d-a93a-66985c832cce",
+    "system_id": "a7270c7f-c15d-4fdf-a793-cfaf2ecf7dac",
+    "planet_id": "795bfdb3-ae39-4108-bb8b-e28b239f0dd8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4115d6d1-2c31-4789-931a-d2d6579daa58",
+    "system_id": "c877d427-3e37-421c-baae-3986820cb90d",
+    "planet_id": "49637ebc-e86d-481d-8432-c5142600595e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fd5d3c23-80b3-4afc-8ad5-87bd78d84322",
+    "system_id": "950b1982-8cb3-45dd-9069-dbf9d7a8020a",
+    "planet_id": "846e0702-2a89-4fbf-a951-987dc0ebc33f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "773caf44-544c-4521-a2b0-2053e79468e0",
+    "system_id": "09ce8ad4-4172-4acf-b286-aae39b29a69b",
+    "planet_id": "80b04321-77b5-464e-80d4-159c7dbef5e8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4f077667-e385-404c-84cf-dabfb4d30db3",
+    "system_id": "dfbe6ab7-3720-4bf9-92c4-7d2f5295b40f",
+    "planet_id": "17449fd1-907c-493e-80a7-c2ba55d98b71",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "72bc864b-caba-4491-8260-cb1378120864",
+    "system_id": "b3651d91-3fdc-4a4f-b4c9-af3fa851e8ed",
+    "planet_id": "6b325583-65b6-45cd-9516-42745a7f4384",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "00ab8540-9024-4062-ad96-b73d2729a641",
+    "system_id": "8323d2d6-4046-4842-bb93-ba1a1eba4537",
+    "planet_id": "c29e1bd2-bf2e-4e21-8920-8e6085579802",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5df54c19-633c-4326-89af-18a9554fabdc",
+    "system_id": "2275839e-1012-4d01-ab84-919edece50e1",
+    "planet_id": "0f59885f-738f-4184-b7bf-70da496924b4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "61e8f99d-da60-497a-bdf6-11eb95c9e2c5",
+    "system_id": "dac63b9a-73b3-458b-81b1-6cad6f097d30",
+    "planet_id": "85112423-dd78-4530-889d-06be7f9d6ee1",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "043d5429-b29a-41f8-b74e-bce23c3cf0ec",
+    "system_id": "e99efccf-12e2-4823-818b-e864b07fc6d7",
+    "planet_id": "cff4cc8d-1317-4550-8bc4-4fb8a4ffa24c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ae0bdca1-a911-4d92-8247-134683ccba53",
+    "system_id": "da030b81-ddb3-4f3b-938d-bab178a9f51e",
+    "planet_id": "1dad1214-b71c-446f-a96f-213799e5f18d",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4ce7a617-bddb-4073-9be1-38c68f41b796",
+    "system_id": "7ae8b593-6489-4a4b-95c2-becba8eae6ae",
+    "planet_id": "e6a7e8b3-cf0b-4d3f-bee6-acc5900d9c0f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f9c7a08b-85bb-45fd-a684-4b0500f13f12",
+    "system_id": "a31089f0-7fef-4334-b02b-5882541e53fa",
+    "planet_id": "07f849e7-1cab-4c6d-bfb3-c36674080b55",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5929db16-2b4a-4ad9-858a-420862acaa43",
+    "system_id": "04d3ae3f-c7cc-4c4f-a3ba-6ee7436efbe0",
+    "planet_id": "4348ac0d-3454-4f2c-befd-efb8f7ce7471",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fa175d0f-693f-4fea-9b7d-484ac0247d12",
+    "system_id": "3a3514f5-9141-4926-abed-f33a49d9bd81",
+    "planet_id": "b5b4de56-cda9-44dc-bb31-38089b3a5425",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b9ae1f8e-935b-4160-acc4-5d36ef7c2e02",
+    "system_id": "2d3d0e59-3cde-41a9-8dda-00d6e58d9a2f",
+    "planet_id": "d56adc5d-754e-4060-8b20-afad3499d772",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "eee247ef-21c7-479b-8476-8d70f25d9006",
+    "system_id": "4d1dd762-a2ed-4c14-ae39-8cc903abba73",
+    "planet_id": "bdd7ea68-d89b-4163-b453-c2896e191c80",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5ce955da-5083-433c-967c-395c481613a9",
+    "system_id": "4d1dd762-a2ed-4c14-ae39-8cc903abba73",
+    "planet_id": "64411945-be3b-48bf-a21f-94a36de08659",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e5b3a478-c28a-419d-9c21-223cfeac15c0",
+    "system_id": "2d3d0e59-3cde-41a9-8dda-00d6e58d9a2f",
+    "planet_id": "dc0d9876-e980-44c8-b181-8b732a1873b8",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cc01d5dd-84db-44e3-833c-4fa1d5e7fa3c",
+    "system_id": "2d3d0e59-3cde-41a9-8dda-00d6e58d9a2f",
+    "planet_id": "cfcb1282-5c88-4787-ac35-6bac88831d9f",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c79f3993-ac38-453e-b4cf-f577a98eba07",
+    "system_id": "a2302ad2-7a57-43f4-8f73-b936aeb4863d",
+    "planet_id": "bc390017-f1bd-49e9-9ab1-70d6d0f12fbf",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "92c9264a-8ad2-4839-a021-6a93d7313fbc",
+    "system_id": "9b7a6b21-a392-4b86-9636-ef54ae0cc90d",
+    "planet_id": "3ad307e6-7394-4da4-8fdf-2dc0f264afae",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bcdd4242-03bf-4111-9c3b-585d34d9ba4f",
+    "system_id": "d3fc71b9-c6e0-4fd5-a84e-7c0257b82867",
+    "planet_id": "ff4b4233-fe9f-4faf-a455-3d5df67da029",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4586350e-b0a1-4bf1-9054-05299541810f",
+    "system_id": "e99efccf-12e2-4823-818b-e864b07fc6d7",
+    "planet_id": "74e9273a-adb2-4bab-99c3-ec1db1d797f1",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c3b08bff-c9b0-42f1-861b-71d988bc38b2",
+    "system_id": "c1d45e11-7c26-4f5f-ace3-8a4d8ae5ef12",
+    "planet_id": "37ab1680-29de-423f-aa73-275afcf983a0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "90f0a03b-95d3-497d-b5b0-204d685b08ef",
+    "system_id": "c1d45e11-7c26-4f5f-ace3-8a4d8ae5ef12",
+    "planet_id": "3aaf3362-3d7b-431c-9555-a4680d47eeb6",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f666579e-ee37-4c03-9b84-6dc36e06b566",
+    "system_id": "cc1d08ca-93b9-4773-b64e-4c905ee60131",
+    "planet_id": "52f985d3-dfbb-4ab8-9636-db778edc27d3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "44184cf1-e5d7-49f5-bfc0-85f43326f25c",
+    "system_id": "e52420e1-6006-4148-aed0-92634393a08f",
+    "planet_id": "08e9ec13-ea1c-4b41-8136-8d28fa87dbf2",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "177e3df2-d1ff-4491-ad38-a176d6da077f",
+    "system_id": "7f6985d1-48b0-4f81-b7cf-6f7aac285707",
+    "planet_id": "fdbe6700-f85b-4a33-8ae7-6a23d3d20faa",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "86f4d69b-91fe-4e32-8406-d78c1f0917af",
+    "system_id": "6f989d39-cf96-4e65-b31a-bf41430175d3",
+    "planet_id": "8a4629c4-36b6-4c0f-9674-de3fba53772e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9f23b2c8-56e1-494e-8cc3-b29cb8e270a6",
+    "system_id": "b3651d91-3fdc-4a4f-b4c9-af3fa851e8ed",
+    "planet_id": "6008bf60-87cf-486f-85a2-0ed7d653ab32",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4d21b50f-4b9f-47f0-b1b2-f2d79094b6ab",
+    "system_id": "dde5a86e-76b8-43b2-a0c5-b162f9e8cf19",
+    "planet_id": "4728b378-bee3-4bae-bc99-34a0cc4ed85a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "60f65abd-74cf-477d-8284-752f82da74e2",
+    "system_id": "b60fc207-a5b8-499e-b137-0597f1761743",
+    "planet_id": "0124f709-4e16-49ea-930b-2d61377ffd02",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "07d080df-6493-4daf-82c2-7c6485b46f67",
+    "system_id": "b60fc207-a5b8-499e-b137-0597f1761743",
+    "planet_id": "5cbe87bd-7544-4ce8-8807-8c10e5fefc6b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1b49c15-a910-4b33-be0c-8fc1a9dfb6e5",
+    "system_id": "4780673a-76f6-4ac3-b49b-31f1e21701b3",
+    "planet_id": "f7dcb645-57e6-4fd0-b637-8ce7f3105fdf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b9797f97-591e-4fac-b256-a9a25bec5e53",
+    "system_id": "b60fc207-a5b8-499e-b137-0597f1761743",
+    "planet_id": "a437fa0d-19a4-46bb-85b4-8857d2f5f09c",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7c7abb3a-2f68-4cd6-81d2-d13b470037c8",
+    "system_id": "b60fc207-a5b8-499e-b137-0597f1761743",
+    "planet_id": "53514f4c-7f9b-45f1-a2fc-3578f2c2daaf",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "30b802c1-eae6-40aa-a967-585df143e941",
+    "system_id": "b60fc207-a5b8-499e-b137-0597f1761743",
+    "planet_id": "2c51a664-e554-4d26-ba8c-c5c6b745aba2",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2c70656d-b271-40a1-97ab-1a85ef96dc96",
+    "system_id": "6db936e1-84d5-43ca-b572-1b7c87a83616",
+    "planet_id": "09a5c1c2-1bdf-414f-86a8-700c4e3d9fe1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ffc13948-33e5-48c6-bb2f-58c97ad80f14",
+    "system_id": "6db936e1-84d5-43ca-b572-1b7c87a83616",
+    "planet_id": "c20b9ca2-b644-47b7-b061-fcb1729f2933",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ce0773a8-2cee-4764-9ac0-3b48d78a1397",
+    "system_id": "8d058957-d100-4f76-a70f-e8a5aaae8311",
+    "planet_id": "25151a13-bf83-4e63-9a2a-4cd0d271307c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4d120b3a-5c6e-4a60-b7cc-96aed65c738c",
+    "system_id": "2c3e0399-dcf7-4080-86e6-aae346ee04ad",
+    "planet_id": "85db0d52-4b00-4814-bc7c-513979553384",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ea25c838-203e-42ce-91c0-1e1f1ea62fbf",
+    "system_id": "ddd8a366-5eda-4d00-af29-dca541e75a14",
+    "planet_id": "ac1edaa0-863d-4905-a6a0-3e4a85b55c27",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "65dd7c3c-4122-4703-b856-340b3a569526",
+    "system_id": "e442ea7f-4a13-49cb-b8ba-fac2e5727e01",
+    "planet_id": "2ca2242b-530c-4c1c-951d-cfc1aade3757",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1fb4c4c9-96a9-456c-8451-277977f0227e",
+    "system_id": "f9ef253b-3811-42c1-ae1e-a4079f86ecea",
+    "planet_id": "65b0d450-3669-4d47-b280-f8752fbcc765",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fecc9809-bd1d-4bb1-b0ec-513517c2f250",
+    "system_id": "6a0aaea7-052d-4f24-9a64-b56abe7edeee",
+    "planet_id": "535b1214-e91d-429a-8599-ffd11a03fa3b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "394f273d-88ac-4dcc-be02-25a943602931",
+    "system_id": "26e74d98-52fb-4417-8a02-fa24730ed789",
+    "planet_id": "cbcf2349-709c-4fcf-ab7f-1b43027be5d8",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bd2ec470-04fd-4d41-b3a0-e6236ec1aba5",
+    "system_id": "26e74d98-52fb-4417-8a02-fa24730ed789",
+    "planet_id": "2473e73e-b97e-47ca-8ab1-5f7ba2a523fc",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "550994d8-6565-4aea-96c1-feba46137d16",
+    "system_id": "c877d427-3e37-421c-baae-3986820cb90d",
+    "planet_id": "b51f9049-a126-4eba-975a-5c7cc32dca42",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b20e3738-dd51-4db5-b398-c2beb79e42d8",
+    "system_id": "2b6bde05-3dc2-47e2-89b8-80508d4ad47d",
+    "planet_id": "4e315a02-39aa-488a-9258-5fb289221b2b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "eb248f48-6c86-429c-a2de-980d7895bac1",
+    "system_id": "ed165b39-0075-4071-ac39-91a94cc18979",
+    "planet_id": "4d69fe85-c1c6-435f-aa16-54cccc168452",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4a8db63c-57f6-4722-b40b-462302f5c049",
+    "system_id": "a477ef7f-8d99-4dc6-b447-414b30df948a",
+    "planet_id": "5100e6d3-0ea1-4d13-8ef0-afcef5e83098",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5ba44d8a-9593-4501-b245-91bf07359a2c",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "0c28a30d-f571-483e-98f9-cbc41a69b3c9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "77b3727f-e61a-4a01-81e4-8b495b17ab29",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "f201936a-d7f0-4b32-8882-cb0cbefb0b0f",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "94c4d422-e30c-4446-95fc-867cbae0180b",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "a8849147-061e-4a9a-9b43-cd159cbeb8a9",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c6635eed-5ad6-4c31-b2a3-15e2cbfc053b",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "058beaa5-f44f-41cd-bdfe-11da83bd1989",
+    "orbit_order": 6,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "926fd70e-c667-4510-94df-ed0e20a2c0e5",
+    "system_id": "92f7db7d-842a-4d47-a824-a8803144f8fa",
+    "planet_id": "d80575fb-0cec-493c-9454-56045855874e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ed0f9651-45b8-4b08-9ca0-c1897b53f5ab",
+    "system_id": "a06259a9-ab55-4806-a27d-03783c1eeaad",
+    "planet_id": "97dbf5d0-e403-4465-bd61-5cb930250117",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5921d7ad-aa88-4835-8dbd-a7c4abf18bf5",
+    "system_id": "a06259a9-ab55-4806-a27d-03783c1eeaad",
+    "planet_id": "d47d478b-be0f-4fd3-8b72-39f7e0fa9a6f",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d102f014-e27f-41db-90e5-918f74c9365b",
+    "system_id": "4245584b-3300-476b-94be-b461076e853d",
+    "planet_id": "45a3f198-8a55-4735-955e-c4670496fb95",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2b8f488f-396b-4adb-a99c-04b2855f53be",
+    "system_id": "01c2520b-9198-47ba-8ac2-ee7db695d89e",
+    "planet_id": "322e6cd5-4bac-4f2d-8e08-37521a00ae95",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "121317c5-af1b-44c1-85cf-0599d7aa78ce",
+    "system_id": "21adce7d-8b8a-47ba-8869-d99a23e61176",
+    "planet_id": "92d6c1af-9713-440d-a925-99aaeae89a1b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "efe9f9b4-1e37-4629-b41f-45dee5e0a37b",
+    "system_id": "21adce7d-8b8a-47ba-8869-d99a23e61176",
+    "planet_id": "a55e64c7-330c-4699-9696-c56a3d1436ec",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fb4363aa-57a3-4f6d-83e7-28079a4b7832",
+    "system_id": "3b2c2c18-ce65-4296-a2a6-f80254162b59",
+    "planet_id": "7f4a6d89-9b93-42c5-9ca5-14e1e18a37ff",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ce8a3bbc-7fb3-4d70-a9e7-22ca2b814a84",
+    "system_id": "a20cce3c-a900-4bae-88dd-f5bd4f1f07e6",
+    "planet_id": "45407b39-e4dd-48df-8102-96391e5eee0a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "be74d7ab-0724-4729-a9d1-87b8ad17f147",
+    "system_id": "8869c96f-583e-4f2b-8f7f-cc151e054954",
+    "planet_id": "da635ca1-8a4a-416c-8cf8-8520f68a08df",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "62adc822-0ca9-4701-bad0-b7556b3eaeef",
+    "system_id": "ec1219d3-3b47-4d4a-a44f-3623f204c41d",
+    "planet_id": "b728afd7-9ada-4605-8a65-dcce3f79097a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b234825c-8231-410d-a9f6-07285c5789eb",
+    "system_id": "ec1219d3-3b47-4d4a-a44f-3623f204c41d",
+    "planet_id": "c9de9074-d20d-4bc4-a118-994c94a4c969",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6ad7e04e-5148-4ddb-8939-63493f0373c4",
+    "system_id": "42faf9dd-6abe-46c0-8330-46c905830008",
+    "planet_id": "8ba48378-bbca-44df-8f72-1e049caa7e37",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ea940a24-1346-415f-8a25-8af0f955f792",
+    "system_id": "f797fd1e-246a-4b0e-abf5-59cf6fcaac19",
+    "planet_id": "f3db90a4-133d-46cf-8d67-82e629dcab0e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a9310882-cc50-483c-8abc-aea562ab5395",
+    "system_id": "42faf9dd-6abe-46c0-8330-46c905830008",
+    "planet_id": "01e4f01d-0446-4e1c-bfaf-ebf945d8c73b",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a801889c-c35a-4104-aac5-ebf9f76e8dc2",
+    "system_id": "4106ea39-6885-4bbc-9478-526d2d5315a5",
+    "planet_id": "1d8c81f8-7cb3-4ea1-a112-3f65c3850244",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e7b2de6e-c597-49e0-a13b-311130333ecf",
+    "system_id": "176bb25b-e210-4f9b-a9ac-cc4fcb15af8d",
+    "planet_id": "864f5bff-8264-4215-b5c1-2afbac357fc9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9d311a6c-2624-42ac-b7e8-fd96a9fd0d58",
+    "system_id": "7d0953d0-6a01-41de-a097-ac0c6e05c462",
+    "planet_id": "88ec3b4f-d277-4829-80cd-60bf219ca80d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bd338f20-7f13-4b8e-bc4e-fd9004c16e4a",
+    "system_id": "83c8c67e-b068-4e4d-9270-b3371c9d0c27",
+    "planet_id": "1a897bdd-5251-45f0-a21f-8f9bcf9951ee",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3c678351-fffe-4ed2-8703-6da23b61bf7a",
+    "system_id": "e67bb20f-d093-4d53-96c6-03cfa4a5bce1",
+    "planet_id": "002a8399-05df-4eb9-a290-cc3294641f8d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fa4fc992-84c4-4618-acbd-468dd5183cd3",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "e74b5595-6e5c-4166-a483-c11a65e4e9b6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "af13b035-220c-4004-a716-13e8e764dbbe",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "e430e209-117e-4a24-81ea-79d10b95ff7c",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9b3ef9fd-53ca-4a80-b9b6-792c412e25a2",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "2fd666af-759c-456a-a921-1cbbfdd68352",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "48b1c571-e3fb-4491-ab46-7871cb9595a8",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "315f33a6-a324-4c87-88d5-25c10cc0aa64",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1f40117e-43f7-485b-8f0e-3a46f609e969",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "43f46b51-fd85-4eca-8ab7-561875e5b652",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "84263609-31ce-41b8-87dd-1a28e60fe9a0",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "e36a4be3-2dad-4919-a57f-8d480a5af359",
+    "orbit_order": 6,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e12811e7-574f-4b94-80ad-f2959aed9f41",
+    "system_id": "7701ddb7-d372-4674-a342-86321a7f7a70",
+    "planet_id": "d5e6a2b9-d2d6-48d6-aaaf-2ac4a161b393",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "644a77a8-e6a1-4713-a268-e57c2f66ddf9",
+    "system_id": "97fecd49-ee21-443a-9034-1141e7005e6c",
+    "planet_id": "1ff32e5c-dee0-480d-96a7-b76bf8017737",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "eaa154d9-0cee-47f6-bef0-0f97b6638829",
+    "system_id": "f30a110b-294e-4a47-93aa-a86b610aa495",
+    "planet_id": "934247fc-41ab-4cdf-81a1-3cd041a9610f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "39eacf48-0379-4005-9a08-4aa89b5f285c",
+    "system_id": "c3fc8efe-900f-42c4-83d2-d87c94db7261",
+    "planet_id": "b9e32fdb-de8c-447e-966d-3a58d20642e4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "49f3f11b-0468-4f95-8336-561e55fe19d5",
+    "system_id": "a2a9aa00-3b27-4e86-b57a-1756f2456c50",
+    "planet_id": "0d09f32e-8d3e-4b0a-997d-169cc22646f0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dee9b5c4-d4b7-47ff-be6e-446fd84871a7",
+    "system_id": "1714b01a-6e65-4e76-accd-5314dd7d4b8a",
+    "planet_id": "ba3173ae-bbb5-4323-8675-6ea55f8fb417",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f58137c4-1fb2-4b3e-8e38-0bc4ea18cda7",
+    "system_id": "1e14bdee-bc9a-4020-aa7f-6d80622c2859",
+    "planet_id": "dcb0ce63-93b4-4e17-97b4-3c7a78938dd8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d21567b5-7d6f-46f1-b372-22e9f3ca14c3",
+    "system_id": "a8eeaba1-26fe-4ac6-b12f-cd713e886cb8",
+    "planet_id": "33989770-451a-464c-8123-7252e59d8281",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "922a5f20-12f2-4fac-9030-3eb171e66f63",
+    "system_id": "bec3071e-d1ed-44da-bb85-10c794e48f2b",
+    "planet_id": "9a360695-adf5-460b-bc6f-e20e2a121979",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "359d2bdf-3f71-41d5-a188-7c3d8899b259",
+    "system_id": "0fd22afc-ea30-4a8e-a3dc-1a610af5d0cb",
+    "planet_id": "737ea51e-e0e4-4598-a670-5acb07e04d33",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4078f523-40ce-42e2-9da5-066f07182679",
+    "system_id": "691c1be3-942b-47a5-8f3c-bfa08e9ef14e",
+    "planet_id": "7c72023e-49f1-4d4c-954a-a3ddfc1d2237",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3190ca60-db17-4f3d-b299-227887baa0e6",
+    "system_id": "1ae5445c-fc64-4e29-a2a0-20f9f55fc638",
+    "planet_id": "bd209005-5ec1-4356-b8c5-0df2b8d4f99b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "108fff9d-9648-4842-b8eb-5356f2b06f14",
+    "system_id": "99bbfe85-8c8f-4228-9060-33ffd5054564",
+    "planet_id": "5adfb1dc-bf7e-4dd0-87c5-ec97bcba89fc",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "709f59d4-05de-4fed-bd97-6d361a83d138",
+    "system_id": "190f8e65-9e71-4978-ad94-7c5b10a21a86",
+    "planet_id": "5d2f1870-02a1-48d4-b7a4-5ba58728c41a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fd32dec1-9a18-4fe5-9f62-ebfa3a0b4ea1",
+    "system_id": "98dadb64-fc11-432a-9ed6-fdcf0022b157",
+    "planet_id": "28320558-d739-433d-897a-fbf3185e239e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "16e0b980-33de-45d0-8bda-e79c2fb28922",
+    "system_id": "a8039138-6d7d-41eb-a508-42fd3294625c",
+    "planet_id": "1e251b0e-2d7a-4696-94f3-d01bd9da578b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1d724240-cb15-45d0-a584-3a855e575d62",
+    "system_id": "e3d42a20-fb88-4bde-8354-b590bc8f4ca7",
+    "planet_id": "d3a3fbc3-8631-4dba-884e-222636cf4a4a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d36c62bb-1b82-4ea7-b279-e55f68a3d557",
+    "system_id": "40e25307-1c22-4282-b505-4514033b07dd",
+    "planet_id": "f768813a-0846-4529-a071-5ebcc8d3c2c8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8fec9a9e-d393-4ae7-a78c-6b9b57a1697c",
+    "system_id": "36b7e842-22a4-4938-8b73-f795597fe2d3",
+    "planet_id": "2be00634-7e45-4b9f-92f1-be67d2ef83fb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bec0b1ef-c7a1-4508-b552-05c9bb1ee2cb",
+    "system_id": "77f4530c-f0a3-46fd-b4e0-95ae984abd69",
+    "planet_id": "7baa07cc-66fd-4fe1-b888-2b0234bc721e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cc85657e-66c1-43b1-a74b-74aa1e0e5c74",
+    "system_id": "21ceca51-e83d-4511-8c4e-2884f14a07e9",
+    "planet_id": "5abff791-7710-4375-a767-5684dbe5507a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3e7db6d1-524a-43f1-a945-249ff2cc01f6",
+    "system_id": "4d797e78-3a5e-416f-a381-f4e0bc60485e",
+    "planet_id": "b5f4a016-d8e8-40c2-93b9-8dea4a58e595",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9d8f005b-d77b-4fc9-952d-f9271ca931b1",
+    "system_id": "1c2ff1e8-04ba-428a-ad6d-66d30bb3110e",
+    "planet_id": "096c50f6-9478-4188-b3a3-102b8c7dc456",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bdb5cc8b-545b-44ab-9f2d-19a75c93d0b9",
+    "system_id": "134a2f05-ed84-44a6-aaf1-3828bdb44385",
+    "planet_id": "861491b2-8aaf-4177-9251-0ae1790cd7e1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0eb27461-033c-4f3c-a6e3-cd08c513bae2",
+    "system_id": "568a53b2-4fb0-4c1d-8d43-8e05f3bdd8b7",
+    "planet_id": "7376f193-70b0-4994-8c26-fc101b3f309a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "412f1e24-e97c-4bf1-af95-e973481781e1",
+    "system_id": "9c7bc327-c0b6-4e82-80c9-1efcb3ff3112",
+    "planet_id": "42008c13-1f56-492b-b518-1a153cdbe3d6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0181dad5-ebae-40bc-aaf9-385767124847",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "6fc44577-2b4e-4959-a944-56855d2166d0",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8870358a-111d-4112-9af9-864ab368f6c3",
+    "system_id": "eca7696f-e89a-4249-880e-2a12f4950650",
+    "planet_id": "e40bce6c-564c-4405-b815-2cda2d07a2cb",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "de08e82f-69f3-4082-a4eb-93bbea903b69",
+    "system_id": "eca7696f-e89a-4249-880e-2a12f4950650",
+    "planet_id": "fb226d09-9a38-4fc3-a02d-ca26aa2027ea",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f6f39a40-945a-4bb2-9ab0-8fddde27671b",
+    "system_id": "69fed68f-edc7-41ab-94b7-2a93b16ef72d",
+    "planet_id": "750b32d1-4b6e-4bb3-bacd-a30cfe9eb4f3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5ae54cc6-90d3-4b6d-9e10-db9007706222",
+    "system_id": "2cc42a23-03a9-4dec-99d2-2c67c957ba28",
+    "planet_id": "6fae9cb6-3c6e-4915-836a-e8ba4d538d05",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "faafcb9e-c38e-45c4-ab38-7fe2c397492d",
+    "system_id": "a2302ad2-7a57-43f4-8f73-b936aeb4863d",
+    "planet_id": "390d5f57-44d9-4dc0-8709-ac5ccf36590a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c391f984-eb18-4b00-825c-a096bacf2afa",
+    "system_id": "2454ca02-c735-454e-a2c9-485f4abcab41",
+    "planet_id": "ac5b3aad-3824-4ada-bd06-abedae372879",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7cb1464b-ad81-4227-a535-327b92a33097",
+    "system_id": "c48c12ad-47dd-448e-8629-fbcd0db305ef",
+    "planet_id": "088a1e47-746a-469b-8f88-800ec8730f43",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f59e1560-43a7-48b5-b8d2-e71d75c4e385",
+    "system_id": "abcd03f9-c098-4bbf-b871-6737ec6db909",
+    "planet_id": "52b6ca0b-3c01-48c1-917a-3c69b7d7a5bf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "daf5dd96-dc4a-49eb-b7aa-412573cedcb8",
+    "system_id": "f5acd7d8-2d60-468f-add2-fa3f255f69d0",
+    "planet_id": "2f956cff-6b76-4b38-b540-be3cb897231d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "42c61a32-2a53-450f-a909-2fbd7d3387f1",
+    "system_id": "b60825d9-db18-4041-8591-48a32e4add11",
+    "planet_id": "1d7b35d4-62b5-446a-a7a2-66104de557ff",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "648437ed-5825-47a5-ac0d-00230923aad5",
+    "system_id": "5ed40173-61e3-4beb-b18e-964cf0f587f5",
+    "planet_id": "c1ebb26f-573f-4e92-8493-eb880bd91717",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7f8468f2-2481-42b9-8364-385f31c2beb6",
+    "system_id": "dbf9ebd3-d77e-4c0b-a9fa-4933ce5ad51b",
+    "planet_id": "64ed3fe5-c5eb-497d-aa73-0483343da14a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "674e148f-972f-4996-9ed1-e4079758bdcc",
+    "system_id": "e4dcfdf9-4ff1-4f20-9a87-2a923e8c153f",
+    "planet_id": "4bd93df2-f80e-47c0-8f95-73da74d70e98",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "37e01be5-d852-495c-b48c-61aec7f3e390",
+    "system_id": "bd066c90-ddee-4610-9221-2f65ef47a863",
+    "planet_id": "dee0a5f8-5291-4c91-b0fc-4aa71ead3ad4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "69f60b1a-252b-40fe-aa59-f691663e060d",
+    "system_id": "099dd7f7-63ad-48ad-afa8-012cf361a875",
+    "planet_id": "f81d9cd1-74a6-46cf-bb94-c5eb8c3f29a0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2f3a4db2-192c-487d-9b0f-5c84d78d9169",
+    "system_id": "a502eadf-7164-45fe-ac0a-5bb4e41cb0bb",
+    "planet_id": "9fb26fd4-a9d7-4360-aec9-240763c6b187",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "005cfd41-36ad-4486-bfc8-8bffad052821",
+    "system_id": "1583df63-a751-4885-b426-048a18dd34b9",
+    "planet_id": "2e15dd3f-86de-4644-9025-0dc67a72d69b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7ef75266-2e3f-4683-b080-f46604c96be9",
+    "system_id": "e5addbf8-52b0-4160-813a-25735b08c8ca",
+    "planet_id": "64b38de1-8ddb-4c39-ab3a-2f3540a86d12",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "75ff9bca-7359-475a-b984-520d9e02492b",
+    "system_id": "79802f78-9c68-4608-9a89-b32441494e0f",
+    "planet_id": "f4ee3be0-9eba-45b5-8de8-c4f155224aef",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b7f40ce0-87b7-41d7-ab03-25b2e8d0e3a9",
+    "system_id": "0e17acfb-3360-4a58-bfdd-2829662ca557",
+    "planet_id": "d3d663d1-5262-4663-93b1-5909d8a10aca",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9b1b5c3f-deab-46ca-b8b6-e41c5a28d6f1",
+    "system_id": "c08bdc87-6af1-44ed-bf06-c3169014d83c",
+    "planet_id": "affa4c67-b137-4679-b22e-9f95e91e74d7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "439ab1ca-e138-4f5b-8c2a-891211164608",
+    "system_id": "9cf71021-90d9-4a33-aec9-9aa2978b4a0b",
+    "planet_id": "bc51a048-7dd6-48fd-89eb-0ec8b296779b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4c892f8a-7f28-48ff-a7ba-74e34f30045a",
+    "system_id": "76c63815-e0aa-416c-a469-0607e122555c",
+    "planet_id": "13f87957-90d8-4f65-b2f6-9f6d2cac92f4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e144f675-c4d4-4a69-a1fa-023e0ede38ac",
+    "system_id": "a54dcd69-9f3b-4201-a6e6-5a0f1724a28d",
+    "planet_id": "4a091f0a-7660-4031-810b-708641ed9ed4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "556a9076-b11d-42c8-8951-71cd49a60fe6",
+    "system_id": "c90f2746-3e73-46d1-9d12-af3564f8ddd1",
+    "planet_id": "dae869ae-b8cf-4226-a46b-3e7ba2e6754c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e9aba25e-9a16-435a-8ed8-7248da90624c",
+    "system_id": "a9b21088-1483-4cd9-b840-557b0e66df82",
+    "planet_id": "1ed038ba-495a-45a2-9941-f9d0ab7ea1bb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0add87be-867b-4a77-9be6-6b70258fe6dc",
+    "system_id": "a7176157-8aee-4578-8da4-21eef0ea7841",
+    "planet_id": "11b94b76-8e2e-4ade-9635-4d5a6b48b428",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "503f19c5-4c00-47b5-b9d4-9d4f5ffe7add",
+    "system_id": "d3e4ef89-c868-44c2-962c-feae1648325d",
+    "planet_id": "ff92b8fd-6415-46c9-ab75-0b3af39814a4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9b824196-1171-4283-9090-8af8f90aae8b",
+    "system_id": "81533432-2b98-42fd-a739-65cc08defba8",
+    "planet_id": "ffa3aa09-84c7-42db-be7a-101adc48830b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "637c10a5-dc52-4860-9c4b-8a4b8b1be52f",
+    "system_id": "068dc9a5-aac6-4d82-8174-d73cdca2510c",
+    "planet_id": "996ea83c-1935-4a1a-a457-762c1e183170",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f8472e9f-b8dd-4b46-a270-150e8dc01a65",
+    "system_id": "34c40cff-08fc-47d7-8cfb-40d329984f88",
+    "planet_id": "e67576b8-ab6b-4e6e-9d9d-98b8bf7e4801",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4497fbc2-9669-437c-a434-10e4486dca8c",
+    "system_id": "176bb25b-e210-4f9b-a9ac-cc4fcb15af8d",
+    "planet_id": "49da6564-e3ec-41bf-9767-0b52091f85a3",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "44191260-bb08-4348-8f32-1138cf694ae5",
+    "system_id": "e44a44b6-c6dc-4ab7-92a9-98271e8d22af",
+    "planet_id": "3f306c83-b6f4-4968-bb86-3fee5a12a7b0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d39810ee-fd18-4f84-bc50-eba7b1529e50",
+    "system_id": "e44a44b6-c6dc-4ab7-92a9-98271e8d22af",
+    "planet_id": "f1ea8016-a190-4a89-a78e-aecb0803ffa7",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1bf84ab5-d07e-45de-bda6-d1bd1ef1d8de",
+    "system_id": "41af21b6-200a-4f4c-97d3-e97c771e83e4",
+    "planet_id": "2ed42514-6c10-4167-a65d-7b681a1ac81b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f6aebd79-b989-4a24-93b3-c25b915202f3",
+    "system_id": "41af21b6-200a-4f4c-97d3-e97c771e83e4",
+    "planet_id": "ce5d1bba-572e-4e74-bd12-9b8b2f52e2b4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d5ae4291-ea06-4c6f-9f72-0315f43afde0",
+    "system_id": "e5eeea23-5b74-4169-aaa8-b5bc251afe67",
+    "planet_id": "d2ebe96b-cd3f-4606-ba15-ce36644371eb",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a5421ee8-7bc9-47b5-a405-7fe59257858e",
+    "system_id": "abc1c1ee-be63-4d67-b041-cfd9a40c423f",
+    "planet_id": "37ededd1-705e-4f9b-bc34-cb068f1c8b63",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d7921eb5-cbd5-4fb6-b194-0226634a8bd4",
+    "system_id": "31be9565-babd-433a-8912-d197a7e22e2d",
+    "planet_id": "5aa46043-5297-4eda-9272-24a59d65dd00",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3ddd79cf-4a1f-4ae2-85e8-8d4795118bc5",
+    "system_id": "d2c46bd3-aea5-4322-b9c9-17e48f1596a4",
+    "planet_id": "02717cf8-3db9-455a-9737-af27487f56b0",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e68fca48-b267-4bf2-a0d9-929169a75a5d",
+    "system_id": "d2c46bd3-aea5-4322-b9c9-17e48f1596a4",
+    "planet_id": "04b7b410-5d31-49e8-b612-ec45a844dad1",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1eaec934-dba6-4418-a95e-189a2e4d34d9",
+    "system_id": "e0fb6024-7e11-42c3-bc1b-c69078e7f044",
+    "planet_id": "4097c929-d142-4184-b6ee-4fe1a3c28fdf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a4b180b2-b937-4c65-992c-2542eac13dae",
+    "system_id": "77476c20-73cf-4c2b-b7f3-5c9dede75cd8",
+    "planet_id": "8a02ff1a-3b4b-400c-9754-cf4dda125f90",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "568be64f-2eb8-4432-b76a-2cd385634319",
+    "system_id": "91f1a484-fae1-4935-aee4-19004b3bd44e",
+    "planet_id": "cc6731dd-b68d-471a-94f8-ce96db99e807",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "06d4ea60-449e-4d2f-bac5-ff881dcec9c3",
+    "system_id": "76abad66-59fd-4c41-9f6b-2522edec1ba0",
+    "planet_id": "9aada124-0934-4735-acb5-dd2eaff89d36",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e87ca396-d223-4f52-8d35-b2d5bcf4a038",
+    "system_id": "1ae5445c-fc64-4e29-a2a0-20f9f55fc638",
+    "planet_id": "e42c9c4d-98a4-481d-a79a-202a754a5eb4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a2d4c6d6-5603-4af5-b7f7-a134daaa8810",
+    "system_id": "77456b63-9791-4f1d-a636-5deeb0841f66",
+    "planet_id": "aa604fab-04f3-42fd-b75c-a0a53b1303a1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c7a28583-534a-4410-8e4c-82d839c663a8",
+    "system_id": "396b341e-b5fc-48f1-a9ff-c516baf5e87b",
+    "planet_id": "d43bd59d-37c4-45f0-95ae-c9ace9791d1a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3e70cf8b-5b34-4c99-b28c-8a2ba2c87579",
+    "system_id": "688f95e7-881d-4321-a60e-05d46204742b",
+    "planet_id": "dc689be4-3366-4a0f-b481-cac4993eb361",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0d201cbd-d919-4f6d-95a6-b7b33cf3fe86",
+    "system_id": "dac63b9a-73b3-458b-81b1-6cad6f097d30",
+    "planet_id": "587be241-e17a-48f4-aa81-d6d4bb8c9bab",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3d0d2a19-7a1d-441d-8046-eb9d90a6f26e",
+    "system_id": "42999cac-7043-4c38-90d5-195998612562",
+    "planet_id": "96d9e42b-2863-4e28-bc1f-a76e34fc26b9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1f30033-3849-4369-aa06-a2def57d599e",
+    "system_id": "dac63b9a-73b3-458b-81b1-6cad6f097d30",
+    "planet_id": "607eeb10-cd04-443a-84b7-802185a0fd4a",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e82590ef-7298-4eaa-a8e1-ab1d180318aa",
+    "system_id": "b9b1607f-2bc8-4049-9668-6f253142b303",
+    "planet_id": "908be512-d2fb-4c10-b616-027a930370f7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "057f520e-724b-4b8f-99cb-83a4a7637116",
+    "system_id": "04b02477-4e2c-4173-8a42-61434dc7f145",
+    "planet_id": "3aabde93-0614-49d7-be1e-7d9ddbeb25d8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "819851f3-61e8-4245-8aa2-0713322ce45f",
+    "system_id": "d604caff-14e4-4a4b-b243-7ceeb06e8586",
+    "planet_id": "a3cd0db6-146e-40a6-be14-5fac0df08fce",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fded261f-b77b-40f4-b785-dd7015347d1d",
+    "system_id": "47d8f306-4d7c-4e94-81a3-f36f88508e6c",
+    "planet_id": "173df5e2-c1b2-4487-b624-a4b7758606e9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c4ffccd9-88d8-4f94-ab6e-9bb8f6bebb71",
+    "system_id": "5fbf0da1-849e-4f3a-93a1-f2f53d7359ba",
+    "planet_id": "4500e824-a248-4672-ab15-3f0f7a806b45",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "38fd18b6-6119-4754-829c-c843b0e9ab9b",
+    "system_id": "5fbf0da1-849e-4f3a-93a1-f2f53d7359ba",
+    "planet_id": "4ad9f2bf-be14-416d-89c3-be374329acaf",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "412655fb-8304-41a1-8b71-de748c8a7a41",
+    "system_id": "b35541c7-4e13-44ca-808b-eb8fad0aee89",
+    "planet_id": "a991e6fc-d1bc-41ef-b095-0444e5f72724",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "aa0ee95d-a63e-4a3b-b6b2-bcc3f7eff0e8",
+    "system_id": "b35541c7-4e13-44ca-808b-eb8fad0aee89",
+    "planet_id": "69d66e95-e6de-45d6-807e-3b8696fe7ae8",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f2bc5ada-95ae-411d-ad58-e4f624d72622",
+    "system_id": "7bc0ef30-739e-4b20-b1b4-b11fc6c2feb7",
+    "planet_id": "6e71fb8c-7a29-415c-97db-63ad7b089a47",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1b2120c2-139c-4e0d-9dac-7f8122591ed2",
+    "system_id": "d80a0c99-e0c7-406d-92f7-db368e7986c8",
+    "planet_id": "a1f4a12c-3a1d-4633-ae11-27f9704d500e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7e610872-8cd0-42b7-a1cb-455fe3e47f16",
+    "system_id": "27f77270-e9f6-443b-ae72-001f053fb1db",
+    "planet_id": "9c2cef56-4cf0-42d2-a61a-08235d5ca675",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b525d72e-5b50-4122-9772-7301b2915d83",
+    "system_id": "e631cc8f-48d9-4750-a47b-decd8403a809",
+    "planet_id": "b74e6f49-39b1-47f4-abd1-4dbebb8feb29",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "977d2cd7-e9f7-44f2-9451-81589d5b9794",
+    "system_id": "b2dfa21d-2374-4e41-bb98-83a3cff8b36a",
+    "planet_id": "fb61ba9d-c54c-40d2-835e-8fa1921fc4d8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "981064a5-c5c9-4108-8569-51abfaf47b20",
+    "system_id": "b2dfa21d-2374-4e41-bb98-83a3cff8b36a",
+    "planet_id": "f9acca8c-ceb3-47a6-8080-9f41b873e9f5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "64a0c1e9-ad4f-4e29-8901-d6b43b7f2f30",
+    "system_id": "fdb0b184-56b2-404d-ab1d-97b7c2838226",
+    "planet_id": "669ca308-30c7-4678-bc41-991f442bbec6",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "97706f86-d5e1-458a-82ac-50b9ac168867",
+    "system_id": "fdb0b184-56b2-404d-ab1d-97b7c2838226",
+    "planet_id": "7488ca33-82b7-4503-8e38-86acc8e20554",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "edbd0cf7-ae35-4525-b7e5-1f4921cdff58",
+    "system_id": "fdb0b184-56b2-404d-ab1d-97b7c2838226",
+    "planet_id": "99241f9e-c447-4da2-8f5e-ccccdb41fa35",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5b81c6be-2739-4f1c-99fb-81d30b2b253a",
+    "system_id": "8dcb4643-27f8-4f3e-bb58-df39d44f56d5",
+    "planet_id": "c3a45c68-e85b-413d-930d-0c97ae8c21cb",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dcb0609d-2376-4588-8e62-be8ccd601ce5",
+    "system_id": "672fb0ab-e1d7-4bd2-9b65-61d9647d561b",
+    "planet_id": "7cab8875-67ff-4e13-8574-f89701401537",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e18f3890-28d6-4dbe-bb6d-d3e6a128c8b4",
+    "system_id": "7d1280ba-f9c2-4d21-b734-13c9930f60cc",
+    "planet_id": "1c8c9701-1280-4558-b24d-5ea3715b9718",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cff668df-2bc9-40be-ae69-0b7ca5c36e56",
+    "system_id": "5cc900bc-cb05-4649-8191-9d8549566164",
+    "planet_id": "ceb56deb-7887-45d0-97b7-6221b6d7d4b4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bcf1c000-b284-4040-971f-055c20224d33",
+    "system_id": "02d071dc-ca33-4897-be96-aa4a1833f9c5",
+    "planet_id": "83a99d07-a00d-4c2e-8a30-9a023ff6a91e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "db48b729-3d83-4ea4-a956-a62051dbaa4a",
+    "system_id": "10e548d5-dacc-4b4e-a89b-dc43352b869b",
+    "planet_id": "498151d2-4f4a-412a-bea1-d8fd76675729",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c7897451-1c98-436d-b35e-b7c408f600bc",
+    "system_id": "d49ccb9d-66ea-4142-bb59-74f9c3ad4da1",
+    "planet_id": "fce43234-367f-48ad-8710-d878bcc62b5b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "22adf894-80ad-4e22-8649-cab0d7b383af",
+    "system_id": "68a74849-421c-4bba-9b12-20661b3b8cd2",
+    "planet_id": "96736c0c-91bd-4373-806b-e4d324ce3956",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b988f3cc-a31c-4b9f-841b-0db8e5b2d6b6",
+    "system_id": "2106fabb-4f36-4e5a-858b-5c9d0810a140",
+    "planet_id": "64e554d5-ce11-4cba-89da-fc3a3c34641d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0aa8a73a-8ba8-47e6-abf6-20400af4c8ce",
+    "system_id": "cb43444c-f729-44ed-9dd4-be8eb4e4d012",
+    "planet_id": "716be1e4-aaaa-472c-8744-10eb3267fbcc",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ecc6dee0-0e27-4d2d-bb73-f7293cec8758",
+    "system_id": "9e963d02-c3ef-4912-84c1-8ea7dd60843f",
+    "planet_id": "9f9578b0-75eb-4680-a6dc-eb349ec1c42e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1e981718-f09e-4e36-b76e-afc4c028821c",
+    "system_id": "2fda19cd-0911-4f05-8557-2405e4e65954",
+    "planet_id": "754ae8c3-ca35-466f-b7a4-a8ab1a44de1a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8dad7c09-fd56-420f-a3bf-70d0b95aebb9",
+    "system_id": "2fda19cd-0911-4f05-8557-2405e4e65954",
+    "planet_id": "ac7f8100-65dc-4c39-8a9e-48fac230b044",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5d568a08-1c2a-4bfc-8aa7-d6c72956459f",
+    "system_id": "762705bc-4671-4dbc-9f3d-76cb6a11112f",
+    "planet_id": "60ab8e6c-c638-4065-a80b-0b287cdefd44",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3dbd8dd6-b623-4eb2-846f-d9d65147516c",
+    "system_id": "9cdf74bc-1a7b-46a3-9920-eb9668d276c6",
+    "planet_id": "4b576b59-555a-42b6-a36e-1c11287065cc",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2f10e8ac-ae24-41a9-832d-37110a2ef79b",
+    "system_id": "3d45bfe8-f92b-4d2e-999b-c0401f592183",
+    "planet_id": "b388352a-fb0a-481e-9304-cfa56e57d97a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d9c6286e-cd36-4f30-89dd-d69294662028",
+    "system_id": "bb784c78-6ebf-4f68-a9cf-a889d2e7a9b8",
+    "planet_id": "879ef03f-c979-4904-8845-eef4a6db0e7b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c2fd574c-31db-48f0-9608-22d1b69ae65b",
+    "system_id": "102ee55e-35b9-49a3-84f7-4b7819ae1cae",
+    "planet_id": "a88cc605-ed4a-4966-a51f-d8041596287b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a8880868-1614-4537-8174-f8be8b72c4e0",
+    "system_id": "eb21ef67-47c2-4d39-a4a7-d9d96c7a9e84",
+    "planet_id": "237ad379-afd9-4953-807f-c94540d2e077",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8b238627-79a4-4717-9889-21903b24e37f",
+    "system_id": "ab49a798-dcb5-4803-a359-78522c0a0566",
+    "planet_id": "d889e2a4-480b-4f38-b572-0593d4bda309",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "78987fa8-498f-4317-b629-e8d8725d6efa",
+    "system_id": "e73f6b7a-1f7a-4f52-b274-3fadb8c3b923",
+    "planet_id": "97d5c733-eb58-4de2-90ae-e620067ad94f",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5c520097-821d-407e-b34d-88caaefef119",
+    "system_id": "e73f6b7a-1f7a-4f52-b274-3fadb8c3b923",
+    "planet_id": "13c1e645-5821-4aa4-9b3c-5bf18fade5db",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f5b411ea-ef1d-4b25-953e-ea4674e8f995",
+    "system_id": "fa23d44d-9914-46e0-863b-b1f56e0f4f1a",
+    "planet_id": "dfebfe17-4c19-41ac-bf73-e7ce96766d0b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7cd9525d-41c6-4d07-a9f5-c510c6d9711f",
+    "system_id": "ab49a798-dcb5-4803-a359-78522c0a0566",
+    "planet_id": "842f62f4-30e4-4a44-94bf-7b1e01dc7d74",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "46d827bc-acd0-42d6-95b4-8afeb46409fc",
+    "system_id": "ab49a798-dcb5-4803-a359-78522c0a0566",
+    "planet_id": "b0fe73a0-1971-45ca-9421-8ac9e07be940",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "19d9feae-318f-4655-b917-1c89baafd106",
+    "system_id": "7f9959c0-4b35-478e-887d-a128a59c7501",
+    "planet_id": "ee726de3-2575-4ecb-9ed2-9a92d18c8785",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0d3dcb5a-c8af-440a-bd68-68896b765ff8",
+    "system_id": "d7604c45-ab2b-4918-840a-573b2cf2f4ce",
+    "planet_id": "2370813f-2a87-4d7f-88d1-14758365a645",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ba5e1def-9557-4360-9cb2-4d46bc8c5404",
+    "system_id": "4ec3f1af-1d71-423a-90c4-9bd7125feb66",
+    "planet_id": "ed58403b-a115-45cc-803f-8ef1f0757136",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0b832754-147b-4438-adc9-ea4a0b305fdb",
+    "system_id": "f53e11cc-86e1-4c93-8e40-ce97d755f4c3",
+    "planet_id": "1bf4a4cc-45f4-4def-afd8-a28b9cf4a8d8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cffaed78-770c-4aeb-bd16-e0410c0b0a7f",
+    "system_id": "d80c2c7a-478a-432d-be18-026e3c9b791c",
+    "planet_id": "bb41db7b-3b96-4752-b412-230c305998c0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a0de29d5-edd2-4572-8209-667a2229b1b8",
+    "system_id": "7f9959c0-4b35-478e-887d-a128a59c7501",
+    "planet_id": "f76936cf-4044-46d7-81e1-07c952ba430a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7f4a2e54-dff3-4761-a626-948edd9a2c32",
+    "system_id": "17340e00-4c9d-4d6b-80ff-f116368553b2",
+    "planet_id": "e5e62548-645d-459f-b286-724d88cb0649",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5a875037-53b5-4f9e-ae46-4c13b62ec072",
+    "system_id": "1a6814f0-0bcd-49d8-b9b5-1ccfcc69dfdd",
+    "planet_id": "0845ee14-0673-4212-8d4e-91317ec96006",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f9b92a8c-9e26-4e0e-ba88-aa9041d966ff",
+    "system_id": "3b4005e5-6e24-4e94-bd78-8aca44546781",
+    "planet_id": "43528fb8-fe53-4093-b032-1800067d60bc",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9bfece5e-2ead-459a-a2fb-2285b807d59c",
+    "system_id": "8bf9d67f-c4de-456d-9523-69a323f66248",
+    "planet_id": "c59871b8-4a3c-44a8-90d0-6bdb21548260",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "464c4e95-ec6a-4204-9e35-74141b680d19",
+    "system_id": "9798c5e5-141d-4202-ab39-ef1a12c38634",
+    "planet_id": "ecb357c1-7a4c-45f7-af20-7afae9e51535",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7e712650-f043-4989-b2d6-4cfa2d03fac0",
+    "system_id": "b2350a9e-9b54-4e1e-8b46-9390423d4b23",
+    "planet_id": "e88d933c-a588-4864-926d-380d5c3f9185",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fdf05933-c90e-4127-83ad-ec9df8941cb3",
+    "system_id": "1364b24a-1812-4a65-aaf1-294f8a20963c",
+    "planet_id": "b958b237-c807-482e-a94f-beee2a6fa257",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "50104b7c-c23a-4e72-aa00-f5cfa485b49e",
+    "system_id": "1364b24a-1812-4a65-aaf1-294f8a20963c",
+    "planet_id": "21d53f5f-6d3a-4982-bc05-eb0eafe64f77",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dbee736c-8f45-433e-8cfc-6ec754415410",
+    "system_id": "3ec56572-1b82-4eb3-b284-52d11a86fb80",
+    "planet_id": "6453294f-c849-443b-9c73-064906e744b8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2bc475f6-1055-45c4-a476-59cbd72652ef",
+    "system_id": "3062d2b9-0344-4c15-a788-12759130c381",
+    "planet_id": "f5328351-efda-4605-a7c3-3699b35df5d1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b81e2cc1-0b8a-4186-96ed-322731a6849b",
+    "system_id": "3062d2b9-0344-4c15-a788-12759130c381",
+    "planet_id": "0ab30653-f402-4520-8928-6b126513b583",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ee5120e0-c95f-4874-8b1f-9998fc126fb1",
+    "system_id": "d1918e35-47a4-45b0-b2e9-5558a44349db",
+    "planet_id": "0589066b-6d9f-4e29-b0ac-4a5ad173c159",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f4ed47f6-a3a0-4e74-b919-ea40a4520ac5",
+    "system_id": "fc25a51e-4825-49c0-b2aa-53e452dd460b",
+    "planet_id": "bdb89638-95af-4eb0-9d4f-33c667f4ec2f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d3d22ab1-6fd7-45a4-a445-df46b479ceac",
+    "system_id": "7c3382c3-a107-4c14-b75e-4e2eab46d024",
+    "planet_id": "2273bda7-77b1-4cc6-bf69-d1302619a9a6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2c2edc8e-6203-4f10-84c7-65513bcecc5d",
+    "system_id": "102ee55e-35b9-49a3-84f7-4b7819ae1cae",
+    "planet_id": "4ab144b2-7043-40b9-9ba3-37d667850655",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ae939ccb-9521-41b3-9a36-36fbbe515534",
+    "system_id": "7d17053a-6243-43b1-8eca-f3250724c434",
+    "planet_id": "58b514c1-c114-4097-b9a1-02f0caddd558",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ab37a33c-8b2b-4d48-9974-a61ed861c6d6",
+    "system_id": "b8c6887d-bd75-4470-91ff-993d997d9810",
+    "planet_id": "d155e355-68df-4313-b894-963db9410dcf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b0c2fe94-0979-4e91-bff5-2c8e55da7fa3",
+    "system_id": "53972f99-cae6-4aed-a693-9f98a8c245d0",
+    "planet_id": "d590b91a-2cca-4016-a5ec-f71d4f7d14d1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5c931512-c7c2-4b58-8f6a-e3ee0cace867",
+    "system_id": "d53df89a-3a05-40c6-8a6a-50594c2adbf4",
+    "planet_id": "21de71fd-b6f5-4b8d-a081-6fd6ae5e7cc9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7959c456-6399-48e1-96d9-a89f1e1b00a6",
+    "system_id": "74c7b1fd-e31f-4a66-b1cd-6becc3ced614",
+    "planet_id": "0e7e2a27-c5f2-403a-9704-3fccf57f3966",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c1c51cf9-1555-45f3-bd9f-b395a09a503a",
+    "system_id": "b6a885b2-1870-45e2-987b-32e96ba6abb0",
+    "planet_id": "d58f4be5-62e7-456d-86eb-c93655c758d3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "638bdbc5-d4f2-48a3-87de-e6a92ed57a46",
+    "system_id": "5ed7e2b2-f177-4991-a936-ddabfc5a67f9",
+    "planet_id": "4fafbd07-8c87-4dc7-96a4-5ffe11c32ed5",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d618f3a8-0785-4859-a1c7-895eb6c2ef1c",
+    "system_id": "1d6d46a0-0b6d-498c-8718-9cfc7ad409a9",
+    "planet_id": "45558af7-a2f1-4e60-bd32-fc72c77e15ac",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4b19653e-76c8-41ff-a5d1-e9e8a1fc7e8f",
+    "system_id": "9f54bb84-43f4-42a4-8c63-72ca9982bad8",
+    "planet_id": "7b7bd3bf-ac26-477f-84e8-58ccb217a3e3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6fcb92c1-64a1-4e0a-92dd-4ab7ceaa1e96",
+    "system_id": "68a74849-421c-4bba-9b12-20661b3b8cd2",
+    "planet_id": "14082fd1-e203-4e59-88fc-3e7c899a9c89",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8cb090e4-3c51-400f-85c9-39c82c444695",
+    "system_id": "2d4bf02c-f7d4-44bc-a112-a93a642c29da",
+    "planet_id": "7250f416-be98-4ee3-8684-7c99ce9dd0d1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e21567ef-9bbd-4be5-905c-a5ddda7fab14",
+    "system_id": "07aaae32-b838-489a-a431-b98dbb932604",
+    "planet_id": "3dbdef10-5b08-4b25-90b4-e068706af9d8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "085432e9-a462-480c-b576-1ca67c6f5b57",
+    "system_id": "60cb6416-ec85-4945-b45b-f92ee1f2ce0a",
+    "planet_id": "413586b8-36e7-4d68-9db5-7c79bbf2fa3e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "299d0696-6ea3-4670-ad95-d35911f69b92",
+    "system_id": "a6850254-3762-44ff-930c-4adaaab77e3d",
+    "planet_id": "09dff7c8-be03-4731-b07d-94792fc0b5af",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5a5fcf79-1ac6-4e95-b5a1-a6fc95e21a43",
+    "system_id": "8be40c5b-db1b-4b2e-9570-8657d43027dc",
+    "planet_id": "a31170b9-d8b2-4a58-81fe-2b46eb901212",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dbdad0bc-8efc-4afe-87f8-f72878ae935c",
+    "system_id": "04d3ae3f-c7cc-4c4f-a3ba-6ee7436efbe0",
+    "planet_id": "d560c8fc-dd45-4fc0-bfc7-cddb751c0c32",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d209cc9e-d8ae-4adc-838b-2b80a890e3bd",
+    "system_id": "02960e3a-cb35-499d-b6bd-8c5a00b2ec27",
+    "planet_id": "4d83010d-96cf-415c-97bf-4b716a9bf6e1",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "650062b3-f8d1-4fdf-b90c-3d4f93b2ff63",
+    "system_id": "10e548d5-dacc-4b4e-a89b-dc43352b869b",
+    "planet_id": "0bab6f67-6ad3-4529-a3e3-c8851ce6d4b5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c096386b-0001-4903-9cc6-1f2b07198ecf",
+    "system_id": "02960e3a-cb35-499d-b6bd-8c5a00b2ec27",
+    "planet_id": "5896803e-775b-493a-bc85-ed892e721b71",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f2bad468-5366-4ea4-a937-e1be6c47c136",
+    "system_id": "7bcccbb2-4d9f-4f06-8d40-84e211c9ec89",
+    "planet_id": "08261381-9e2a-4ead-8526-cc50d0cd076f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6e187cb7-df4d-4ad8-8b02-a94beebc685a",
+    "system_id": "bfbd8e1b-6067-4755-9e21-96af196ad541",
+    "planet_id": "a15b9971-1e96-4271-935c-a022368214f1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a1f8b2c3-c301-4822-ae08-297a004eebe1",
+    "system_id": "b2d52926-cd24-463a-b4b2-007784d56a73",
+    "planet_id": "cd5add8f-cd0d-4355-9c0b-c7eecaea5678",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fae3f803-dedf-497b-975e-09fd86075404",
+    "system_id": "b2d52926-cd24-463a-b4b2-007784d56a73",
+    "planet_id": "b6d83f8e-1c15-4137-944e-84d01e192022",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e6c28fd3-d806-41b7-b8f0-0971c588e354",
+    "system_id": "20d2a04b-0876-46af-bdc8-f36b40e6c37a",
+    "planet_id": "1f3dec3c-9adf-451a-82e4-1f67c7ae87cf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8cc5bab6-1fea-4fe0-8e84-207e85090776",
+    "system_id": "c6b033b8-d3aa-436e-bced-5e70e4192188",
+    "planet_id": "19974875-392f-4cf2-a47b-967005da80e9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "83929730-eaef-4eee-b9aa-7a75b5b07b61",
+    "system_id": "0e194b40-7583-485e-8f6e-3a898fffd469",
+    "planet_id": "32d2a2f9-43ef-4bfb-958e-1a3ffc66e3cf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4b4c0be7-0d77-4e78-aaca-770722f2e3ea",
+    "system_id": "73c9cc30-82e9-487c-ad16-6b9a06292da1",
+    "planet_id": "6bf8fca8-027f-43d3-aa53-dce7f80fb836",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7180e904-c0d6-480a-a4ac-f3efcbe49ff2",
+    "system_id": "bf19e7d2-3a30-489d-9b91-7e384d2b120b",
+    "planet_id": "ae7802ee-14c5-4708-a6ac-ff29f729a823",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9a76d577-a05d-4427-adb0-bd20040d08ef",
+    "system_id": "e686e5f9-069d-4748-b6ae-a28237cf44c8",
+    "planet_id": "7495eba0-4b9d-4bd8-a26e-214f4f9010c2",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "eca0ac44-34d5-4ff7-a1dd-15a49143cff4",
+    "system_id": "7d6355f8-e558-4b7f-89f1-3a54f8c5e28f",
+    "planet_id": "d0f45d72-ed2a-4624-8f34-dce65d356da6",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "67ed05b8-a012-4d71-bc06-aabe6e76440e",
+    "system_id": "7d6355f8-e558-4b7f-89f1-3a54f8c5e28f",
+    "planet_id": "f8720629-31ac-485a-9147-abfaa70b393a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6636c4d3-7e47-49eb-90fd-79bc1f9b5fe6",
+    "system_id": "a192a0aa-8da9-4575-8e68-30c738535ec6",
+    "planet_id": "2f11fc44-c186-41aa-9bf3-a1f239dc2a2e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5d216c68-9547-4f3b-b629-16ca0fc73e55",
+    "system_id": "3766c278-ab03-457a-af68-683143b75b8e",
+    "planet_id": "71721379-d62d-4177-8c98-5971ec4da80d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b206e531-409c-4fdb-b84a-36dd333db777",
+    "system_id": "9741bcfe-a656-4e33-871c-5e5624cf45a1",
+    "planet_id": "9dc8808b-c6ee-4c65-8a1e-340a330d10ec",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5b9436cc-cfec-4fbe-b64b-a27cf85cccd2",
+    "system_id": "9741bcfe-a656-4e33-871c-5e5624cf45a1",
+    "planet_id": "f18ce48d-74be-4562-aeb5-aad5b4515327",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "950444d5-e20b-4e13-8f9f-eceb596bc6d6",
+    "system_id": "e4d2329a-8a67-412e-8f68-226334658f4a",
+    "planet_id": "37948676-8b83-49b7-b37a-9619d52af7cd",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d5c50946-d6e9-4b97-a631-cc460d249209",
+    "system_id": "62c26858-16bc-4883-92b9-382801f995e4",
+    "planet_id": "ac823608-b12c-4e3e-818b-a5ccd3afbeb4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d219c039-bd29-4fb0-abb4-c551c0b29fb6",
+    "system_id": "e4d2329a-8a67-412e-8f68-226334658f4a",
+    "planet_id": "4759b09d-9663-4c3a-9111-5e2b8573d364",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1ab294cc-bada-4f63-b8a4-08c6d95b0c99",
+    "system_id": "e4d2329a-8a67-412e-8f68-226334658f4a",
+    "planet_id": "81277240-35d8-4952-8864-4ed630004967",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "24daf5c8-680c-4422-b35e-55bb20bec0ea",
+    "system_id": "200a690d-4595-4e2c-af89-9a9420702e5d",
+    "planet_id": "1746144f-7947-4141-818d-3e8674c6b9ba",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1feeea2-7bfb-4cd2-a20c-c7cc05a360a7",
+    "system_id": "07ac20a5-6246-4e8d-86f8-a99bb75c074b",
+    "planet_id": "e1d6e7e1-57fa-434d-9c20-da82f4de7f6c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dbd4cc3c-c9ba-48d3-92d9-174fec51cfdd",
+    "system_id": "fa1acf93-2c80-4088-9d0a-b3af12c6d4f1",
+    "planet_id": "4ea834a3-a619-41e7-8a79-78cde9140379",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7e0f35e4-f7cd-46b7-9260-8708ecc29a4b",
+    "system_id": "34aba43e-9618-4d54-9147-98a4ab712386",
+    "planet_id": "c44a07ab-bcba-4444-819f-655bdb0327ca",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "821ea01d-6c41-4d21-9035-a6d9c95aceb2",
+    "system_id": "82524840-8049-4c86-8587-233e7450c5f4",
+    "planet_id": "679aa26b-dd45-408c-8e05-f3fa72d3536d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "614dee65-9c46-4f28-94fb-1c932cc9e5e1",
+    "system_id": "677b9f08-2421-4daa-8fae-d64274e39a81",
+    "planet_id": "1a90f397-2fad-4d99-8908-06cabdd0cd9d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d9f8e993-f390-4e61-9656-ec94bbfd5fef",
+    "system_id": "620880b4-d32c-4510-9cd8-6737e6b43be7",
+    "planet_id": "e9d073a9-a5e2-4063-9991-ae9d6c90a9ef",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2d01a89a-f6fa-4f72-be0c-c0650162ca8a",
+    "system_id": "e5e9d22b-277d-43cc-b4d7-858b30ad7e97",
+    "planet_id": "7bd35a1c-887c-4f95-bba2-f37391a81966",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "25993017-265f-4575-a96f-f689764c1f6a",
+    "system_id": "81bb9dfb-02b6-491c-862a-436e147ea734",
+    "planet_id": "ca05c7b2-d9fa-4308-af37-a23edab5cb0a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "27791543-c9e1-471c-a70f-6dcc40446ab3",
+    "system_id": "84712254-8a5d-47bc-ba91-e93cf29b9b31",
+    "planet_id": "62498d59-0fb7-4ae9-83e5-4a1c53b77b71",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "77a758b2-38de-4674-9d80-b3b94ba66da4",
+    "system_id": "290ffc73-d452-4f4a-a17e-039120fd262c",
+    "planet_id": "646956f8-ddac-4403-b058-13d52061fe62",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b20e964b-1bae-488e-8090-50412952a90d",
+    "system_id": "80c4ac3d-3db2-4e1c-a47a-1c546d8c06cb",
+    "planet_id": "7d95b4ce-76e4-4dd9-b344-9f7dedd98b37",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9a1fab55-a611-42d1-afd8-3a604dacc30d",
+    "system_id": "80c4ac3d-3db2-4e1c-a47a-1c546d8c06cb",
+    "planet_id": "593e1478-b380-4403-a9fc-ec644c5bb2b3",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3f8f1b4a-f5d2-4da4-9222-16c9c8bef23b",
+    "system_id": "80c4ac3d-3db2-4e1c-a47a-1c546d8c06cb",
+    "planet_id": "16b72d6a-fc9a-4186-96e3-b04094dca278",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "26450fbf-e846-4e83-8494-c96a26bf907e",
+    "system_id": "fa137c57-7839-4d5d-9078-fb75a48a67b0",
+    "planet_id": "4f9eec1a-6fe8-4d5e-a0a2-1d8e6dbba602",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fefa3e16-1b82-413e-9886-3edff557d078",
+    "system_id": "88aacc27-4a7d-49cc-892f-3c726a505507",
+    "planet_id": "aba938dc-50a4-48d9-82a5-713a26941e5b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "17904d96-fc51-4be1-92bb-38dce4fa4586",
+    "system_id": "f1bb92f5-b299-486c-a749-6ba7c35196ab",
+    "planet_id": "a6fefc05-ca27-424e-83a8-b6a556630f74",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "64b654e3-cf3e-4c71-99ce-b923708ce541",
+    "system_id": "91927d03-45bd-404e-ae61-9765e7240452",
+    "planet_id": "7f7d45ba-ad5f-4757-8fc8-57d279510865",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f3e852f1-056c-4891-ae48-25e5b1b38153",
+    "system_id": "8b249156-ae97-4d29-84ea-a913ab968214",
+    "planet_id": "a82f91a6-2734-4b91-8266-41b2fd585f80",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4f39cf45-0baf-4801-ace8-129e43216533",
+    "system_id": "53bd0a25-3200-4df2-83eb-299b85ae12de",
+    "planet_id": "5015f160-9acc-4dc3-9168-adf9172a5cf7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "14cfad6d-907a-4c81-abcb-d17c651850f1",
+    "system_id": "995fcf0c-5cd8-4ad7-a9f0-01970c40fd2a",
+    "planet_id": "6f96f0bb-ec03-4e11-b50a-7a5aa49b1e61",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7665a931-57ec-49de-a8ae-7b8b20d82943",
+    "system_id": "6e9d8edf-e1a1-4ced-b04c-2c7d6b21331d",
+    "planet_id": "6be94c65-4673-4e97-9981-ca2a833f93c0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "146a5ae6-59ef-49bd-b906-19a686fc437e",
+    "system_id": "b8805965-f325-49d2-a781-e5dd66b30380",
+    "planet_id": "1e58eaa9-8c52-4aec-854f-aebb3179857c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f8345163-2167-493c-a7da-ba5317a3e007",
+    "system_id": "5a9bb1d0-7a2b-4515-a02b-ab9f04d783d1",
+    "planet_id": "f4beac52-34be-4a23-901d-43a4661ec2ed",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "deda7550-5c85-45cf-a8eb-caabb593e223",
+    "system_id": "f1bb92f5-b299-486c-a749-6ba7c35196ab",
+    "planet_id": "76e4b244-eddc-4eda-a626-a3b1b254e6ab",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f02fd4a9-3459-449a-9abb-8d7a63128588",
+    "system_id": "fab1d074-d287-4623-814b-912c641b2ac6",
+    "planet_id": "ce810d45-2231-440f-b984-441d02b7414a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "774dc43e-8bf2-4444-9db5-f2c237cbae46",
+    "system_id": "0517f801-9ff5-473a-aef6-d0f4bb8796ca",
+    "planet_id": "471dac51-5d71-4088-a980-b4366c245e82",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "09f25ad5-42b2-4364-904f-f26c54f3975e",
+    "system_id": "0517f801-9ff5-473a-aef6-d0f4bb8796ca",
+    "planet_id": "af90d2a0-a20a-4fb5-a8cd-d2718de2d6e5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "596b1b84-a1fa-4d5e-98bf-143d7a440086",
+    "system_id": "088992c9-87ae-4916-b7e2-30b81cf0372c",
+    "planet_id": "45413243-2b6d-4e15-b7ea-81db0c8e4f01",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1e5e777-4793-4bd2-8faa-213dc2aefbf3",
+    "system_id": "088992c9-87ae-4916-b7e2-30b81cf0372c",
+    "planet_id": "aa627cce-03d8-4340-90c1-43795888ce4a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "95c72b2a-cedd-4c14-85c3-ff06674b34d8",
+    "system_id": "335fb825-7608-42ee-9f40-9e00db4d916c",
+    "planet_id": "aaf3dc40-4079-4e85-b802-a04b32787db0",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6448ada6-7c0b-4577-aa38-cb2634d42b0a",
+    "system_id": "58b0a106-0598-4ba1-ae45-59d8b53b4d98",
+    "planet_id": "57adee93-b396-4659-b552-3300f66224e8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "905d7045-aa9d-44f4-bb89-dc1f5b9a8e54",
+    "system_id": "58b0a106-0598-4ba1-ae45-59d8b53b4d98",
+    "planet_id": "10687cab-de8c-4cf8-bb7c-3c7be2377700",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0ea2bf6b-acc4-4ee8-baea-4922f2343d69",
+    "system_id": "58b0a106-0598-4ba1-ae45-59d8b53b4d98",
+    "planet_id": "5e9789a6-760e-4110-9be8-1307d314b753",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bdf30d6a-6870-4566-84f6-0c08ec05de7c",
+    "system_id": "a7d21cfa-7602-4476-8ab8-a93eb0bacd65",
+    "planet_id": "3241990a-f031-4267-88d9-d9ce71f53b41",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9570053c-4a6c-4155-97b0-4227a0531c2c",
+    "system_id": "c813902a-5a6c-423d-b93e-8aeb8426029a",
+    "planet_id": "b0e4a0f7-3233-413c-aa7a-5440296492cf",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "401636b3-4ffc-4585-9f51-b092f21f1bf5",
+    "system_id": "7db3a733-b1e2-40a2-ac9d-8c7f5679d560",
+    "planet_id": "d130b83e-8c9c-485a-8845-9adb2cd9731e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c5a9ec53-2a41-42a2-b1e7-ea71067681ab",
+    "system_id": "f55f99f9-2376-46e0-bfc7-284f891e4881",
+    "planet_id": "1023af14-5624-4195-98fc-7cc1421e595e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1932ec9-0b2f-4b42-a6e7-f6ca96bdd550",
+    "system_id": "feff01a7-e5cb-47a5-97a5-240bd75bd0fc",
+    "planet_id": "8387c914-4be7-4b8f-aa41-a049f47c9c84",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b44ae41e-4f4b-4b61-ad5f-6e50c7a18a63",
+    "system_id": "02026783-42ef-4a14-b9ac-2e47cf2123d5",
+    "planet_id": "468361f4-a923-419a-9758-421db198078a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b32c63d1-13a9-4683-8c41-d969cea79e18",
+    "system_id": "02026783-42ef-4a14-b9ac-2e47cf2123d5",
+    "planet_id": "14f1ca1a-0bd8-4194-ab21-9f7cebb27dc1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cd005003-4446-434f-9825-6d13976681b2",
+    "system_id": "2f7ae626-075c-4edc-8e3b-7f616d9063f6",
+    "planet_id": "11495aac-bfd2-49c4-8660-810ba762d337",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "75084f26-0d52-43be-a68a-3fdb81ffb2bc",
+    "system_id": "2f7ae626-075c-4edc-8e3b-7f616d9063f6",
+    "planet_id": "d5f60a58-8065-4b0d-ae8c-8cdcf8bfc860",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ac7d4cc3-c2e1-46b9-ada0-5c5d30fd15a2",
+    "system_id": "d705e630-a23c-4da1-8e02-4c1d8ac2b520",
+    "planet_id": "616da317-1573-4da7-8a83-7a32fc23e4b1",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "017c14ed-58a9-45be-a058-c0ea762b5d93",
+    "system_id": "d705e630-a23c-4da1-8e02-4c1d8ac2b520",
+    "planet_id": "0d8b49ee-ca54-4dad-a454-29eb28c4cbc2",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c78664ef-bade-40a0-9765-d11892b3d2f8",
+    "system_id": "d705e630-a23c-4da1-8e02-4c1d8ac2b520",
+    "planet_id": "45d55026-418f-4763-b876-6494c5409ce5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7016634d-f1f4-4f49-b835-7bf59c76501c",
+    "system_id": "0c1b1d10-bbcd-419c-ab3f-aff2a56c1d6d",
+    "planet_id": "979ff118-3be0-4fcd-9265-8cfe57db970f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "761f4d92-f540-44b7-8891-2deeda871d39",
+    "system_id": "8323d2d6-4046-4842-bb93-ba1a1eba4537",
+    "planet_id": "1a59af83-3205-4f73-adad-41b53737b081",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a7b07be2-e275-4a47-9b51-2ba2c04059c8",
+    "system_id": "c5b8df65-08f7-44b1-ad22-8b6061b8bcad",
+    "planet_id": "e32a65e8-fcd3-4ad9-ab2c-cc628f7c93ce",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6870f871-4ab1-41cd-85e6-31d9c0466d58",
+    "system_id": "09ce8ad4-4172-4acf-b286-aae39b29a69b",
+    "planet_id": "5ca9aba9-d7ad-42b7-9395-e7ad7996a990",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "98e7cb29-c206-4a82-8c67-211bf8b5d94b",
+    "system_id": "6f15047e-ac61-4136-b546-9e80bd426a1a",
+    "planet_id": "86eee248-adb3-467a-806d-ececd04ee3d0",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c16ca2e8-4247-4090-9976-792672160765",
+    "system_id": "92256076-9fc0-4362-aa98-6617af748e92",
+    "planet_id": "e8f8bb54-ef53-4cdc-bfc2-aa091865bad0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1397139c-c511-45ec-b022-f8e48f3010fe",
+    "system_id": "aae7a79b-bbdd-4042-8636-07c3631377c1",
+    "planet_id": "3b88f79e-2289-4fae-8676-37b4f515323f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "01d578a6-113d-41f9-be3a-788f912dc7fa",
+    "system_id": "6fe4a8f2-0148-421e-9c6f-068bd84eb2c1",
+    "planet_id": "9149f5c5-8357-4dac-bfca-017b82bc00c3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b4cdbd66-3dc1-4cea-8bd5-2d616e422003",
+    "system_id": "328a0f68-edf9-44c5-baaa-09e7a345cbdf",
+    "planet_id": "1e3e1457-7384-4ab2-9021-12b54c80927f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4ff5ac4b-1ce3-4d23-905f-fbb42c7342d5",
+    "system_id": "5b50b52a-4376-44ab-934d-4f6456e6f7f3",
+    "planet_id": "cfccc412-cfc1-4528-9f91-6994f6c8a5fe",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b1537cae-a076-4781-91cb-a282a4447412",
+    "system_id": "d4767f03-ef3e-46b6-862b-882ea92f47e1",
+    "planet_id": "55f6f335-53a4-4794-b1ca-dfbfb5284de9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "25e79810-945d-4dce-a252-a060789ead05",
+    "system_id": "f156b742-e9c7-4aa1-91e7-8f5246b7b5f6",
+    "planet_id": "70e8cd14-0620-4a27-8210-0c585f1b8d19",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "147d326e-4e99-4059-961a-1a2249f36d7b",
+    "system_id": "921ce469-94e2-4528-b89d-049d2a0b0890",
+    "planet_id": "f77bb497-fb29-4f6c-a4d0-caeaddabe446",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2d0d04cb-674a-4f95-ab33-6cabeb32e47f",
+    "system_id": "489e68b7-cff6-4e3a-b065-2da0b29ee11d",
+    "planet_id": "342a51a8-d3fe-491c-bf11-3b300a1ca679",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ea47045c-d624-4514-8fd1-b45b19e310b8",
+    "system_id": "83c42942-1ce2-4403-8aff-f23df0b90ab2",
+    "planet_id": "f6043554-a2d7-4300-a09f-9a42d1b6dc5e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "be57bd4c-1828-46a7-9d47-bc26545806bb",
+    "system_id": "c010ec0a-004b-4cd6-b99c-f8710b9eb0b0",
+    "planet_id": "32bf8b9b-1831-47c6-b7c3-0c8e2dba8e03",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6006a882-54e9-48f5-a284-11333dff7ab0",
+    "system_id": "97ffe5d4-f3a5-4f83-be8d-d3b281f8c326",
+    "planet_id": "ecfd94d6-6da3-46b6-9866-ef965e95c4d5",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a5af546b-7635-4428-a28d-32ce61e87376",
+    "system_id": "97ffe5d4-f3a5-4f83-be8d-d3b281f8c326",
+    "planet_id": "58f65235-d3ea-4f63-804e-a18a787fa53a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "35c992a3-13e4-479f-9571-d63637b705be",
+    "system_id": "97ffe5d4-f3a5-4f83-be8d-d3b281f8c326",
+    "planet_id": "581007b7-e10f-4291-83bc-5c8c38894fc5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0e2c0b4f-4c84-4b10-bdf7-080c318517c5",
+    "system_id": "f9f6f649-1454-45b3-a931-6113a8a2eae8",
+    "planet_id": "3b103e5a-9a6c-498d-89eb-ad120e7ca884",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "55765277-b736-46e0-b228-1ebf50276b42",
+    "system_id": "a3580c0f-98c3-4a6d-a24b-a44ed675cb89",
+    "planet_id": "29aec461-7147-433f-a9cd-b6dd4cdfe15e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5b189dcc-142b-4631-a15c-ed042470866a",
+    "system_id": "9e4087d3-ffda-474b-ae55-3be5dc550e34",
+    "planet_id": "3455e445-9fe0-4795-9700-200785a8ce34",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f6899499-fa5b-484d-93ab-1e121641dc34",
+    "system_id": "0a9daff0-fe54-4eb5-85a0-6ce69dd85d9c",
+    "planet_id": "f2a3a477-3042-45ae-a3ef-0f81e6fe04f9",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "99a8afa7-dfcb-439c-bd3e-2bb05b3274be",
+    "system_id": "0a9daff0-fe54-4eb5-85a0-6ce69dd85d9c",
+    "planet_id": "35d90d6e-a79c-4674-9513-1599d7f07f1f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8e405763-c9ff-49fc-961c-d20fc7697f91",
+    "system_id": "0a9daff0-fe54-4eb5-85a0-6ce69dd85d9c",
+    "planet_id": "82542816-db14-4c67-9ba4-8d5fdb618f02",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bdcdf989-5830-4757-8c16-d46576db5b73",
+    "system_id": "7577fcc6-b05b-4680-92a3-91f3f6eb2964",
+    "planet_id": "0e4d8b94-1aeb-41d9-9540-2f7e89b792f0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b7237c4c-c24a-48b4-8738-ebe9a4a0304f",
+    "system_id": "417b3ff9-a9de-4b15-9d1a-b18586ffa06d",
+    "planet_id": "d1f5da8a-ff9a-497b-9644-cc58e4326241",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d1e2e601-d640-47b1-8145-69acdc0f3798",
+    "system_id": "9958e118-1f6e-4b57-954f-985216134f86",
+    "planet_id": "dedc33fc-9d4c-46b5-9e2a-0ec7e1985773",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "037bc482-37c0-4b3f-93b9-fd81ba6fc9a2",
+    "system_id": "62d84432-36e1-4c17-8e08-b1b03088c6e6",
+    "planet_id": "b0fc2241-e451-47c9-8c0d-db38463bb7b7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4ff85b91-89c8-46bb-b4fc-fd72b8ec8a9b",
+    "system_id": "2301fc9e-22d5-4cc8-b272-c393659b446e",
+    "planet_id": "73675009-6713-4339-acfb-4f73b5736884",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "47307bb5-3e09-457f-a4fa-a9baaf04dcb0",
+    "system_id": "4d1dd762-a2ed-4c14-ae39-8cc903abba73",
+    "planet_id": "90652b89-cb48-4745-ad41-5e095f054b12",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "11f9821f-b73e-47ef-883c-53d513848a82",
+    "system_id": "a477ef7f-8d99-4dc6-b447-414b30df948a",
+    "planet_id": "f52caea2-0d84-4588-aa5a-5788e3d219af",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "9eb03595-0bdd-4f4d-a142-8fecf3b204d1",
+    "system_id": "6fe4a8f2-0148-421e-9c6f-068bd84eb2c1",
+    "planet_id": "a087f1e6-5c70-41de-99c8-12ee92d3f95b",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "56da284e-bca6-44b4-a885-14998d2c275e",
+    "system_id": "da9f3452-93e5-4c2d-83ba-e186337252c2",
+    "planet_id": "e2ef94af-7fff-4a54-9021-660a2b6355a8",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bb803202-3ac9-4546-9764-d479f449d4bd",
+    "system_id": "da9f3452-93e5-4c2d-83ba-e186337252c2",
+    "planet_id": "5b2621f3-ca15-4202-8a28-db218771c4ca",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e825323b-a3b8-456a-9b4b-2180f366dbf1",
+    "system_id": "f08287a9-ce1b-4734-b80f-cc1ad738d4ba",
+    "planet_id": "afaeaa7e-8afe-49a9-8dd9-5c532a793788",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "30529ec4-60ec-4a74-ba52-3471ca65c41a",
+    "system_id": "fab1d074-d287-4623-814b-912c641b2ac6",
+    "planet_id": "a3cd2254-ae99-4951-99ef-4fb239cc4e6b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8fba0e03-73c6-4a11-83cb-78a335cfc1fb",
+    "system_id": "68a74849-421c-4bba-9b12-20661b3b8cd2",
+    "planet_id": "a4fa5951-6a8a-48f5-9cd3-26a1ac34b909",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bfcc301b-7f29-4d7f-82e3-4e68d06b92ae",
+    "system_id": "36f130b7-e77a-4d92-9cf3-c6b585e4f64a",
+    "planet_id": "e93c995a-e475-4c9a-823f-5ba3622d9682",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5eae0d58-5025-4af3-8adb-38a2f4ecdaab",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "8d5a0f00-fe15-41a9-b563-7e7aed280b3e",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "34858770-60bc-4d47-9ea9-df7c81972ee4",
+    "system_id": "fed204ea-e781-42c0-9ada-664444d7186b",
+    "planet_id": "14272024-ee15-4a55-983e-3a959a790f96",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3e665d5b-0a59-494e-849f-46e398c78e37",
+    "system_id": "d665465e-9f92-45a4-88e7-28abb1d5aa5c",
+    "planet_id": "25dd66d2-bcff-4ef2-b7ed-155a4310c6b7",
+    "orbit_order": 5,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8472b588-53c1-4d85-a590-f7d7607e44c6",
+    "system_id": "329255a0-340c-46eb-86fb-c4310295b47f",
+    "planet_id": "d2d62b3f-375c-4285-ba81-8eef8592fd4a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6d8ab1f0-c650-4e3f-96f7-a1b15ee0a8f7",
+    "system_id": "a95c4c75-3579-47ca-ad4d-8b51a10844d6",
+    "planet_id": "5f13108b-2bca-4c6c-9048-7a18dc1dfbd3",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "68cf0ad4-11a5-48ba-ab5c-463f48733aca",
+    "system_id": "538e9753-06c0-4ad7-af3e-e897e4df696e",
+    "planet_id": "54c113f7-6649-4def-829e-e646e97e725c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7d765b62-af38-4ede-a410-bf5071bb64cb",
+    "system_id": "cdab40d7-db0e-41be-8b3e-e7b9c2053790",
+    "planet_id": "5ace230f-e187-405e-a24e-76a8624cc1e4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4bb1e52b-6eb7-41c5-a68e-7e0e825128a7",
+    "system_id": "69fed68f-edc7-41ab-94b7-2a93b16ef72d",
+    "planet_id": "eb056438-14cb-41c2-9c22-a3aa92bfa9c7",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e377b2c6-5cea-436f-8d17-7b5f339cf77e",
+    "system_id": "5d074bc9-0569-4e69-bd56-935f9a6ab561",
+    "planet_id": "e12e34f0-2650-4f86-8516-31e1d829a261",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0d0ec17b-5ff8-4515-8aea-817e33833b81",
+    "system_id": "a502eadf-7164-45fe-ac0a-5bb4e41cb0bb",
+    "planet_id": "539cf82c-2557-4b2e-a0a0-33c4010c4729",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3d12b230-1728-4962-ae4c-0713d71ce3fa",
+    "system_id": "eca7696f-e89a-4249-880e-2a12f4950650",
+    "planet_id": "d2bedf5d-32f3-4aab-ab81-90215c86dca8",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e546a18e-89fa-45f4-b4c1-89ebb91c15f4",
+    "system_id": "cdeea466-1817-4aa6-9b07-7165398fa257",
+    "planet_id": "66ad28dc-2389-42dc-b107-c226cbf5ec9e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "908192f4-4ccc-4cc4-8dc0-90b826bc107c",
+    "system_id": "6567d336-5db6-4d57-a754-80a9033ebe6c",
+    "planet_id": "178409c2-1152-4630-b0dd-b59e2a08d02c",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c6de4b90-e7a2-4af6-aaae-ec993618a18e",
+    "system_id": "85858391-f507-4e0b-b219-af752d4a5c4d",
+    "planet_id": "e1fcfcb7-92ae-418d-9214-b0b99b498f98",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "36c074f3-4a27-4e00-8f8d-429abaf7abf5",
+    "system_id": "c2128e9c-e9ee-49b6-8f4f-e96e0f282623",
+    "planet_id": "9b0abbb9-34f8-4e56-b1b9-7b12c6fcb228",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7a5edaa7-6096-43ae-9b6c-2e77c4ee640f",
+    "system_id": "b577d818-3795-47a2-af53-65e4612b7f0e",
+    "planet_id": "ca07f3f0-dcb4-4fae-81c1-91a665e6f038",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "32a8fa05-91c3-4d6c-9760-a9fbed26178c",
+    "system_id": "79802f78-9c68-4608-9a89-b32441494e0f",
+    "planet_id": "58ab87df-b892-4d12-8a77-3c1ba63ceb13",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "16b14447-152a-4872-b6f6-a2813c211656",
+    "system_id": "502150d2-afc8-4970-979f-490d9a002451",
+    "planet_id": "b1c29e2f-4bf9-4e40-94e5-3f3424a4f342",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6a771cfc-1875-4455-a6a6-4411113275aa",
+    "system_id": "f34da0f3-0444-4502-b525-9d11bbda0b84",
+    "planet_id": "661728d7-56c7-40ab-95f3-21fa49098360",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ba0b556f-cd93-4ebd-bbc2-eb7e212357c9",
+    "system_id": "5b50b52a-4376-44ab-934d-4f6456e6f7f3",
+    "planet_id": "d378044b-ed17-4191-8a98-05a523a8658d",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e93c0db5-2798-49ed-9ede-46b16ea4a9f3",
+    "system_id": "a22d38a6-422d-45b0-a3c5-eba03a6ad0a4",
+    "planet_id": "b9ac0b5f-0e37-487b-845c-51f27b93ee5d",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "62e6c5ed-d7de-4f17-965a-bb5d52d7867d",
+    "system_id": "dde5a86e-76b8-43b2-a0c5-b162f9e8cf19",
+    "planet_id": "d3a5c31e-a9e7-4a33-b7c4-dce20ec4b517",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8d09e4be-8176-4b5b-b5b6-bbf63e921e24",
+    "system_id": "61300628-239e-49ba-8596-2664fb627949",
+    "planet_id": "b3a09bdc-114d-4672-8c13-336074aa6c61",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "63131872-8b88-4075-b937-c092e61784dc",
+    "system_id": "e5eeea23-5b74-4169-aaa8-b5bc251afe67",
+    "planet_id": "d5ff86e0-0717-4c58-a0df-feef4a80c1f9",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "817aa488-800b-4230-b440-bdb11d84cd52",
+    "system_id": "b645fc2b-3e82-4bbb-a041-ba8e2b80698b",
+    "planet_id": "5375affe-1e04-4e25-a0c0-fdf01a00ad9b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "288d4ebf-3068-43c1-918a-24652e27ba3d",
+    "system_id": "ebcc66bb-7c75-40d7-aa0a-958df8de5076",
+    "planet_id": "5aa15b74-d46a-45e3-9023-6bd84a205d61",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5437ff31-15b6-4a65-bca0-7202493145f7",
+    "system_id": "b526271c-b0a4-4521-955a-db7706eed676",
+    "planet_id": "b329bf7b-607e-4b18-92bf-d03768d3fae5",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "39688efb-b5be-4727-a025-c67dc5fff5f9",
+    "system_id": "6441fb70-2775-470e-a63e-9f55aa87e77e",
+    "planet_id": "9c2e6d90-a6ab-4e56-b3bb-29b5fa8e4daa",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c2856b94-67df-4052-bd1b-4b656c7b976f",
+    "system_id": "1a6814f0-0bcd-49d8-b9b5-1ccfcc69dfdd",
+    "planet_id": "a9c3fc73-5978-4f5b-ab91-e1533f70054a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ace83c71-ba71-462e-ab11-6c38c7ce41fc",
+    "system_id": "a3580c0f-98c3-4a6d-a24b-a44ed675cb89",
+    "planet_id": "a7f633b2-d2e2-4563-9f9d-9e8cf8ff812d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "56174f7a-aad0-40af-877e-852478ebddf4",
+    "system_id": "5327340d-1335-47d5-b0d3-cf734064558b",
+    "planet_id": "6c2f6822-d814-4fc8-a84e-6421398f0f93",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "15c48457-47e2-47a4-8040-2da24f3d6b45",
+    "system_id": "91927d03-45bd-404e-ae61-9765e7240452",
+    "planet_id": "81c8e5e9-de89-46eb-8120-f7719bb95d1f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cec1f89b-b9d6-4666-a1bb-803868bb750c",
+    "system_id": "b4c9c3e9-d6f7-4f70-a8c0-6c92d5be86f6",
+    "planet_id": "b5f9ea67-3b53-442c-b4a5-2fc28d221114",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3c3b62e4-29f2-4739-8628-620dfd0adf99",
+    "system_id": "bfcc3a00-2b88-419f-999d-a1a3a7e526c0",
+    "planet_id": "c4ae0144-1ffb-4ada-acf5-42c0e5b35c1d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "32235e39-6fe7-4245-b461-88528f016bdb",
+    "system_id": "d499dbcb-20a7-42dc-9262-86f5671d7951",
+    "planet_id": "f4a23385-ed62-4934-8029-77b5f6b1f00a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d38dfd3a-c7e1-40a0-ae0d-5762dec50611",
+    "system_id": "d499dbcb-20a7-42dc-9262-86f5671d7951",
+    "planet_id": "2ff91abc-9189-4172-8cd8-e8b9b45d6873",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c3764427-ccf7-4e69-b6bc-cdf45c932807",
+    "system_id": "7f95bb5d-4b9c-4ea3-97e1-1122a9d1b85d",
+    "planet_id": "773457b5-e654-4790-b8b7-01f2e0472c80",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ca461dc4-a34a-49c2-b604-5e72f6036324",
+    "system_id": "95cc334b-fa94-40b2-a504-f2f60f3e2d60",
+    "planet_id": "9bcc075e-7d4c-4b99-bff2-e329c8918ec3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1fc34764-9568-4110-a380-5c04110bf1d1",
+    "system_id": "6b000838-eee7-4aae-bb76-f04ef40a8bd6",
+    "planet_id": "57b2707f-af5e-4845-9bf9-13e6c895872f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6d6485f7-800b-423b-b22f-477df26546dc",
+    "system_id": "9798c5e5-141d-4202-ab39-ef1a12c38634",
+    "planet_id": "45f5d8df-9327-46c3-8d44-d846c7a48af3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f0e5e31a-8a85-4fb0-9392-2faf6e1c0128",
+    "system_id": "c4b6a075-1eaa-4897-9163-5c5ae068eb82",
+    "planet_id": "a2909839-6628-426c-a664-d7544ef106db",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "94337449-0f85-4710-afe5-52210b95e7dc",
+    "system_id": "921ce469-94e2-4528-b89d-049d2a0b0890",
+    "planet_id": "6d2bf960-008c-4129-95ed-981632356b14",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "620163ef-ff5d-42bf-9e53-086df25e8ba8",
+    "system_id": "b2350a9e-9b54-4e1e-8b46-9390423d4b23",
+    "planet_id": "80a7560e-4726-4e37-ba49-6996cf915535",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "67e86dd2-c67d-4785-a521-a95c50381516",
+    "system_id": "f156b742-e9c7-4aa1-91e7-8f5246b7b5f6",
+    "planet_id": "31e78203-a7ef-4fa2-90ed-013c4cd9f8ce",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fb713d25-eef5-4451-8be8-32ee4e586119",
+    "system_id": "3b05697e-cc35-4176-a543-967c15c3d81c",
+    "planet_id": "f5509411-e15d-422a-a0ba-9a9dbf3ba32f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "be2aa9ae-f4f4-4b43-aebf-2e24b955a6f7",
+    "system_id": "3b05697e-cc35-4176-a543-967c15c3d81c",
+    "planet_id": "741d5a29-aeea-4632-89c4-1c44f9bdf5c8",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ce00e75f-cf3a-4126-99e3-93f091d04703",
+    "system_id": "35697e96-22b5-41c8-a5fc-06525d8dd1f5",
+    "planet_id": "14895cfa-390f-4b1b-86ec-8f781b701a95",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "e4b553b1-c24f-4ce3-8b5b-6832e67893bd",
+    "system_id": "52d7cdc7-805f-4f83-ae07-56369f7bfd18",
+    "planet_id": "cb543f50-4f3e-438c-b759-80105a3eb504",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4000db64-fccb-417d-bc9a-7c59da1717e3",
+    "system_id": "89071b3d-941f-44a3-958f-e700a93882d3",
+    "planet_id": "54133da1-e2a3-47d8-ab03-c2dfead118f4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "46a09750-0bb0-456d-a06f-935ce6579f0c",
+    "system_id": "76c63815-e0aa-416c-a469-0607e122555c",
+    "planet_id": "f9a81c1e-a784-468f-8af4-1b446285965f",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0f79ab82-1f13-436d-a0d6-f7a30455933c",
+    "system_id": "60cb6416-ec85-4945-b45b-f92ee1f2ce0a",
+    "planet_id": "0ff97dc4-ad96-4290-8a9a-e88285998846",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "16bc6310-2e0d-471a-8fd1-8807908ae338",
+    "system_id": "412e20c2-4ff8-493a-a206-267d09cc4fbd",
+    "planet_id": "33490a82-b395-4a31-9aea-682692588167",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2a5f931d-8800-4cd2-8720-e9eac1e2104b",
+    "system_id": "01c2520b-9198-47ba-8ac2-ee7db695d89e",
+    "planet_id": "af012f29-bab9-47d7-a3b0-932b56489d49",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8e525eb1-b054-4389-8927-1a954628f0de",
+    "system_id": "8de86b76-49e6-4710-914b-e740aba44fd1",
+    "planet_id": "1bea5159-324f-4fa8-b44a-3018ac458257",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "5cb687b8-fa0f-4b2a-997b-a537673a325a",
+    "system_id": "73bf4aa3-0e8b-44c9-920f-7685a26d597d",
+    "planet_id": "fcc7cfec-37d9-4908-a46d-57d731048392",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cfe23057-19af-48a8-b451-e30bb5c71976",
+    "system_id": "f9ef253b-3811-42c1-ae1e-a4079f86ecea",
+    "planet_id": "527bc46d-27ee-48e9-b7a1-911addd38d9e",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "28bd16de-36f4-49b9-ad9d-6d8ceb73703c",
+    "system_id": "c4589218-4f12-43c1-8f22-e25de28c02be",
+    "planet_id": "348a6bea-0811-4a5a-85fd-5f2081135843",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "168eb465-01a8-4322-b9c4-2baf2938207b",
+    "system_id": "cb2256e2-ac6b-460d-bb11-07c78268b522",
+    "planet_id": "ecedeeb7-d273-477c-b9bd-243fdd88043d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6e72b5b6-d286-4c7d-a35a-daf7841c5bd7",
+    "system_id": "2428e5dd-dfdb-43b9-83e6-ff7702ac594f",
+    "planet_id": "a6cf25ac-a9c0-4254-949d-71dadd987486",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fccee864-d4a5-4ff6-aeb3-55e5f8b57bb6",
+    "system_id": "3b4005e5-6e24-4e94-bd78-8aca44546781",
+    "planet_id": "3450ca40-812e-4f5a-9fbd-23b7905c426e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "c586da58-6cb0-4676-a753-3c01290de82e",
+    "system_id": "e86bd991-ff7e-484b-9324-0396c15c5ac1",
+    "planet_id": "520a73ce-92a0-4789-827e-cd5b87b0e6db",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "278e3a0c-73a1-4969-95a0-5611da04a013",
+    "system_id": "3766c278-ab03-457a-af68-683143b75b8e",
+    "planet_id": "ed390d09-39db-4984-81a8-76be66aeea63",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dfdc774e-37e1-452f-9930-aae69e11b32f",
+    "system_id": "2a477b49-1a2d-42dc-91c1-b0349576bee5",
+    "planet_id": "215e5b65-0ce8-423e-81f8-9996e699a74a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a1d53714-abb1-4599-b9dc-1782697fde58",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "0d3f20e5-e5a3-4735-b57b-dbe17a5d090e",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "31087ce4-cd1f-441d-bf67-c097f4cf892e",
+    "system_id": "afd9df69-65d9-4a3f-88bd-6664507a937b",
+    "planet_id": "31315391-261a-42e5-a0ab-880aa7e74b65",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "12031e29-c5d5-43e3-b35d-e28928f91a19",
+    "system_id": "8f727b99-7c57-4e87-957c-c6bcc3a1e041",
+    "planet_id": "89127651-4086-4822-b505-94b0bab8f4fc",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ad6bb433-b6bc-40eb-a500-12291e25a356",
+    "system_id": "4bb55b8a-fbd4-49f4-8deb-262cdce53621",
+    "planet_id": "2e086416-e19d-4b50-bd0e-ac4379b89fe1",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "93f578b8-3088-4deb-9876-1d8f15666e2d",
+    "system_id": "91927d03-45bd-404e-ae61-9765e7240452",
+    "planet_id": "64c3aec8-44c2-44a4-9202-c75a1bf05d4d",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7628ef59-2ba8-4086-aea8-9d6cb46b444e",
+    "system_id": "2b6bde05-3dc2-47e2-89b8-80508d4ad47d",
+    "planet_id": "dd980398-6d35-4a5e-ab72-5e226a0436af",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "19774081-f528-4b28-80a8-b367e3bde83b",
+    "system_id": "bdbac038-0116-4b0b-8f6c-7296f5932a30",
+    "planet_id": "ed80f55d-af4a-4b2f-ad2b-0f0ef1351b93",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2aff41c6-b761-4dee-8cbb-63f662a4017e",
+    "system_id": "5da969d5-4319-4e30-a48e-01fbda2981f7",
+    "planet_id": "7835f421-73f4-4e1a-80c2-1faeabb0a101",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3928beed-7d42-412f-aade-545d3df7e195",
+    "system_id": "cabacddc-73d0-4a0a-a28c-b413170a3dfb",
+    "planet_id": "5dc672dd-0465-42d3-9a9c-9520868267ac",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "66f29c7f-1874-4a55-998a-944470eb278b",
+    "system_id": "7701ddb7-d372-4674-a342-86321a7f7a70",
+    "planet_id": "5b41cb6b-0e45-4782-b16e-92cb397825ac",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "fd6361e8-d736-4668-8806-c9c5f0984d9e",
+    "system_id": "9f173e80-dccc-4fce-82b1-216d7af301d3",
+    "planet_id": "26f302f4-7564-4262-8b3d-b9bb0cb92799",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "d9275c55-dcdd-4b54-b9cf-f133dfee5ccf",
+    "system_id": "6e38e910-cb7c-4615-a5ce-539b93ce726e",
+    "planet_id": "32500c2e-dece-4017-b334-11c4ad500ef9",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "32e07cbe-5908-4632-bd19-9439613bed44",
+    "system_id": "688227dd-b49d-47d9-8b6c-aff7f34d0604",
+    "planet_id": "c400106f-efe0-4f5f-a242-12e79a87fe2c",
+    "orbit_order": null,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cc0fb81f-c531-4ad1-9a93-22de99f6dfba",
+    "system_id": "1b58b824-23e4-4490-99df-c0daebe1be0c",
+    "planet_id": "80b667f9-4038-4c4b-8d72-e698d8c08e4d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4d2c500a-e2b6-4ee3-8490-6ddf59d8349c",
+    "system_id": "b6bfa580-967e-4901-a6cf-34185a89c882",
+    "planet_id": "038f81d0-0a52-4b71-9a84-64c2cb15411b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "79de5a4f-6e7d-4174-aee8-517b90920efe",
+    "system_id": "f92ca620-9dfb-4cda-b0e1-7515b296649c",
+    "planet_id": "ed5ca789-3d3f-44d7-9f9f-11994be7afcf",
+    "orbit_order": null,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bd809bef-f3bc-4879-84c0-cc18e516f3f3",
+    "system_id": "636b0814-5c86-485d-a537-0f63715d84ae",
+    "planet_id": "dc511175-e599-491c-99da-4ba0a1d0213b",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "1f18b9c4-79c2-45a9-b9e5-1325e69cf12c",
+    "system_id": "56df4588-bbcb-4114-82b5-d36fe2b302c5",
+    "planet_id": "065b2d8f-9c7c-425b-bd84-91f1f03476d7",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a4d8dcf9-7ff7-461f-9483-5b5154add7f6",
+    "system_id": "bb784c78-6ebf-4f68-a9cf-a889d2e7a9b8",
+    "planet_id": "d6b7b024-05e2-433b-9b6d-469784fab67c",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "24a14aad-ac85-4e4b-8ec0-c344a35432cb",
+    "system_id": "5a9bb1d0-7a2b-4515-a02b-ab9f04d783d1",
+    "planet_id": "07b3482f-a9ee-4006-9eb5-33e118d934ac",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2758b039-d5fb-4dcc-b8fc-4536ce6342dd",
+    "system_id": "47acd231-e2dd-4291-8a9e-b70c6c06dacc",
+    "planet_id": "3c6aa3dd-c85e-43d6-b9e1-010cdf4fb330",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ef9c3683-c46a-4b3b-bcdd-cf01777c232b",
+    "system_id": "47acd231-e2dd-4291-8a9e-b70c6c06dacc",
+    "planet_id": "f1bbaeac-da27-4e60-8762-b560fb72b4aa",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "26263b97-ab26-40b1-8be6-73039ce57dc1",
+    "system_id": "47acd231-e2dd-4291-8a9e-b70c6c06dacc",
+    "planet_id": "709c496e-cebd-4839-a1f4-f45bdc73fea1",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3e0662ac-f418-4007-9db8-d193a20ffa7f",
+    "system_id": "4ec3f1af-1d71-423a-90c4-9bd7125feb66",
+    "planet_id": "08b18730-1fd4-4e8d-b29c-c9f741320ce0",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "095c782a-6be9-438e-b663-5e2b588ffe32",
+    "system_id": "52957e63-4f35-4b03-825c-73f557d01058",
+    "planet_id": "8d061bc6-dc87-4b40-b2e1-d1c3a8f7a409",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3c096cd4-08e2-42cd-843c-db75aac7d6c4",
+    "system_id": "f1bb92f5-b299-486c-a749-6ba7c35196ab",
+    "planet_id": "7ff771df-0a43-4502-a6a0-5468ce35e2b4",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "f14fd043-9198-452f-be43-c41ccb6471ed",
+    "system_id": "2b237fac-8dc3-4eeb-8247-a269179c444d",
+    "planet_id": "a124787a-8019-439a-b883-5359860a9995",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "09f21ab9-5309-4efa-939d-47f3987e1fe3",
+    "system_id": "ec6fbb2e-71b5-44e7-ae57-ff07610046be",
+    "planet_id": "cc142a72-e384-4584-89bf-cde246cddce9",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6b996900-e8a0-47aa-90b5-93448eab2806",
+    "system_id": "86db7f57-e005-4cad-a62b-466ed51dd44b",
+    "planet_id": "00d54811-dc6e-4461-a4f5-e792c09c662f",
+    "orbit_order": 4,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "907a8b18-3f1b-4647-83c2-269c6221449b",
+    "system_id": "3d7c4276-b18d-4a47-969f-531d2ee61d4b",
+    "planet_id": "513589aa-2df1-4c4e-8507-4327015ce919",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "61edc88d-3243-401a-a895-e77435fd5404",
+    "system_id": "d49ccb9d-66ea-4142-bb59-74f9c3ad4da1",
+    "planet_id": "f2e53350-98a1-48ed-a484-01c138ae6e3f",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b291e15b-23c3-4db3-bc34-119ef6587619",
+    "system_id": "12f69693-1086-4810-9e75-cdbab9e8b90a",
+    "planet_id": "46537547-e936-4c38-803c-fd6617377f34",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bd45a2ca-14f2-43fb-9969-413d2b209aef",
+    "system_id": "ab470dfc-a850-43f8-89c5-cbe83fc11687",
+    "planet_id": "5bd0ce8a-b274-4f07-bd47-14c2923ddf6e",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b10d6cd4-3fca-414a-8110-02f10a694b32",
+    "system_id": "cb43444c-f729-44ed-9dd4-be8eb4e4d012",
+    "planet_id": "94ba016c-bb6b-4401-a68b-556fd7d80e61",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ff5c676b-c0fe-42e4-b836-42a946c65911",
+    "system_id": "fa23d44d-9914-46e0-863b-b1f56e0f4f1a",
+    "planet_id": "5fcc2189-803a-4ded-9d31-28e74bbcb928",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "82165e90-c7c2-4043-8fdf-9f8317501f19",
+    "system_id": "a6cd7d78-90e4-48fa-b603-751759c95653",
+    "planet_id": "864bf423-397b-4f39-bf29-7aa9546cbc34",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "be3d2151-2315-4568-a582-1a5c7decc561",
+    "system_id": "fe3ece6c-f503-4203-84fb-1ddfe161a86d",
+    "planet_id": "a3ba7f84-7b9b-4728-a3c3-e2fbd53a338a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "352c863e-5f0e-4240-a9ec-b1101f735658",
+    "system_id": "73bf4aa3-0e8b-44c9-920f-7685a26d597d",
+    "planet_id": "c8eed289-20c8-456f-aeeb-37a108c98f19",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "74aef0af-6eb2-469d-9fe3-851fc291130e",
+    "system_id": "6d765f9f-d3e4-4ae9-bb3f-9c06cee628c5",
+    "planet_id": "fad5dec7-30f9-4636-8468-3a7cfd00c718",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "2e7f2279-c937-48a4-8bf5-494612075def",
+    "system_id": "78427082-75a4-40fc-8a63-8c17b6fe00f1",
+    "planet_id": "f952d233-12dc-4279-b64a-ffd57fa9b1a4",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "36fdd6f2-361a-45d5-be29-9d60d8999511",
+    "system_id": "77476c20-73cf-4c2b-b7f3-5c9dede75cd8",
+    "planet_id": "4955497e-8784-4461-9d4c-2992f08f3764",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "10d648d6-83aa-4141-8c5f-ce3cf65b4188",
+    "system_id": "f6b9d037-a452-4b66-a657-69f494ce631b",
+    "planet_id": "b1b58c87-9af9-4f5f-b35f-11db3e0e8df6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ef6eb587-f40a-44cf-8c37-0423e5f7fb6e",
+    "system_id": "e0fb6024-7e11-42c3-bc1b-c69078e7f044",
+    "planet_id": "8b019886-dc84-4219-abc3-bfaaa03346c5",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "cf6656d6-4594-4241-9d5a-6805e80a473f",
+    "system_id": "e5eeea23-5b74-4169-aaa8-b5bc251afe67",
+    "planet_id": "a1eff4c7-8e14-47f6-a481-c69ea738e6a3",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "dc6c7a86-f64c-44bb-bf8f-6d2d4bf306a1",
+    "system_id": "fc84975d-fd6c-48a4-9fc0-ae9256e025ad",
+    "planet_id": "2e103616-4555-4d31-a847-3c9b8b6376b0",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "8cf8030b-7f16-4808-9e93-90d2db6208a4",
+    "system_id": "229bcfea-8eef-4eca-aecd-05bb32326490",
+    "planet_id": "576b7092-4f6d-4743-9858-f14e6cb57210",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "35cbd0fb-c90e-4d6f-b63b-da830cdf7098",
+    "system_id": "42faf9dd-6abe-46c0-8330-46c905830008",
+    "planet_id": "06356ad1-5e34-4a45-8145-76c98451b4e7",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "a47c2f9e-4c1e-4ae7-a4ad-090dd9d38fe1",
+    "system_id": "17340e00-4c9d-4d6b-80ff-f116368553b2",
+    "planet_id": "1ab3c8d3-5bfc-431c-9de5-5b4f338fd52c",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "b220999c-f13d-4bb2-82ac-453e9a2dcc2f",
+    "system_id": "099dd7f7-63ad-48ad-afa8-012cf361a875",
+    "planet_id": "ff91f735-a229-4c12-908f-04e28724e4b8",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "ef149b34-f7c3-4785-ac8d-3a63a64c19e3",
+    "system_id": "42999cac-7043-4c38-90d5-195998612562",
+    "planet_id": "88f799e5-aa52-410d-a79d-81ff94f0fc9a",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "3ad958c0-33d6-4c6c-9a86-adda11a9159f",
+    "system_id": "cd401064-f8dc-4006-9702-a290411c8716",
+    "planet_id": "6120bf69-d115-4bfd-bdb4-5cc151a2b192",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "67e033a9-2466-4602-ab82-13ab4f5f96ca",
+    "system_id": "c68b2fe1-0d98-4c72-91fe-e1cc3ac2b215",
+    "planet_id": "861a7ac7-26c6-4167-9c39-94a07455249a",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "658cd171-2f6f-477d-93a9-0f6c434768f8",
+    "system_id": "ba4ec91a-470a-4b54-a2c9-538928eaa28b",
+    "planet_id": "1b9362a3-82a3-4b0d-b0b9-a39c786b9291",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "4e8429cd-bd06-49bb-80b5-adeee41daeeb",
+    "system_id": "bc995eab-0d69-4cb9-b1fd-85666ae0152e",
+    "planet_id": "79592544-b142-4785-8b5c-4272323c148c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "0baaeec6-f471-42ea-9a9d-ee0ac1579725",
+    "system_id": "8dd392c1-6292-4eb5-b8e6-bd4fbcf13bdf",
+    "planet_id": "7ef00fae-b08f-432b-b419-b73671c5847d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "399e7878-ab86-400c-9aac-a73887fbc047",
+    "system_id": "01c2520b-9198-47ba-8ac2-ee7db695d89e",
+    "planet_id": "2d7f55ce-4ec8-475a-98fb-372d824a8192",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "bcae6207-fec6-4de0-bca8-bc5c98a7562f",
+    "system_id": "0e17acfb-3360-4a58-bfdd-2829662ca557",
+    "planet_id": "8778b0e0-0d23-447a-9cfb-31dc24778da8",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "08d936ef-5ecf-4e8d-9e0e-f28ff87e5398",
+    "system_id": "0e8ee024-35d4-4ba4-a517-b15e4cc01296",
+    "planet_id": "4113d917-9ff0-4753-8d06-07049f743588",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "eda46db8-c482-45e1-8305-d634170c88a9",
+    "system_id": "95e29a55-8329-4d48-888a-53a1bb0ed76f",
+    "planet_id": "8f2487a5-f1aa-4b7c-bc2e-8dbe7d9f28d6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "15bc189d-6076-4e72-b15b-beca670efcee",
+    "system_id": "101f290f-f114-42b9-94e3-d20dbee1fd81",
+    "planet_id": "7bfb9498-9788-48a4-a86d-4286d932e9b6",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "7fb0c59b-f4a1-43ee-985e-f1e1501a6a90",
+    "system_id": "99a8d3d1-20c0-4363-a9f1-1fabd7e81126",
+    "planet_id": "292652c1-d2af-4f0a-b30c-f7fa07ab7b1c",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "86014abd-5b20-4715-8daf-f7b90badf3f5",
+    "system_id": "e5eeea23-5b74-4169-aaa8-b5bc251afe67",
+    "planet_id": "accd42a1-fecf-41bd-93d4-7bba6f8f2246",
+    "orbit_order": 2,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "6557fef3-da47-4274-9328-e67d15f2e683",
+    "system_id": "a5b8acd4-d028-416b-a653-3f1f793ad187",
+    "planet_id": "cd73741a-3746-4702-8bfe-ead1321bb60d",
+    "orbit_order": 1,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  },
+  {
+    "id": "23934f25-ce49-427c-9b8a-bf5c872d5471",
+    "system_id": "8323d2d6-4046-4842-bb93-ba1a1eba4537",
+    "planet_id": "1432a51c-6a0a-4e96-b160-b5a5b10c0315",
+    "orbit_order": 3,
+    "discovery_status": "confirmed",
+    "created_at": "2026-09-18T14:52:11.082018+00:00"
+  }
+]

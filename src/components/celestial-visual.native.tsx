@@ -32,19 +32,20 @@ type CelestialVisualProps = {
   object: CelestialVisualObject;
   size?: number;
   animated?: boolean;
+  fillFrame?: boolean;
 };
 
-export function CelestialVisual({ object, size = 96, animated = false }: CelestialVisualProps) {
+export function CelestialVisual({ object, size = 96, animated = false, fillFrame = false }: CelestialVisualProps) {
   const profile = useMemo(() => getCelestialVisualProfile(object), [object]);
-  if (profile.kind === 'star' && menuStarEffect) return <MenuStar profile={profile} size={size} animated={animated} />;
-  return <LegacyCelestialVisual object={object} size={size} animated={profile.kind === 'star' ? false : animated} />;
+  if (profile.kind === 'star' && menuStarEffect) return <MenuStar profile={profile} size={size} animated={animated} fillFrame={fillFrame} />;
+  return <LegacyCelestialVisual object={object} size={size} animated={profile.kind === 'star' ? false : animated} fillFrame={fillFrame} />;
 }
 
-function LegacyCelestialVisual({ object, size = 96, animated = false }: CelestialVisualProps) {
+function LegacyCelestialVisual({ object, size = 96, animated = false, fillFrame = false }: CelestialVisualProps) {
   const reducedMotion = useReducedMotion();
   const profile = useMemo(() => getCelestialVisualProfile(object), [object]);
   const center = size / 2;
-  const radius = size * profile.bodyRatio;
+  const radius = size * (fillFrame ? 0.48 : profile.bodyRatio);
   const surfaceClip = useMemo(() => {
     const path = Skia.Path.Make();
     path.addCircle(center, center, radius);

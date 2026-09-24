@@ -1,10 +1,9 @@
 import { ObservatoryPressable as Pressable, ObservatoryButton } from '@/components/observatory-button';
 import { House, ArrowLeft, ArrowRight, Search, SlidersHorizontal, X, Sparkles, Scale, Crosshair, Orbit, ChevronRight } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
-import { CelestialVisual } from '@/components/celestial-visual';
 import { supabase } from '@/lib/supabase';
 import { signInWithSocialProvider, type SocialProvider } from '@/lib/social-auth';
-import { useFocusEffect, useLocalSearchParams } from 'expo-router';
+import { Link, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';
 import { makeRedirectUri } from 'expo-auth-session';
 import { useEffect, useState } from 'react';
@@ -17,19 +16,15 @@ import {
   View,
 } from 'react-native';
 import { MotionSection } from '@/components/motion-section';
+import { GoogleSignInButton } from '@/components/google-sign-in-button';
 import { Text, TextInput } from '@/components/astralys-text';
 import { navigationClearance } from '@/constants/observatory-theme';
+import { contactSupport, openLegal } from '@/lib/legal-links';
+import { WIDGET_STORAGE_KEY } from '@/features/star-widget-data';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type AuthMode = 'signIn' | 'signUp' | 'reset';
 type Feedback = { type: 'success' | 'error'; message: string } | null;
-
-const profileStar = {
-  id: 'astralys-profile-star',
-  object_type: 'star' as const,
-  visual_category: 'blue',
-  apparent_magnitude: 1.8,
-};
 
 function friendlyAuthError(message: string) {
   const normalized = message.toLowerCase();
@@ -221,6 +216,33 @@ export default function ProfileScreen() {
     setBusy(false);
   };
 
+  /* ---- Suppression du compte (obligatoire sur les stores) ---- */
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const deleteAccount = async () => {
+    if (!user) return;
+    setBusy(true);
+    setFeedback(null);
+    const userId = user.id;
+    const { error } = await supabase.rpc('delete_my_account');
+    if (error) {
+      setFeedback({ type: 'error', message: `Your account could not be deleted. Try again or write to support.` });
+      setBusy(false);
+      return;
+    }
+    try {
+      localStorage.removeItem(`astralys:guardian:v4:${userId}`);
+      localStorage.removeItem(`astralys:guardian:v3:${userId}`);
+      localStorage.removeItem(WIDGET_STORAGE_KEY);
+    } catch { /* rien d'autre à nettoyer */ }
+    await supabase.auth.signOut({ scope: 'local' });
+    setConfirmDelete(false);
+    setEmail('');
+    setPassword('');
+    setMode('signIn');
+    setFeedback({ type: 'success', message: 'Your account and all its data have been deleted.' });
+    setBusy(false);
+  };
+
   if (loading) {
     return (
       <View style={styles.loadingScreen}>
@@ -246,10 +268,6 @@ export default function ProfileScreen() {
         <View style={styles.shell}>
           <View style={styles.header}>
             <Text style={styles.brand}>ASTRALYS</Text>
-            <View style={styles.securePill}>
-              <View style={styles.secureDot} />
-              <Text style={styles.secureText}>{user ? 'CONNECTED' : 'SECURE'}</Text>
-            </View>
           </View>
 
           {passwordRecovery && user ? (
@@ -270,19 +288,13 @@ export default function ProfileScreen() {
                     setFeedback({ type: 'success', message: 'Password updated successfully.' });
                   } catch (caught) { setFeedback({ type: 'error', message: friendlyAuthError(caught instanceof Error ? caught.message : 'The password could not be updated.') }); }
                   finally { setBusy(false); }
-                }}>{busy ? <ActivityIndicator color="#171321" /> : <Text style={styles.primaryButtonText}>Save new password</Text>}</Pressable>
+                }}>{busy ? <ActivityIndicator color="#F4F1FF" /> : <Text style={styles.primaryButtonText}>Save new password</Text>}</Pressable>
                 <Pressable accessibilityRole="button" onPress={() => { setPassword(''); finishPasswordRecovery(); }} style={styles.signOutButton}><Text style={styles.signOutText}>Cancel</Text></Pressable>
               </View>
             </MotionSection>
           ) : user ? (
             <MotionSection style={styles.content}>
-              <View style={styles.avatarScene}>
-                <View style={styles.avatarOrbit} />
-                <CelestialVisual animated object={{ ...profileStar, id: user.id }} size={104} />
-                <View style={styles.avatarBadge}>
-                  <Text style={styles.avatarText}>{(profile?.display_name || user.email || 'A').slice(0, 1).toUpperCase()}</Text>
-                </View>
-              </View>
+              <View style={styles.avatarScene}><View style={styles.avatarBadge}><Text style={styles.avatarText}>{(profile?.display_name || user.email || 'A').slice(0, 1).toUpperCase()}</Text></View></View>
               <Text accessibilityRole="header" style={styles.title}>{profile?.display_name || 'Astronomer'}</Text>
               <Text style={styles.subtitle}>{user.email}</Text>
 
@@ -303,7 +315,7 @@ export default function ProfileScreen() {
                       <Text style={styles.secondaryButtonText}>Cancel</Text>
                     </Pressable>
                     <Pressable accessibilityRole="button" disabled={busy} onPress={saveProfile} style={styles.primaryButton}>
-                      {busy ? <ActivityIndicator color="#171321" /> : <Text style={styles.primaryButtonText}>Save changes</Text>}
+                      {busy ? <ActivityIndicator color="#F4F1FF" /> : <Text style={styles.primaryButtonText}>Save changes</Text>}
                     </Pressable>
                   </View>
                 </View>
@@ -323,13 +335,21 @@ export default function ProfileScreen() {
               <Pressable accessibilityRole="button" disabled={busy} onPress={signOut} style={styles.signOutButton}>
                 <Text style={styles.signOutText}>Sign out</Text>
               </Pressable>
+              {confirmDelete ? <View style={styles.deleteCard}>
+                <Text style={styles.deleteTitle}>Delete your account?</Text>
+                <Text style={styles.deleteText}>This permanently deletes your account, your profile, every system you own, your progress and your stars. It cannot be undone. Store purchases are not refunded automatically: request a refund from Google Play or the App Store.</Text>
+                <Pressable accessibilityRole="button" disabled={busy} onPress={() => void deleteAccount()} style={styles.deleteButton}>
+                  {busy ? <ActivityIndicator color="#FFE3E8" size="small" /> : <Text style={styles.deleteButtonText}>Delete permanently</Text>}
+                </Pressable>
+                <Pressable accessibilityRole="button" disabled={busy} onPress={() => setConfirmDelete(false)} style={styles.signOutButton}>
+                  <Text style={styles.signOutText}>Cancel</Text>
+                </Pressable>
+              </View> : <Pressable accessibilityRole="button" disabled={busy} onPress={() => { setFeedback(null); setConfirmDelete(true); }} style={styles.signOutButton}>
+                <Text style={styles.deleteLink}>Delete account</Text>
+              </Pressable>}
             </MotionSection>
           ) : (
             <MotionSection replayKey={mode} style={styles.content}>
-              <View style={styles.guestScene}>
-                <View style={styles.guestOrbit} />
-                <CelestialVisual animated object={profileStar} size={48} />
-              </View>
               <Text accessibilityRole="header" style={styles.title}>{mode === 'reset' ? 'Reset password' : mode === 'signUp' ? 'Join Astralys' : 'Welcome back'}</Text>
               {mode === 'reset' ? <Text style={styles.subtitle}>Receive a reset link by email.</Text> : null}
 
@@ -358,16 +378,18 @@ export default function ProfileScreen() {
                   value={password}
                   onChangeText={setPassword}
                 /> : null}
-                {mode !== 'reset' ? <Pressable accessibilityRole="button" onPress={() => setShowPassword(v => !v)} style={styles.signOutButton}><Text style={styles.signOutText}>{showPassword ? 'Hide password' : 'Show password'}</Text></Pressable> : null}
-                {mode === 'signIn' ? <Pressable accessibilityRole="button" onPress={() => { setPassword(''); switchMode('reset'); }} style={styles.signOutButton}><Text style={styles.signOutText}>Forgot password?</Text></Pressable> : null}
-                {mode === 'reset' ? <Pressable accessibilityRole="button" onPress={() => switchMode('signIn')} style={styles.signOutButton}><Text style={styles.signOutText}>Back to sign in</Text></Pressable> : null}
+                {mode !== 'reset' ? <View style={styles.linkRow}>
+                  <Pressable accessibilityRole="button" hitSlop={8} onPress={() => setShowPassword(v => !v)} style={styles.inlineLink}><Text style={styles.signOutText}>{showPassword ? 'Hide password' : 'Show password'}</Text></Pressable>
+                  {mode === 'signIn' ? <Pressable accessibilityRole="button" hitSlop={8} onPress={() => { setPassword(''); switchMode('reset'); }} style={styles.inlineLink}><Text style={styles.signOutText}>Forgot password?</Text></Pressable> : null}
+                </View> : null}
+                {mode === 'reset' ? <Pressable accessibilityRole="button" hitSlop={8} onPress={() => switchMode('signIn')} style={styles.inlineLink}><Text style={styles.signOutText}>Back to sign in</Text></Pressable> : null}
                 {callbackError ? <FeedbackBanner feedback={{ type: 'error', message: callbackError }} /> : null}
                 {feedback ? <FeedbackBanner feedback={feedback} /> : null}
                 <Pressable accessibilityRole="button" disabled={busy || socialBusy !== null} onPress={submit} style={[styles.primaryButton, busy && styles.buttonDisabled]}>
-                  {busy ? <ActivityIndicator color="#171321" /> : (
+                  {busy ? <ActivityIndicator color="#F4F1FF" /> : (
                     <>
                       <Text style={styles.primaryButtonText}>{mode === 'reset' ? 'Send reset link' : mode === 'signUp' ? 'Create account' : 'Sign in'}</Text>
-                      <ArrowRight size={22} color="#171321" />
+                      <ArrowRight size={22} color="#C8BAF5" />
                     </>
                   )}
                 </Pressable>
@@ -378,29 +400,21 @@ export default function ProfileScreen() {
                 <View style={styles.dividerLine} />
               </View>
               <View style={styles.socialGroup}>
-                <Pressable
-                  accessibilityRole="button"
+                <GoogleSignInButton
+                  compact
+                  label={mode === 'signUp' ? 'signUp' : 'signIn'}
+                  loading={socialBusy === 'google'}
                   disabled={busy || socialBusy !== null}
-                  onPress={() => submitSocial('google')}
-                  accessibilityLabel="Continue with Google"
-                  style={[styles.socialButton, socialBusy !== null && styles.buttonDisabled]}>
-                  <View style={[styles.socialMark, styles.googleMark]}>
-                    <Text style={styles.googleMarkText}>G</Text>
-                  </View>
-                  <Text style={styles.socialButtonText}>Google</Text>
-                  {socialBusy === 'google' ? <ActivityIndicator color="#DAD5E4" size="small" /> : <Text style={styles.socialChevron}>›</Text>}
-                </Pressable>
+                  onPress={() => void submitSocial('google')} />
                 <Pressable
                   accessibilityRole="button"
                   disabled={busy || socialBusy !== null}
                   onPress={() => submitSocial('apple')}
-                  accessibilityLabel="Continue with Apple"
-                  style={[styles.socialButton, socialBusy !== null && styles.buttonDisabled]}>
-                  <View style={[styles.socialMark, styles.appleMark]}>
-                    <Text style={styles.appleMarkText}>A</Text>
-                  </View>
-                  <Text style={styles.socialButtonText}>Apple</Text>
-                  {socialBusy === 'apple' ? <ActivityIndicator color="#DAD5E4" size="small" /> : <Text style={styles.socialChevron}>›</Text>}
+                  accessibilityLabel={mode === 'signUp' ? 'Sign up with Apple' : 'Sign in with Apple'}
+                  style={[styles.appleButton, socialBusy !== null && socialBusy !== 'apple' && styles.buttonDisabled]}>
+                  {socialBusy === 'apple'
+                    ? <ActivityIndicator color="#0B0D12" size="small" />
+                    : <Text style={styles.appleButtonText}>{mode === 'signUp' ? 'Sign up with Apple' : 'Sign in with Apple'}</Text>}
                 </Pressable>
               </View>
 
@@ -409,6 +423,16 @@ export default function ProfileScreen() {
 </> : null}
             </MotionSection>
           )}
+          <View style={styles.legalLinks}>
+            <Pressable accessibilityRole="link" hitSlop={8} onPress={() => openLegal('privacy')} style={styles.inlineLink}><Text style={styles.legalLink}>Privacy Policy</Text></Pressable>
+            <Text style={styles.legalDot}>·</Text>
+            <Pressable accessibilityRole="link" hitSlop={8} onPress={() => openLegal('terms')} style={styles.inlineLink}><Text style={styles.legalLink}>Terms</Text></Pressable>
+            <Text style={styles.legalDot}>·</Text>
+            <Pressable accessibilityRole="link" hitSlop={8} onPress={() => contactSupport()} style={styles.inlineLink}><Text style={styles.legalLink}>Support</Text></Pressable>
+          </View>
+          {__DEV__ ? <Link href="/system-lab" asChild>
+            <Pressable accessibilityRole="button" style={styles.signOutButton}><Text style={styles.signOutText}>System lab (dev) · test the 10,000 systems</Text></Pressable>
+          </Link> : null}
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -460,34 +484,30 @@ const styles = StyleSheet.create({
   securePill: { flexDirection: 'row', alignItems: 'center', gap: 7, paddingHorizontal: 10, paddingVertical: 7, borderRadius: 99, backgroundColor: '#101420' },
   secureDot: { width: 5, height: 5, borderRadius: 3, backgroundColor: '#7FE0B6' },
   secureText: { color: '#858B9E', fontSize: 12, fontWeight: '700' },
-  content: { flex: 1, alignItems: 'center', paddingTop: 12 },
-  title: { maxWidth: 400, color: '#F5F3FA', fontSize: 28, lineHeight: 34, fontWeight: '700', textAlign: 'center', letterSpacing: -0.7 },
+  content: { flex: 1, alignItems: 'center', paddingTop: 4 },
+  title: { maxWidth: 400, color: '#F5F3FA', fontSize: 24, lineHeight: 30, fontWeight: '700', textAlign: 'center', letterSpacing: -0.7 },
   subtitle: { maxWidth: 370, color: '#A7B0C5', fontSize: 14, lineHeight: 22, textAlign: 'center', marginTop: 9 },
-  segment: { width: '100%', flexDirection: 'row', padding: 4, marginTop: 25, borderRadius: 16, backgroundColor: '#0E121C' },
-  socialGroup: { width: '100%', gap: 9, marginTop: 24 },
-  socialButton: { width: '100%', height: 50, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 13, borderRadius: 15, backgroundColor: '#111622', borderWidth: 1, borderColor: 'rgba(255,255,255,0.09)' },
-  socialMark: { width: 28, height: 28, alignItems: 'center', justifyContent: 'center', borderRadius: 10 },
-  googleMark: { backgroundColor: '#F7F7FA' },
-  googleMarkText: { color: '#4285F4', fontSize: 14, fontWeight: '900' },
-  appleMark: { backgroundColor: '#F7F7FA' },
-  appleMarkText: { color: '#0B0D12', fontSize: 13, fontWeight: '900' },
-  socialButtonText: { flex: 1, color: '#E8E4EE', fontSize: 12, fontWeight: '800', marginLeft: 12 },
-  socialChevron: { color: '#777F91', fontSize: 22 },
-  dividerRow: { width: '100%', flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 20 },
+  segment: { width: '100%', flexDirection: 'row', padding: 3, marginTop: 14, borderRadius: 14, backgroundColor: '#0E121C' },
+  socialGroup: { width: '100%', gap: 8, marginTop: 12 },
+  appleButton: { width: '100%', minHeight: 46, borderRadius: 23, alignItems: 'center', justifyContent: 'center', backgroundColor: '#F4F1FF' },
+  appleButtonText: { color: '#0B0D12', fontSize: 15, fontWeight: '600' },
+  linkRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: -2 },
+  inlineLink: { minHeight: 32, justifyContent: 'center', alignSelf: 'flex-start' },
+  dividerRow: { width: '100%', flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 12 },
   dividerLine: { flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.075)' },
   dividerText: { color: '#A1A9BB', fontSize: 12, fontWeight: '800', letterSpacing: 0.8 },
-  segmentButton: { flex: 1, height: 42, alignItems: 'center', justifyContent: 'center', borderRadius: 12 },
+  segmentButton: { flex: 1, height: 36, alignItems: 'center', justifyContent: 'center', borderRadius: 12 },
   segmentButtonActive: { backgroundColor: '#24283A' },
   segmentText: { color: '#737A8D', fontSize: 12, fontWeight: '700' },
   segmentTextActive: { color: '#F0ECF8' },
-  formCard: { width: '100%', gap: 13, padding: 16, marginTop: 12, borderRadius: 20, backgroundColor: '#0E121C', borderWidth: 1, borderColor: 'rgba(255,255,255,0.065)' },
+  formCard: { width: '100%', gap: 10, padding: 14, marginTop: 10, borderRadius: 18, backgroundColor: '#0E121C', borderWidth: 1, borderColor: 'rgba(255,255,255,0.065)' },
   nameRow: { width: '100%', flexDirection: 'row', gap: 10 },
-  field: { flex: 1, gap: 7 },
+  field: { flex: 1, gap: 5 },
   fieldLabel: { color: '#8881A0', fontSize: 12, fontWeight: '900', letterSpacing: 1 },
-  input: { width: '100%', minWidth: 0, height: 50, paddingHorizontal: 13, borderRadius: 13, color: '#F3F0F8', fontSize: 16, backgroundColor: '#151A27', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
-  primaryButton: { width: '100%', minHeight: 51, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 22, paddingHorizontal: 18, borderRadius: 15, backgroundColor: '#C8BAF5' },
-  primaryButtonText: { color: '#171321', fontSize: 12, fontWeight: '900' },
-  buttonArrow: { color: '#171321', fontSize: 19 },
+  input: { width: '100%', minWidth: 0, height: 46, paddingHorizontal: 13, borderRadius: 13, color: '#F3F0F8', fontSize: 16, backgroundColor: '#151A27', borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
+  primaryButton: { width: '100%', minHeight: 46, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 22, paddingHorizontal: 18, borderRadius: 12, backgroundColor: '#22283B' },
+  primaryButtonText: { color: '#F4F1FF', fontSize: 12, fontWeight: '800' },
+  buttonArrow: { color: '#C8BAF5', fontSize: 19 },
   buttonDisabled: { opacity: 0.7 },
   feedback: { width: '100%', paddingHorizontal: 12, paddingVertical: 10, borderRadius: 12, borderWidth: 1 },
   feedbackSuccess: { backgroundColor: 'rgba(47,118,88,0.16)', borderColor: 'rgba(127,224,182,0.28)' },
@@ -495,12 +515,9 @@ const styles = StyleSheet.create({
   feedbackText: { fontSize: 12, lineHeight: 18, textAlign: 'center' },
   feedbackSuccessText: { color: '#A9F1D1' },
   feedbackErrorText: { color: '#EAB4BE' },
-  avatarScene: { width: 126, height: 126, alignItems: 'center', justifyContent: 'center', marginBottom: 13 },
-  avatarOrbit: { position: 'absolute', width: 122, height: 62, borderRadius: 99, borderWidth: 1, borderColor: 'rgba(133,177,255,0.2)', transform: [{ rotate: '-18deg' }] },
-  avatarBadge: { position: 'absolute', right: 6, bottom: 8, width: 34, height: 34, alignItems: 'center', justifyContent: 'center', borderRadius: 12, backgroundColor: '#171D2B', borderWidth: 1, borderColor: 'rgba(188,208,255,0.26)' },
-  avatarText: { color: '#DFE9FF', fontSize: 13, fontWeight: '900' },
-  guestScene: { width: 124, height: 56, alignItems: 'center', justifyContent: 'center', marginTop: -20, marginBottom: 8 },
-  guestOrbit: { position: 'absolute', width: 122, height: 54, borderRadius: 99, borderWidth: 1, borderColor: 'rgba(137,167,230,0.18)', transform: [{ rotate: '18deg' }] },
+  avatarScene: { width: 72, height: 72, alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
+  avatarBadge: { width: 64, height: 64, alignItems: 'center', justifyContent: 'center', borderRadius: 21, backgroundColor: '#202436' },
+  avatarText: { color: '#DFE9FF', fontSize: 26, fontWeight: '700' },
   profileLoader: { marginTop: 32 },
   profileCard: { width: '100%', paddingHorizontal: 16, marginTop: 25, marginBottom: 12, borderRadius: 20, backgroundColor: '#0E121C', borderWidth: 1, borderColor: 'rgba(255,255,255,0.065)' },
   profileLine: { minHeight: 56, flexDirection: 'row', alignItems: 'center', gap: 16, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.065)' },
@@ -512,4 +529,13 @@ const styles = StyleSheet.create({
   secondaryButtonText: { color: '#CBC6D4', fontSize: 12, fontWeight: '800' },
   signOutButton: { minHeight: 46, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 20, marginTop: 9 },
   signOutText: { color: '#A39AAA', fontSize: 12, fontWeight: '700' },
+  deleteLink: { color: '#C98A96', fontSize: 12, fontWeight: '700' },
+  deleteCard: { marginTop: 14, padding: 16, gap: 8, borderRadius: 16, borderWidth: 1, borderColor: 'rgba(240,169,181,0.35)', backgroundColor: 'rgba(240,169,181,0.06)' },
+  deleteTitle: { color: '#FFE3E8', fontSize: 15, fontWeight: '700' },
+  deleteText: { color: '#C9B3B9', fontSize: 12, lineHeight: 18 },
+  deleteButton: { minHeight: 46, marginTop: 6, borderRadius: 12, alignItems: 'center', justifyContent: 'center', backgroundColor: '#8E2E42' },
+  deleteButtonText: { color: '#FFE3E8', fontSize: 14, fontWeight: '700' },
+  legalLinks: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 8, marginTop: 22 },
+  legalLink: { color: '#7D869C', fontSize: 12, textDecorationLine: 'underline' },
+  legalDot: { color: '#4C5366', fontSize: 12 },
 });

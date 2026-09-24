@@ -30,6 +30,7 @@ uniform float uStyle;
 uniform float uDetail;
 uniform float uReveal;
 uniform float uCloud;
+uniform float uStarLight;
 varying mediump vec3 vNormal;
 varying mediump vec3 vLocal;
 varying mediump vec3 vWorld;
@@ -84,7 +85,8 @@ void main() {
   }
   vec3 normal = normalize(vNormal);
   vec3 view = normalize(uCamera - vWorld);
-  vec3 light = uMaterial < 1.5 || uMaterial > 3.5 ? normalize(-vWorld) : normalize(vec3(-3.0, 6.0, 4.0));
+  // Dans le système, tout est éclairé par l'étoile (au centre) ; dans la vue du relais, lumière fixe.
+  vec3 light = uMaterial < 1.5 || uMaterial > 3.5 || uStarLight > 0.5 ? normalize(-vWorld) : normalize(vec3(-3.0, 6.0, 4.0));
   if (uMaterial > 3.5) {
     float rim = pow(1.0 - clamp(dot(normal, view), 0.0, 1.0), 3.0);
     float daylight = smoothstep(-0.2, 0.65, dot(normal, light));
@@ -101,12 +103,38 @@ void main() {
     if (uDetail > 0.35) cells = cells * 0.7 + valueNoise(plasma * 2.3) * 0.3;
     float darkSpots = smoothstep(0.62, 0.8, terrain(surface * 1.3));
     float limb = 0.5 + 0.5 * pow(max(dot(normal, view), 0.0), 0.4);
-    vec3 hot = mix(albedo, vec3(1.0, 0.53, 0.18), smoothstep(0.35, 0.85, cells) * 0.5);
+    // Les granules chauffent la teinte de l'étoile sans la délaver : une étoile bleue reste bleue, une naine rouge reste rouge.
+    vec3 hot = mix(albedo, albedo * vec3(1.18, 1.05, 0.9), smoothstep(0.35, 0.85, cells) * 0.5);
     float pulse = 1.0 + 0.025 * sin(uTime * 0.4);
-    gl_FragColor = vec4(displayColor(hot * (1.65 + cells * 1.8) * limb * (1.0 - darkSpots * 0.32) * pulse), uAlpha);
+    gl_FragColor = vec4(displayColor(hot * (1.15 + cells * 1.15) * limb * (1.0 - darkSpots * 0.32) * pulse), uAlpha);
     return;
   }
   float roughness = 0.72;
+  // Pièces du satellite (uStyle ≥ 10) : cellules solaires, feuille dorée froissée, métal brossé, radiateur.
+  float glint = 0.0;
+  if (uMaterial > 1.5 && uMaterial < 2.5 && uStyle > 9.5) {
+    vec3 p = vLocal;
+    if (uStyle < 10.5) {
+      vec2 uv = (p.xz + 0.5) * vec2(max(uSeed, 1.0), max(uCloud, 1.0));
+      vec2 f = fract(uv), id = floor(uv);
+      float grid = max(1.0 - smoothstep(0.0, 0.08, min(f.x, 1.0 - f.x)), 1.0 - smoothstep(0.0, 0.08, min(f.y, 1.0 - f.y)));
+      float tone = 0.75 + 0.45 * hash31(vec3(id, uSeed + 3.0));
+      albedo = mix(vec3(0.02, 0.045, 0.2) * tone, vec3(0.55, 0.58, 0.68), grid * 0.8);
+      roughness = 0.16; glint = 3.0;
+    } else if (uStyle < 11.5) {
+      float crinkle = valueNoise(p * 26.0 + vec3(3.1)) * 0.7 + valueNoise(p * 63.0) * 0.3;
+      albedo *= 0.55 + crinkle * 0.8;
+      normal = normalize(normal + (vec3(valueNoise(p * 21.0), valueNoise(p * 21.0 + 7.0), valueNoise(p * 21.0 + 13.0)) - 0.5) * 1.1);
+      roughness = 0.2; glint = 2.4;
+    } else if (uStyle < 12.5) {
+      albedo *= 0.84 + 0.16 * valueNoise(vec3(p.x * 4.0, p.y * 110.0, p.z * 4.0));
+      roughness = 0.32; glint = 1.5;
+    } else {
+      float fin = smoothstep(0.3, 0.5, abs(fract(p.x * 12.0) - 0.5));
+      albedo *= 1.0 - fin * 0.4;
+      roughness = 0.55; glint = 0.7;
+    }
+  }
   if (uMaterial < 1.5 && uReveal > 0.5) {
     float height = heightAt(surface);
     float fine = uDetail > 0.35 ? valueNoise(surface * 42.0 + vec3(uSeed)) - 0.5 : 0.0;
@@ -142,5 +170,7 @@ void main() {
   float specular = pow(max(dot(normal, halfVector), 0.0), mix(65.0, 14.0, roughness)) * (1.0 - roughness) * 0.14 * daylight;
   vec3 color = albedo * (0.045 + 0.95 * ndl) + vec3(specular);
   if (uMaterial > 1.5) color += pow(albedo, vec3(0.6)) * specular * 0.35;
+  // Reflets vifs (éclat des panneaux face à l'étoile) + un léger fond pour garder la silhouette lisible.
+  if (glint > 0.0) color += vec3(specular) * glint * 6.0 + albedo * 0.07;
   gl_FragColor = vec4(displayColor(color), uAlpha);
 }`;

@@ -50,3 +50,19 @@ example
 # generated native folders
 /ios
 /android
+
+# Exports de builds et captures locales (plusieurs centaines de Mo, régénérables)
+output/
+tmp/
+
+# Réglages locaux des assistants et de l'éditeur
+.claude/
+
+# Clés et secrets : ne jamais publier
+.env
+.env.*
+!.env.example
+client_secret*.json
+google-services.json
+GoogleService-Info.plist
+service-account*.json
